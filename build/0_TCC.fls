@@ -1,0 +1,526 @@
+PWD c:\TCC\ESCRITA TCC
+INPUT C:\Users\diego\AppData\Local\MiKTeX\miktex\data\le\xetex\xelatex.fmt
+INPUT c:\TCC\ESCRITA TCC\0_TCC.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\0_TCC.log
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\changepage\changepage.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\changepage\changepage.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\fontspec\fontspec.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\fontspec\fontspec.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\fontspec\fontspec-xetex.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\fontspec\fontspec-xetex.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\fontspec\fontspec.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\fontspec\fontspec.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\fontspec\fontspec.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\xetex.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\xetex.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\xetex.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\microtype\microtype.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\microtype\microtype.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\microtype\microtype-xetex.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\microtype\microtype-xetex.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\microtype\microtype-xetex.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\microtype\microtype.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\microtype\microtype.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\microtype\microtype.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\hyphenat\hyphenat.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\hyphenat\hyphenat.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\ragged2e\ragged2e.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\ragged2e\ragged2e.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\wrapfig\wrapfig.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\wrapfig\wrapfig.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\pdfescape\pdfescape.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\pdfescape\pdfescape.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\hycolor\hycolor.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\hycolor\hycolor.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\refcount\refcount.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\refcount\refcount.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\stringenc.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\stringenc.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\intcalc\intcalc.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\intcalc\intcalc.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\puenc.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\puenc.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\puenc.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\bitset\bitset.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\bitset\bitset.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\bigintcalc\bigintcalc.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\bigintcalc\bigintcalc.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hxetex.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hxetex.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hxetex.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT .\configuracao_referencias.tex
+INPUT .\configuracao_referencias.tex
+INPUT .\configuracao_referencias.tex
+INPUT .\configuracao_referencias.tex
+INPUT configuracao_referencias.tex
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\babel\xebabel.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\pt\babel-brazilian.tex
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\pt\babel-brazilian.tex
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\pt\babel-brazilian.tex
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\pt\babel-pt-BR.ini
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\babel-portuges\brazilian.ldf
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\babel-portuges\brazilian.ldf
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\babel-portuges\brazilian.ldf
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-dm.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-dm.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-dm.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-unicode.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-unicode.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-unicode.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\unicode-data\UnicodeData.txt
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-compat.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-compat.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-compat.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\bbx\abnt.bbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\bbx\abnt.bbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\bbx\abnt.bbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\l3backend-xetex.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\l3backend-xetex.def
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\xpatch\xpatch.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\xpatch\xpatch.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\bbx\standard.bbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\bbx\standard.bbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\bbx\standard.bbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\cbx\abnt.cbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\cbx\abnt.cbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\cbx\abnt.cbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\cbx\authoryear-comp.cbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\cbx\authoryear-comp.cbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\cbx\authoryear-comp.cbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.aux
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.aux
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.aux
+INPUT c:\TCC\ESCRITA TCC\build\1_capa.aux
+INPUT c:\TCC\ESCRITA TCC\build\1_capa.aux
+INPUT c:\TCC\ESCRITA TCC\build\1_capa.aux
+INPUT c:\TCC\ESCRITA TCC\build\2_folha-de-rosto.aux
+INPUT c:\TCC\ESCRITA TCC\build\2_folha-de-rosto.aux
+INPUT c:\TCC\ESCRITA TCC\build\2_folha-de-rosto.aux
+INPUT c:\TCC\ESCRITA TCC\build\3_ficha-catalografica.aux
+INPUT c:\TCC\ESCRITA TCC\build\3_ficha-catalografica.aux
+INPUT c:\TCC\ESCRITA TCC\build\3_ficha-catalografica.aux
+INPUT c:\TCC\ESCRITA TCC\build\4_folha-de-aprovação.aux
+INPUT c:\TCC\ESCRITA TCC\build\4_folha-de-aprovação.aux
+INPUT c:\TCC\ESCRITA TCC\build\4_folha-de-aprovação.aux
+INPUT c:\TCC\ESCRITA TCC\build\5_dedicatória.aux
+INPUT c:\TCC\ESCRITA TCC\build\5_dedicatória.aux
+INPUT c:\TCC\ESCRITA TCC\build\5_dedicatória.aux
+INPUT c:\TCC\ESCRITA TCC\build\6_agradecimentos.aux
+INPUT c:\TCC\ESCRITA TCC\build\6_agradecimentos.aux
+INPUT c:\TCC\ESCRITA TCC\build\6_agradecimentos.aux
+INPUT c:\TCC\ESCRITA TCC\build\7_epígrafe.aux
+INPUT c:\TCC\ESCRITA TCC\build\7_epígrafe.aux
+INPUT c:\TCC\ESCRITA TCC\build\7_epígrafe.aux
+INPUT c:\TCC\ESCRITA TCC\build\8_resumo.aux
+INPUT c:\TCC\ESCRITA TCC\build\8_resumo.aux
+INPUT c:\TCC\ESCRITA TCC\build\8_resumo.aux
+INPUT c:\TCC\ESCRITA TCC\build\9_abstract.aux
+INPUT c:\TCC\ESCRITA TCC\build\9_abstract.aux
+INPUT c:\TCC\ESCRITA TCC\build\9_abstract.aux
+INPUT c:\TCC\ESCRITA TCC\build\10_lista-de-figuras.aux
+INPUT c:\TCC\ESCRITA TCC\build\10_lista-de-figuras.aux
+INPUT c:\TCC\ESCRITA TCC\build\10_lista-de-figuras.aux
+INPUT c:\TCC\ESCRITA TCC\build\11_lista-de-tabelas.aux
+INPUT c:\TCC\ESCRITA TCC\build\11_lista-de-tabelas.aux
+INPUT c:\TCC\ESCRITA TCC\build\11_lista-de-tabelas.aux
+INPUT c:\TCC\ESCRITA TCC\build\12_lista-de-abreviaturas-e-siglas.aux
+INPUT c:\TCC\ESCRITA TCC\build\12_lista-de-abreviaturas-e-siglas.aux
+INPUT c:\TCC\ESCRITA TCC\build\12_lista-de-abreviaturas-e-siglas.aux
+INPUT c:\TCC\ESCRITA TCC\build\13_lista-de-símbolos.aux
+INPUT c:\TCC\ESCRITA TCC\build\13_lista-de-símbolos.aux
+INPUT c:\TCC\ESCRITA TCC\build\13_lista-de-símbolos.aux
+INPUT c:\TCC\ESCRITA TCC\build\14_sumário.aux
+INPUT c:\TCC\ESCRITA TCC\build\14_sumário.aux
+INPUT c:\TCC\ESCRITA TCC\build\14_sumário.aux
+INPUT c:\TCC\ESCRITA TCC\build\15_introducao.aux
+INPUT c:\TCC\ESCRITA TCC\build\15_introducao.aux
+INPUT c:\TCC\ESCRITA TCC\build\15_introducao.aux
+INPUT c:\TCC\ESCRITA TCC\build\16_desenvolvimento.aux
+INPUT c:\TCC\ESCRITA TCC\build\16_desenvolvimento.aux
+INPUT c:\TCC\ESCRITA TCC\build\16_desenvolvimento.aux
+INPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
+INPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
+INPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
+INPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
+INPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
+INPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
+INPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
+INPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
+INPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
+INPUT c:\TCC\ESCRITA TCC\build\21_glossario.aux
+INPUT c:\TCC\ESCRITA TCC\build\21_glossario.aux
+INPUT c:\TCC\ESCRITA TCC\build\21_glossario.aux
+INPUT c:\TCC\ESCRITA TCC\build\22_apêndice.aux
+INPUT c:\TCC\ESCRITA TCC\build\22_apêndice.aux
+INPUT c:\TCC\ESCRITA TCC\build\22_apêndice.aux
+INPUT c:\TCC\ESCRITA TCC\build\23_anexo.aux
+INPUT c:\TCC\ESCRITA TCC\build\23_anexo.aux
+INPUT c:\TCC\ESCRITA TCC\build\23_anexo.aux
+INPUT c:\TCC\ESCRITA TCC\build\24_índice.aux
+INPUT c:\TCC\ESCRITA TCC\build\24_índice.aux
+INPUT c:\TCC\ESCRITA TCC\build\24_índice.aux
+OUTPUT c:\TCC\ESCRITA TCC\build\0_TCC.aux
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\zapfding\pzdr.tfm
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.out
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.out
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.out
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.out
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.out
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.out
+OUTPUT c:\TCC\ESCRITA TCC\build\0_TCC.out
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\lbx\brazilian-abnt.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\lbx\brazilian-abnt.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\lbx\brazilian-abnt.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\lbx\brazil-abnt.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\lbx\brazil-abnt.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\lbx\brazil-abnt.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\lbx\brazilian-abnt.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazil.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazil.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazil.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+OUTPUT c:\TCC\ESCRITA TCC\build\0_TCC.bcf
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.bbl
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.bbl
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.bbl
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.bbl
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.bbl
+INPUT .\1_capa.tex
+INPUT .\1_capa.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\1_capa.aux
+INPUT .\1_capa.tex
+INPUT .\1_capa.tex
+INPUT 1_capa.tex
+INPUT .\Logo_UENP.png
+INPUT .\Logo_UENP.png
+INPUT .\Logo_UENP.png
+OUTPUT c:\TCC\ESCRITA TCC\build\0_TCC.xdv
+INPUT .\2_folha-de-rosto.tex
+INPUT .\2_folha-de-rosto.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\2_folha-de-rosto.aux
+INPUT .\2_folha-de-rosto.tex
+INPUT .\2_folha-de-rosto.tex
+INPUT 2_folha-de-rosto.tex
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
+INPUT .\3_ficha-catalografica.tex
+INPUT .\3_ficha-catalografica.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\3_ficha-catalografica.aux
+INPUT .\3_ficha-catalografica.tex
+INPUT .\3_ficha-catalografica.tex
+INPUT 3_ficha-catalografica.tex
+INPUT .\4_folha-de-aprovação.tex
+INPUT .\4_folha-de-aprovação.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\4_folha-de-aprovação.aux
+INPUT .\4_folha-de-aprovação.tex
+INPUT .\4_folha-de-aprovação.tex
+INPUT 4_folha-de-aprovação.tex
+INPUT .\5_dedicatória.tex
+INPUT .\5_dedicatória.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\5_dedicatória.aux
+INPUT .\5_dedicatória.tex
+INPUT .\5_dedicatória.tex
+INPUT 5_dedicatória.tex
+INPUT .\6_agradecimentos.tex
+INPUT .\6_agradecimentos.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\6_agradecimentos.aux
+INPUT .\6_agradecimentos.tex
+INPUT .\6_agradecimentos.tex
+INPUT 6_agradecimentos.tex
+INPUT .\7_epígrafe.tex
+INPUT .\7_epígrafe.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\7_epígrafe.aux
+INPUT .\7_epígrafe.tex
+INPUT .\7_epígrafe.tex
+INPUT 7_epígrafe.tex
+INPUT .\8_resumo.tex
+INPUT .\8_resumo.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\8_resumo.aux
+INPUT .\8_resumo.tex
+INPUT .\8_resumo.tex
+INPUT 8_resumo.tex
+INPUT .\9_abstract.tex
+INPUT .\9_abstract.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\9_abstract.aux
+INPUT .\9_abstract.tex
+INPUT .\9_abstract.tex
+INPUT 9_abstract.tex
+INPUT .\10_lista-de-figuras.tex
+INPUT .\10_lista-de-figuras.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\10_lista-de-figuras.aux
+INPUT .\10_lista-de-figuras.tex
+INPUT .\10_lista-de-figuras.tex
+INPUT 10_lista-de-figuras.tex
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
+INPUT .\11_lista-de-tabelas.tex
+INPUT .\11_lista-de-tabelas.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\11_lista-de-tabelas.aux
+INPUT .\11_lista-de-tabelas.tex
+INPUT .\11_lista-de-tabelas.tex
+INPUT 11_lista-de-tabelas.tex
+INPUT .\12_lista-de-abreviaturas-e-siglas.tex
+INPUT .\12_lista-de-abreviaturas-e-siglas.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\12_lista-de-abreviaturas-e-siglas.aux
+INPUT .\12_lista-de-abreviaturas-e-siglas.tex
+INPUT .\12_lista-de-abreviaturas-e-siglas.tex
+INPUT 12_lista-de-abreviaturas-e-siglas.tex
+INPUT .\13_lista-de-símbolos.tex
+INPUT .\13_lista-de-símbolos.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\13_lista-de-símbolos.aux
+INPUT .\13_lista-de-símbolos.tex
+INPUT .\13_lista-de-símbolos.tex
+INPUT 13_lista-de-símbolos.tex
+INPUT .\14_sumário.tex
+INPUT .\14_sumário.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\14_sumário.aux
+INPUT .\14_sumário.tex
+INPUT .\14_sumário.tex
+INPUT 14_sumário.tex
+INPUT .\15_introducao.tex
+INPUT .\15_introducao.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\15_introducao.aux
+INPUT .\15_introducao.tex
+INPUT .\15_introducao.tex
+INPUT 15_introducao.tex
+INPUT .\16_desenvolvimento.tex
+INPUT .\16_desenvolvimento.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\16_desenvolvimento.aux
+INPUT .\16_desenvolvimento.tex
+INPUT .\16_desenvolvimento.tex
+INPUT 16_desenvolvimento.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
+INPUT .\18_conclusão.tex
+INPUT .\18_conclusão.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
+INPUT .\18_conclusão.tex
+INPUT .\18_conclusão.tex
+INPUT 18_conclusão.tex
+INPUT .\19_referencias.tex
+INPUT .\19_referencias.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
+INPUT .\19_referencias.tex
+INPUT .\19_referencias.tex
+INPUT 19_referencias.tex
+INPUT .\21_glossario.tex
+INPUT .\21_glossario.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\21_glossario.aux
+INPUT .\21_glossario.tex
+INPUT .\21_glossario.tex
+INPUT 21_glossario.tex
+INPUT .\22_apêndice.tex
+INPUT .\22_apêndice.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\22_apêndice.aux
+INPUT .\22_apêndice.tex
+INPUT .\22_apêndice.tex
+INPUT 22_apêndice.tex
+INPUT .\23_anexo.tex
+INPUT .\23_anexo.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\23_anexo.aux
+INPUT .\23_anexo.tex
+INPUT .\23_anexo.tex
+INPUT 23_anexo.tex
+INPUT .\24_índice.tex
+INPUT .\24_índice.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\24_índice.aux
+INPUT .\24_índice.tex
+INPUT .\24_índice.tex
+INPUT 24_índice.tex
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.aux
+INPUT c:\TCC\ESCRITA TCC\build\1_capa.aux
+INPUT c:\TCC\ESCRITA TCC\build\1_capa.aux
+INPUT c:\TCC\ESCRITA TCC\build\1_capa.aux
+INPUT c:\TCC\ESCRITA TCC\build\2_folha-de-rosto.aux
+INPUT c:\TCC\ESCRITA TCC\build\2_folha-de-rosto.aux
+INPUT c:\TCC\ESCRITA TCC\build\2_folha-de-rosto.aux
+INPUT c:\TCC\ESCRITA TCC\build\3_ficha-catalografica.aux
+INPUT c:\TCC\ESCRITA TCC\build\3_ficha-catalografica.aux
+INPUT c:\TCC\ESCRITA TCC\build\3_ficha-catalografica.aux
+INPUT c:\TCC\ESCRITA TCC\build\4_folha-de-aprovação.aux
+INPUT c:\TCC\ESCRITA TCC\build\4_folha-de-aprovação.aux
+INPUT c:\TCC\ESCRITA TCC\build\4_folha-de-aprovação.aux
+INPUT c:\TCC\ESCRITA TCC\build\5_dedicatória.aux
+INPUT c:\TCC\ESCRITA TCC\build\5_dedicatória.aux
+INPUT c:\TCC\ESCRITA TCC\build\5_dedicatória.aux
+INPUT c:\TCC\ESCRITA TCC\build\6_agradecimentos.aux
+INPUT c:\TCC\ESCRITA TCC\build\6_agradecimentos.aux
+INPUT c:\TCC\ESCRITA TCC\build\6_agradecimentos.aux
+INPUT c:\TCC\ESCRITA TCC\build\7_epígrafe.aux
+INPUT c:\TCC\ESCRITA TCC\build\7_epígrafe.aux
+INPUT c:\TCC\ESCRITA TCC\build\7_epígrafe.aux
+INPUT c:\TCC\ESCRITA TCC\build\8_resumo.aux
+INPUT c:\TCC\ESCRITA TCC\build\8_resumo.aux
+INPUT c:\TCC\ESCRITA TCC\build\8_resumo.aux
+INPUT c:\TCC\ESCRITA TCC\build\9_abstract.aux
+INPUT c:\TCC\ESCRITA TCC\build\9_abstract.aux
+INPUT c:\TCC\ESCRITA TCC\build\9_abstract.aux
+INPUT c:\TCC\ESCRITA TCC\build\10_lista-de-figuras.aux
+INPUT c:\TCC\ESCRITA TCC\build\10_lista-de-figuras.aux
+INPUT c:\TCC\ESCRITA TCC\build\10_lista-de-figuras.aux
+INPUT c:\TCC\ESCRITA TCC\build\11_lista-de-tabelas.aux
+INPUT c:\TCC\ESCRITA TCC\build\11_lista-de-tabelas.aux
+INPUT c:\TCC\ESCRITA TCC\build\11_lista-de-tabelas.aux
+INPUT c:\TCC\ESCRITA TCC\build\12_lista-de-abreviaturas-e-siglas.aux
+INPUT c:\TCC\ESCRITA TCC\build\12_lista-de-abreviaturas-e-siglas.aux
+INPUT c:\TCC\ESCRITA TCC\build\12_lista-de-abreviaturas-e-siglas.aux
+INPUT c:\TCC\ESCRITA TCC\build\13_lista-de-símbolos.aux
+INPUT c:\TCC\ESCRITA TCC\build\13_lista-de-símbolos.aux
+INPUT c:\TCC\ESCRITA TCC\build\13_lista-de-símbolos.aux
+INPUT c:\TCC\ESCRITA TCC\build\14_sumário.aux
+INPUT c:\TCC\ESCRITA TCC\build\14_sumário.aux
+INPUT c:\TCC\ESCRITA TCC\build\14_sumário.aux
+INPUT c:\TCC\ESCRITA TCC\build\15_introducao.aux
+INPUT c:\TCC\ESCRITA TCC\build\15_introducao.aux
+INPUT c:\TCC\ESCRITA TCC\build\15_introducao.aux
+INPUT c:\TCC\ESCRITA TCC\build\16_desenvolvimento.aux
+INPUT c:\TCC\ESCRITA TCC\build\16_desenvolvimento.aux
+INPUT c:\TCC\ESCRITA TCC\build\16_desenvolvimento.aux
+INPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
+INPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
+INPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
+INPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
+INPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
+INPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
+INPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
+INPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
+INPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
+INPUT c:\TCC\ESCRITA TCC\build\21_glossario.aux
+INPUT c:\TCC\ESCRITA TCC\build\21_glossario.aux
+INPUT c:\TCC\ESCRITA TCC\build\21_glossario.aux
+INPUT c:\TCC\ESCRITA TCC\build\22_apêndice.aux
+INPUT c:\TCC\ESCRITA TCC\build\22_apêndice.aux
+INPUT c:\TCC\ESCRITA TCC\build\22_apêndice.aux
+INPUT c:\TCC\ESCRITA TCC\build\23_anexo.aux
+INPUT c:\TCC\ESCRITA TCC\build\23_anexo.aux
+INPUT c:\TCC\ESCRITA TCC\build\23_anexo.aux
+INPUT c:\TCC\ESCRITA TCC\build\24_índice.aux
+INPUT c:\TCC\ESCRITA TCC\build\24_índice.aux
+INPUT c:\TCC\ESCRITA TCC\build\24_índice.aux
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.out
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.out
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.run.xml
+OUTPUT c:\TCC\ESCRITA TCC\build\0_TCC.run.xml

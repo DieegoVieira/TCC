@@ -1,0 +1,83 @@
+\documentclass[a4paper, 12pt]{article}
+
+    %% -- Configuração da página:
+
+\setlength{\headheight}{14.49998pt}
+\addtolength{\topmargin}{-2.49998pt} 
+    
+\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=3cm]{geometry}
+
+\usepackage{changepage} % Pacote para ajustar largura de texto
+
+\usepackage{fontspec} 
+         \setmainfont{Arial} % define a Arial como fonte padrão
+
+\usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \fancyhf{}
+    \fancyhead[R]{\thepage}
+    \renewcommand{\headrulewidth}{0pt} % configuração do cabeçalho
+
+\setcounter{page}{0} % definir a contagem de páginas
+    
+\usepackage{setspace} 
+
+\usepackage{xcolor}
+    \definecolor{exemplo}{HTML}{538135} % utilização de cor na fonte
+
+\usepackage{microtype} % melhora a tipografia
+
+\usepackage{hyphenat} % evita a quebra de palavras
+
+\usepackage{ragged2e} % pacote para alinhar
+
+\usepackage{microtype} % pacote para melhorar a tipografia
+    %% -- Comandos predefinidos:
+
+\newcommand{\citdireta}{\fontsize{11}{11}\selectfont} % comando para fazer citação direta
+
+\newcommand{\Versal}{\fontsize{14}{14} \selectfont\fontspec{TeX Gyre Heros}} % comando p/ usar a fonte versalete
+
+\newcommand{\Versali}{\fontsize{12}{12} \selectfont\fontspec{TeX Gyre Heros}} % comando p/ usar a fonte versalete
+
+    %% -- Pacotes para determinados usos:
+
+\usepackage{graphicx} % imagens
+
+\usepackage{wrapfig} % imagem ao lado do texto
+
+\usepackage{hyperref} % pacote para citar links
+    
+\setlength{\tabcolsep}{2pt} % espaço entre as colunas
+
+    %% -- Começo do documento:
+\input{configuracao_referencias}
+\begin{document}
+
+
+\include{1_capa}
+\include{2_folha-de-rosto}
+\include{3_ficha-catalografica}
+\include{4_folha-de-aprovação}
+\include{5_dedicatória}
+\include{6_agradecimentos}
+\include{7_epígrafe}
+\include{8_resumo}
+\include{9_abstract}
+\include{10_lista-de-figuras}
+\include{11_lista-de-tabelas}
+\include{12_lista-de-abreviaturas-e-siglas}
+\include{13_lista-de-símbolos}
+\include{14_sumário}
+\include{15_introducao}
+\include{16_desenvolvimento}
+\include{17_desenvolvimento2}
+\include{18_conclusão}
+\include{19_referencias}
+%\include{20_referências2}
+\include{21_glossario}
+\include{22_apêndice}
+\include{23_anexo}
+\include{24_índice}
+
+\end{document}

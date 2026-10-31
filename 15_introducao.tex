@@ -1,0 +1,70 @@
+% Introdução — versão 1, 30/10/2026.
+% Título mantido: Avaliação da Viabilidade da Detecção e Contagem Automática
+% de Instrumentos Cirúrgicos por Meio de Visão Computacional.
+% Requer configuracao_referencias.tex no preâmbulo e referencias_tcc.bib.
+% Não contém resultados fictícios. Pendências: controle_escrita_tcc.md.
+\begingroup
+\justifying
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+\onehalfspacing
+
+\phantomsection
+\addcontentsline{toc}{section}{1 INTRODUÇÃO}
+\noindent\textbf{1 INTRODUÇÃO}\par
+\vspace{\baselineskip}
+
+A conferência de instrumentos cirúrgicos integra os cuidados relacionados à segurança dos procedimentos operatórios. As orientações da Organização Mundial da Saúde incluem a contagem de instrumentos, compressas e agulhas entre as medidas destinadas a prevenir a retenção inadvertida de materiais no paciente \parencite{oms2009}. No contexto brasileiro, o Programa Nacional de Segurança do Paciente também situa a segurança cirúrgica entre as ações voltadas à melhoria da qualidade do cuidado \parencite{brasil2014}. Esses documentos fornecem o contexto assistencial desta pesquisa, cuja investigação se concentra em uma tarefa computacional: identificar e contar instrumentos visíveis em fotografias.
+
+A possibilidade de extrair essas informações de imagens motiva o estudo de ferramentas que possam oferecer apoio à conferência. Uma fotografia, entretanto, registra apenas o que está visível no enquadramento. Por isso, contar os objetos representados em uma imagem não equivale a verificar, por si só, a integridade de uma caixa cirúrgica nem a acompanhar todos os materiais utilizados durante um procedimento. Neste trabalho, a contagem automática é tratada como uma estimativa a ser confrontada com anotações de referência, sem pressupor substituição da conferência profissional ou dos protocolos assistenciais.
+
+Entre as abordagens de visão computacional aplicáveis a essa tarefa está a detecção de objetos, que permite localizar instâncias e atribuir categorias a elas. A proposta original da família \textit{You Only Look Once} (YOLO) reúne a predição de caixas delimitadoras e de classes em uma única rede neural, processando a imagem completa em uma avaliação \parencite{redmon2016}. Para a contagem baseada em detecção, cada instância aceita pelo sistema contribui para o total da imagem e para o total da classe à qual foi atribuída. Assim, objetos não detectados, detecções duplicadas e classificações incorretas podem produzir erros de naturezas distintas.
+
+A literatura apresenta aplicações dessa abordagem ao reconhecimento de instrumentos cirúrgicos. \textcite{ran2023} investigaram modificações no YOLOv7x para lidar com dificuldades como semelhança visual, disposição densa dos objetos e variações de iluminação. \textcite{jiang2023}, por sua vez, avaliaram uma versão modificada do YOLOv5 em imagens de instrumentos, incluindo situações com sobreposição. Esses estudos sustentam a pertinência de investigar detectores dessa família para o problema, mas seus resultados se referem aos respectivos conjuntos de dados e protocolos. Eles não permitem antecipar o desempenho em outras coleções de instrumentos ou condições de aquisição.
+
+Neste trabalho, o recorte de aplicação compreende instrumentos selecionados a partir de uma caixa de apendicectomia utilizada como referência. O conjunto de dados reúne imagens provenientes de bases disponíveis na internet e fotografias de instrumentos fornecidas por uma enfermeira do Hospital Universitário da Universidade Estadual de Londrina (HU-UEL). A preparação dessas fontes envolve revisão das anotações, seleção dos objetos pertencentes ao escopo, padronização das classes e tratamento de imagens duplicadas ou relacionadas. A reunião das duas origens amplia o material disponível para o estudo, mas sua representatividade e sua adequação à avaliação precisam ser examinadas, em vez de presumidas.
+
+\vspace{\baselineskip}
+\phantomsection
+\addcontentsline{toc}{subsection}{1.1 Problema de pesquisa e justificativa}
+\noindent\textbf{1.1 Problema de pesquisa e justificativa}\par
+\vspace{\baselineskip}
+
+A questão que orienta a pesquisa é: em que medida um modelo da família YOLO permite detectar e contar automaticamente os instrumentos selecionados, em fotografias independentes do treinamento, considerando os erros de localização, classificação e contagem e as condições representadas no conjunto de avaliação?
+
+A análise distingue duas formas de representação dos objetos. Na primeira, os instrumentos são agrupados em categorias gerais: pinças, tesouras, afastadores, porta-agulhas, cabos de bisturi, bicos de aspiração e cúpulas. Na segunda, são representados por classes específicas, com distinção entre variantes retas e curvas quando prevista na taxonomia. Diferenças de tamanho permanecem na mesma classe. A contagem com categorias gerais constitui a prioridade experimental, enquanto a classificação específica permite examinar dificuldades que podem ficar ocultas no agrupamento.
+
+Essa distinção é relevante porque uma contagem total correta pode coexistir com erros de identificação. Por exemplo, atribuir a classe incorreta a um instrumento pode preservar o total de objetos detectados e, ao mesmo tempo, produzir uma contagem incorreta por classe. Além disso, uma omissão e uma detecção indevida podem se compensar numericamente. Por esse motivo, a avaliação proposta considera conjuntamente a qualidade das detecções, o erro de contagem e a análise dos casos de falha, evitando interpretar a concordância do total como evidência suficiente de reconhecimento correto.
+
+A contribuição pretendida é uma avaliação experimental documentada, apoiada em dados revisados e em critérios explícitos de seleção e anotação. A organização das imagens e a rastreabilidade das transformações também integram essa contribuição, pois permitem relacionar os resultados às condições em que o modelo foi desenvolvido. A pesquisa não parte da premissa de que a combinação de fontes, o uso de um modelo maior ou o agrupamento de classes produzirá necessariamente melhor desempenho; essas escolhas precisam ser examinadas à luz dos experimentos efetivamente realizados.
+
+\vspace{\baselineskip}
+\phantomsection
+\addcontentsline{toc}{subsection}{1.2 Objetivos}
+\noindent\textbf{1.2 Objetivos}\par
+\vspace{\baselineskip}
+
+O objetivo geral é avaliar a viabilidade técnica da detecção e da contagem automática de instrumentos cirúrgicos selecionados a partir da caixa de apendicectomia de referência, por meio de um modelo da família YOLO, considerando o desempenho e as limitações observadas nas imagens de avaliação.
+
+Para alcançar esse objetivo, estabelecem-se os seguintes objetivos específicos:
+\begin{list}{\alph{enumi})}{\usecounter{enumi}\setlength{\leftmargin}{1.25cm}\setlength{\labelsep}{0.5em}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}\setlength{\topsep}{0pt}}
+\item organizar e revisar as imagens provenientes da internet e do HU-UEL, padronizando as classes e as anotações em caixas delimitadoras;
+\item preparar conjuntos de treinamento, validação e teste com controle de duplicatas e de imagens relacionadas, registrando a distribuição por classe e por origem;
+\item treinar e avaliar a detecção com categorias gerais, mantendo uma representação específica das anotações para a investigação complementar da identificação dos instrumentos;
+\item quantificar o desempenho de detecção e os erros de contagem total e por classe, incluindo a frequência de imagens com contagem correta;
+\item analisar os casos de falha e os recursos computacionais empregados, delimitando as condições em que os resultados sustentam a viabilidade da abordagem.
+\end{list}
+
+\vspace{\baselineskip}
+\phantomsection
+\addcontentsline{toc}{subsection}{1.3 Delimitação do estudo}
+\noindent\textbf{1.3 Delimitação do estudo}\par
+\vspace{\baselineskip}
+
+O estudo utiliza fotografias estáticas e anotações por caixas delimitadoras, com foco na localização, na identificação e na contagem dos objetos presentes nas imagens. A versão inicialmente selecionada para os experimentos é o YOLO26. O uso de variantes com diferentes capacidades e a avaliação com classes específicas serão documentados de acordo com as execuções concluídas. A viabilidade será discutida a partir das evidências obtidas, sem adotar como resultado uma meta de desempenho previamente desejada.
+
+A seleção das classes depende da correspondência com os instrumentos de referência e da disponibilidade de imagens. A pinça Collin coração não integra a configuração inicial por ausência de exemplos, e as pinças anatômicas contam inicialmente apenas com imagens provenientes da internet. A cúpula integra a contagem entre os objetos de interesse, e os porta-agulhas constituem categoria própria. Essas delimitações impedem que os resultados sejam interpretados como validação de todos os componentes da caixa ou de todas as classes no contexto do HU-UEL.
+
+As fotografias hospitalares disponíveis incluem instrumentos isolados e alguns agrupamentos de objetos. O desempenho nesses registros não será interpretado automaticamente como desempenho em bandejas completas, cenas com oclusão acentuada ou acompanhamento de procedimentos cirúrgicos. Essas condições exigem exemplos e avaliações correspondentes. Do mesmo modo, não se pretende demonstrar redução de eventos adversos, benefício clínico ou substituição de profissionais, mas estabelecer as possibilidades e limitações técnicas da abordagem no recorte investigado.
+
+\endgroup
