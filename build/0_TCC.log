@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.10.31)  31 OCT 2026 23:59
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.10.31)  1 NOV 2026 05:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -689,26 +689,26 @@ Package babel Info: 'brazilian' activates 'portuges' shorthands.
  (c:\TCC\ESCRITA TCC\build\2_folha-de-rosto.aux) (c:\TCC\ESCRITA TCC\build\3_ficha-catalografica.aux) (c:\TCC\ESCRITA TCC\build\4_folha-de-aprovação.aux) (c:\TCC\ESCRITA TCC\build\5_dedicatória.aux) (c:\TCC\ESCRITA TCC\build\6_agradecimentos.aux) (c:\TCC\ESCRITA TCC\build\7_epígrafe.aux) (c:\TCC\ESCRITA TCC\build\8_resumo.aux) (c:\TCC\ESCRITA TCC\build\9_abstract.aux) (c:\TCC\ESCRITA TCC\build\10_lista-de-figuras.aux) (c:\TCC\ESCRITA TCC\build\11_lista-de-tabelas.aux) (c:\TCC\ESCRITA TCC\build\12_lista-de-abreviaturas-e-siglas.aux) (c:\TCC\ESCRITA TCC\build\13_lista-de-símbolos.aux) (c:\TCC\ESCRITA TCC\build\14_sumário.aux) (c:\TCC\ESCRITA TCC\build\15_introducao.aux) (c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux) (c:\TCC\ESCRITA TCC\build\17_metodologia.aux) (c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux) (c:\TCC\ESCRITA TCC\build\19_referencias.aux) (c:\TCC\ESCRITA TCC\build\21_glossario.aux) (c:\TCC\ESCRITA TCC\build\22_apêndice.aux) (c:\TCC\ESCRITA TCC\build\23_anexo.aux) (c:\TCC\ESCRITA TCC\build\24_índice.aux))
 \openout1 = `0_TCC.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -751,63 +751,63 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 60.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 60.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 60.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 60.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 60.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 60.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 60.
-LaTeX Font Info:    Redeclaring math accent \check on input line 60.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 60.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 60.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 60.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 60.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 60.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 61.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 61.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 61.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 61.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 61.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 61.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 61.
+LaTeX Font Info:    Redeclaring math accent \check on input line 61.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 61.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 61.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 61.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 61.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 61.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 61.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 61.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 61.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 61.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 61.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 61.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 61.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 61.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 61.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 61.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 61.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 60.
+(Font)              `operators' in the math version `normal' on input line 61.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/Arial(0)/m/n on input line 60.
+(Font)                  OT1/cmr/m/n --> TU/Arial(0)/m/n on input line 61.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 60.
+(Font)              `operators' in the math version `bold' on input line 61.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/m/n on input line 60.
+(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/m/n on input line 61.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/m/n on input line 60.
+(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/m/n on input line 61.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/Arial(0)/m/it on input line 60.
+(Font)                  OT1/cmr/m/it --> TU/Arial(0)/m/it on input line 61.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/b/n on input line 60.
+(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/b/n on input line 61.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 60.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 61.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 60.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 61.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/b/n on input line 60.
+(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/b/n on input line 61.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/Arial(0)/b/it on input line 60.
+(Font)                  OT1/cmr/bx/it --> TU/Arial(0)/b/it on input line 61.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 60.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 61.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 60.
-LaTeX Info: Redefining \microtypecontext on input line 60.
-Package microtype Info: Applying patch `item' on input line 60.
-Package microtype Info: Applying patch `toc' on input line 60.
-Package microtype Info: Applying patch `eqnum' on input line 60.
-Package microtype Info: Applying patch `footnote' on input line 60.
-Package microtype Info: Applying patch `verbatim' on input line 60.
-LaTeX Info: Redefining \microtypesetup on input line 60.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 61.
+LaTeX Info: Redefining \microtypecontext on input line 61.
+Package microtype Info: Applying patch `item' on input line 61.
+Package microtype Info: Applying patch `toc' on input line 61.
+Package microtype Info: Applying patch `eqnum' on input line 61.
+Package microtype Info: Applying patch `footnote' on input line 61.
+Package microtype Info: Applying patch `verbatim' on input line 61.
+LaTeX Info: Redefining \microtypesetup on input line 61.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -817,7 +817,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Arial' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package hyperref Info: Link coloring OFF on input line 60.
+Package hyperref Info: Link coloring OFF on input line 61.
 (c:\TCC\ESCRITA TCC\build\0_TCC.out) (c:\TCC\ESCRITA TCC\build\0_TCC.out)
 \@outlinefile=\write4
 \openout4 = `0_TCC.out'.
@@ -869,8 +869,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file '0_TCC.bbl' found.
  (c:\TCC\ESCRITA TCC\build\0_TCC.bbl)
-Package biblatex Info: Reference section=0 on input line 60.
-Package biblatex Info: Reference segment=0 on input line 60.
+Package biblatex Info: Reference section=0 on input line 61.
+Package biblatex Info: Reference segment=0 on input line 61.
 Package babel Info: Main language set to 'brazilian'.
 \openout2 = `1_capa.aux'.
 
@@ -1080,18 +1080,16 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
 
 
 ]
-Overfull \hbox (5.08789pt too wide) in paragraph at lines 39--40
-[]\TU/TeXGyreHeros(0)/m/n/12 A contribuição pretendida é uma avaliação experimental documentada, apoi-
- []
-
-[15] [16]) [17]
+File: figuras/exemplo_caixa_delimitadora_hu.png Graphic file (type bmp)
+<figuras/exemplo_caixa_delimitadora_hu.png>
+ [15] [16] [17] [18]) [19]
 \openout2 = `16_fundamentacao_teorica.aux'.
 
- (16_fundamentacao_teorica.tex [18
+ (16_fundamentacao_teorica.tex [20
 
 
 
-] [19] [20] [21] [22] [23]
+] [21] [22] [23] [24] [25]
 Underfull \hbox (badness 10000) in paragraph at lines 151--151
 []\TU/Arial(0)/m/n/10.95 Não informa diretamente
  []
@@ -1111,21 +1109,21 @@ Underfull \hbox (badness 2653) in paragraph at lines 155--155
 \TU/Arial(0)/m/n/10.95 etapas incluídas na medi-
  []
 
-) [24]
+) [26]
 \openout2 = `17_metodologia.aux'.
 
- (17_metodologia.tex [25
+ (17_metodologia.tex [27
 
 
 
-] [26] [27] [28] [29] [30] [31] [32]) [33]
+] [28] [29] [30] [31] [32] [33] [34]) [35]
 \openout2 = `18_resultados_discussao.aux'.
 
- (18_resultados_discussao.tex [34
+ (18_resultados_discussao.tex [36
 
 
 
-] [35]) [36]
+] [37]) [38]
 \openout2 = `19_referencias.aux'.
 
  (19_referencias.tex
@@ -1133,35 +1131,35 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [37
+ [39
 
 
 
-]) [38]
+]) [40]
 \openout2 = `21_glossario.aux'.
 
- (21_glossario.tex) [39
+ (21_glossario.tex) [41
 
 
 
 ]
 \openout2 = `22_apêndice.aux'.
 
- (22_apêndice.tex) [40
+ (22_apêndice.tex) [42
 
 
 
 ]
 \openout2 = `23_anexo.aux'.
 
- (23_anexo.tex) [41
+ (23_anexo.tex) [43
 
 
 
 ]
 \openout2 = `24_índice.aux'.
 
- (24_índice.tex) [42
+ (24_índice.tex) [44
 
 
 
@@ -1171,18 +1169,18 @@ LaTeX2e <2026-06-01>
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `0_TCC.out' has not changed.
-(rerunfilecheck)             Checksum: F0670217F5006A4B64DBED8748A103F9;6678.
+(rerunfilecheck)             Checksum: 96945DCB56369C76D09327B556ED2A54;6679.
 Package logreq Info: Writing requests to '0_TCC.run.xml'.
 \openout1 = `0_TCC.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26372 strings out of 402511
- 523760 string characters out of 5435977
- 1575163 words of memory out of 5000000
- 55109 multiletter control sequences out of 15000+600000
+ 26412 strings out of 402511
+ 525093 string characters out of 5435977
+ 1572926 words of memory out of 5000000
+ 55147 multiletter control sequences out of 15000+600000
  635179 words of font info for 114 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  83i,12n,98p,1023b,6992s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on c:\TCC\ESCRITA TCC\build\0_TCC.xdv (43 pages, 643420 bytes).
+Output written on c:\TCC\ESCRITA TCC\build\0_TCC.xdv (45 pages, 699456 bytes).

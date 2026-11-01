@@ -426,6 +426,8 @@ OUTPUT c:\TCC\ESCRITA TCC\build\15_introducao.aux
 INPUT .\15_introducao.tex
 INPUT .\15_introducao.tex
 INPUT 15_introducao.tex
+INPUT .\figuras\exemplo_caixa_delimitadora_hu.png
+INPUT .\figuras\exemplo_caixa_delimitadora_hu.png
 INPUT .\16_fundamentacao_teorica.tex
 INPUT .\16_fundamentacao_teorica.tex
 OUTPUT c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux

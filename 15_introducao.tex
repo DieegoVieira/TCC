@@ -1,28 +1,52 @@
-% Introdução — versão 1, 30/10/2026.
-% Título mantido: Avaliação da Viabilidade da Detecção e Contagem Automática
-% de Instrumentos Cirúrgicos por Meio de Visão Computacional.
-% Requer configuracao_referencias.tex no preâmbulo e referencias_tcc.bib.
-% Não contém resultados fictícios. Pendências: controle_escrita_tcc.md.
+% Introdução — versão 2, 01/11/2026.
+% Preserva o padrão de títulos do template UENP utilizado no projeto.
+% Bibliografias: referencias_tcc.bib, referencias_fundamentacao.bib
+% e referencias_introducao_v2.bib. Instruções em LEIA_ME_INTRODUCAO_V2.md.
 \begingroup
 \justifying
 \setlength{\parindent}{1.25cm}
 \setlength{\parskip}{0pt}
 \onehalfspacing
+\setlength{\emergencystretch}{1em}
 
 \phantomsection
 \addcontentsline{toc}{section}{1 INTRODUÇÃO}
 \noindent\textbf{1 INTRODUÇÃO}\par
 \vspace{\baselineskip}
 
-A conferência de instrumentos cirúrgicos integra os cuidados relacionados à segurança dos procedimentos operatórios. As orientações da Organização Mundial da Saúde incluem a contagem de instrumentos, compressas e agulhas entre as medidas destinadas a prevenir a retenção inadvertida de materiais no paciente \parencite{oms2009}. No contexto brasileiro, o Programa Nacional de Segurança do Paciente também situa a segurança cirúrgica entre as ações voltadas à melhoria da qualidade do cuidado \parencite{brasil2014}. Esses documentos fornecem o contexto assistencial desta pesquisa, cuja investigação se concentra em uma tarefa computacional: identificar e contar instrumentos visíveis em fotografias.
+Antes que uma cirurgia seja realizada, os instrumentos necessários precisam estar disponíveis, organizados e conferidos. Após o uso, esses materiais retornam a um fluxo de recebimento, limpeza, preparo e esterilização que permite sua utilização em novos procedimentos. Nesse percurso, reconhecer cada peça e verificar as quantidades são tarefas que conectam o trabalho de diferentes profissionais. No Hospital Universitário da Universidade Estadual de Londrina (HU-UEL), o estudo de \textcite{moreto2025} descreve conferências tanto na recepção do material utilizado quanto no preparo dos conjuntos que serão encaminhados à esterilização.
 
-A possibilidade de extrair essas informações de imagens motiva o estudo de ferramentas que possam oferecer apoio à conferência. Uma fotografia, entretanto, registra apenas o que está visível no enquadramento. Por isso, contar os objetos representados em uma imagem não equivale a verificar, por si só, a integridade de uma caixa cirúrgica nem a acompanhar todos os materiais utilizados durante um procedimento. Neste trabalho, a contagem automática é tratada como uma estimativa a ser confrontada com anotações de referência, sem pressupor substituição da conferência profissional ou dos protocolos assistenciais.
+Esses conjuntos são frequentemente organizados em caixas cirúrgicas: recipientes que reúnem instrumentos selecionados para atender a determinado procedimento ou especialidade. Cada caixa possui uma composição de tipos e quantidades definida pelo serviço. Assim, uma caixa destinada a uma cirurgia cardíaca pode reunir instrumentos diferentes daqueles utilizados em neurocirurgia ou em uma apendicectomia, procedimento de retirada do apêndice. A caixa de apendicectomia adotada como referência nesta pesquisa delimita os objetos de interesse, entre eles pinças, tesouras e afastadores. Essa delimitação permite estudar um conjunto concreto de materiais, associado a uma necessidade hospitalar, em vez de tentar reconhecer indiscriminadamente todos os instrumentos existentes.
 
-Entre as abordagens de visão computacional aplicáveis a essa tarefa está a detecção de objetos, que permite localizar instâncias e atribuir categorias a elas. A proposta original da família \textit{You Only Look Once} (YOLO) reúne a predição de caixas delimitadoras e de classes em uma única rede neural, processando a imagem completa em uma avaliação \parencite{redmon2016}. Para a contagem baseada em detecção, cada instância aceita pelo sistema contribui para o total da imagem e para o total da classe à qual foi atribuída. Assim, objetos não detectados, detecções duplicadas e classificações incorretas podem produzir erros de naturezas distintas.
+A conferência desses materiais tem importância tanto para a organização do serviço quanto para a segurança do cuidado. Durante a cirurgia, a contagem de instrumentos, compressas e agulhas integra as medidas recomendadas pela Organização Mundial da Saúde para prevenir que materiais permaneçam inadvertidamente no paciente \parencite{oms2009}. No Brasil, a segurança cirúrgica também faz parte das ações do Programa Nacional de Segurança do Paciente \parencite{brasil2014}. A conferência realizada no processamento dos instrumentos e a contagem durante a operação, contudo, correspondem a momentos diferentes. O presente estudo se concentra no primeiro contexto: o apoio à identificação e à contagem de instrumentos fora do paciente, a partir de fotografias.
 
-A literatura apresenta aplicações dessa abordagem ao reconhecimento de instrumentos cirúrgicos. \textcite{ran2023} investigaram modificações no YOLOv7x para lidar com dificuldades como semelhança visual, disposição densa dos objetos e variações de iluminação. \textcite{jiang2023}, por sua vez, avaliaram uma versão modificada do YOLOv5 em imagens de instrumentos, incluindo situações com sobreposição. Esses estudos sustentam a pertinência de investigar detectores dessa família para o problema, mas seus resultados se referem aos respectivos conjuntos de dados e protocolos. Eles não permitem antecipar o desempenho em outras coleções de instrumentos ou condições de aquisição.
+Esse contexto envolve o Centro de Material e Esterilização (CME), setor responsável pelo processamento dos materiais utilizados na assistência. No fluxo descrito por \textcite{moreto2025}, o expurgo recebe os instrumentos utilizados, que passam pela conferência e pela limpeza; na área de preparo, outra conferência acompanha a organização e o fechamento das caixas. O registro individual das peças nesses pontos evidencia uma tarefa repetitiva que motiva a investigação de recursos de apoio. Nesta pesquisa, a aplicação é pretendida em ambos os ambientes, e as fotografias hospitalares foram obtidas tanto no expurgo quanto na área de preparo. A questão é saber se um computador pode extrair de uma imagem informações suficientemente confiáveis sobre quais instrumentos estão presentes e em que quantidade.
 
-Neste trabalho, o recorte de aplicação compreende instrumentos selecionados a partir de uma caixa de apendicectomia utilizada como referência. O conjunto de dados reúne imagens provenientes de bases disponíveis na internet e fotografias de instrumentos fornecidas por uma enfermeira do Hospital Universitário da Universidade Estadual de Londrina (HU-UEL). A preparação dessas fontes envolve revisão das anotações, seleção dos objetos pertencentes ao escopo, padronização das classes e tratamento de imagens duplicadas ou relacionadas. A reunião das duas origens amplia o material disponível para o estudo, mas sua representatividade e sua adequação à avaliação precisam ser examinadas, em vez de presumidas.
+A área da computação que estuda a obtenção de informações a partir de imagens é chamada de visão computacional. Suas aplicações incluem o reconhecimento de objetos e a análise de imagens médicas, entre outras tarefas em que informações visuais precisam ser interpretadas. Uma das abordagens utilizadas é o aprendizado de máquina: em vez de escrever uma regra para cada possível aparência de um objeto, são apresentados exemplos a um modelo computacional, que ajusta seu funcionamento para reconhecer padrões. As redes neurais são modelos formados por operações interligadas, com valores ajustáveis durante esse aprendizado. Quando utilizam múltiplas camadas de processamento para aprender representações dos dados, integram o campo do aprendizado profundo \parencite{goodfellow2016}.
+
+Para a conferência de instrumentos, não basta reconhecer que uma fotografia contém uma pinça. É necessário localizar cada objeto individual, inclusive quando vários aparecem juntos. Essa tarefa é chamada de detecção de objetos. Uma forma usual de apresentar seu resultado é desenhar um retângulo ao redor de cada objeto e associá-lo a uma classe, isto é, à categoria que o identifica. O retângulo recebe o nome de caixa delimitadora. Quando cada instrumento é localizado uma única vez e recebe a identificação correta, essas detecções podem ser somadas para obter a quantidade total e a quantidade por categoria.
+
+% A figura e sua chamada só aparecem quando a fotografia revisada estiver disponível.
+% Inserir imagem real anotada, nunca uma saída fictícia apresentada como predição.
+\IfFileExists{figuras/exemplo_caixa_delimitadora_hu.png}{%
+A Figura~\ref{fig:intro-caixa-delimitadora} exemplifica essa representação em uma fotografia do conjunto hospitalar. A marcação foi realizada para indicar o objeto de interesse e sua categoria.
+\begin{figure}[htbp]
+\centering
+\caption{Exemplo de instrumento identificado por uma caixa delimitadora}
+\label{fig:intro-caixa-delimitadora}
+\includegraphics[width=0.72\linewidth,height=0.30\textheight,keepaspectratio]{figuras/exemplo_caixa_delimitadora_hu.png}
+\par\smallskip
+{\footnotesize Fonte: elaboração própria, a partir de fotografia do conjunto HU-UEL (2026).\par}
+\end{figure}
+}{}
+
+Para aprender a realizar essa tarefa, o modelo recebe imagens acompanhadas de marcações que indicam a posição e a classe dos objetos. Essas marcações são as anotações de referência: exemplos revisados que orientam o aprendizado e permitem, posteriormente, comparar a resposta do modelo com os objetos efetivamente presentes na imagem. A qualidade desse material importa porque uma caixa mal posicionada, uma classe incorreta ou um instrumento não marcado pode comprometer o aprendizado e a avaliação. Por isso, preparar uma base de imagens envolve selecionar os exemplos, conferir as marcações e organizar nomes e categorias antes do treinamento.
+
+Entre os modelos desenvolvidos para detectar objetos estão o Faster R-CNN e os modelos da família \textit{You Only Look Once} (YOLO). No Faster R-CNN, o processamento inclui a proposta de regiões que podem conter objetos e a análise dessas regiões para classificá-los e ajustar sua localização \parencite{ren2015faster}. A proposta original do YOLO reúne a estimativa das posições e das classes em um processamento da imagem completa, com ênfase na rapidez da detecção \parencite{redmon2016}. Essas abordagens oferecem caminhos distintos para o mesmo problema; a escolha entre elas depende da aplicação, dos dados e dos recursos disponíveis.
+
+Neste estudo, foi selecionada a família YOLO por combinar a localização e a identificação dos objetos em uma solução que permite construir a contagem a partir das detecções. A escolha também encontra apoio em pesquisas sobre instrumentos cirúrgicos, como as de \textcite{ran2023} e \textcite{jiang2023}, que investigaram adaptações de versões anteriores dessa família. Seus resultados motivam a investigação, mas não antecipam o desempenho nas fotografias utilizadas aqui. O modelo adotado é o YOLO26n, variante compacta da família YOLO26. Essa família disponibiliza variantes de diferentes tamanhos, identificadas por n, s, m, l e x, com diferentes necessidades de processamento \parencite{ultralyticsYOLO26intro}. A opção inicial pela variante n considera a execução do treinamento no equipamento disponível, mantendo a qualidade das detecções como uma questão a ser avaliada experimentalmente.
+
+Essa avaliação exige separar o aprendizado da verificação de seus resultados. As imagens de treinamento são utilizadas para ajustar o modelo; as de validação permitem acompanhar o aprendizado e orientar escolhas de configuração; e as de teste são reservadas para avaliar o desempenho após essas escolhas. Também é necessário preparar as imagens para a entrada da rede. Fotografias de dimensões diferentes são redimensionadas e, quando necessário, recebem preenchimento nas bordas para se adequar ao tamanho de processamento adotado. Esse procedimento facilita a execução computacional, mas pode reduzir detalhes relevantes para distinguir instrumentos semelhantes. As decisões de preparação e avaliação, portanto, fazem parte do problema investigado, e não apenas da execução do programa.
 
 \vspace{\baselineskip}
 \phantomsection
@@ -30,13 +54,13 @@ Neste trabalho, o recorte de aplicação compreende instrumentos selecionados a 
 \noindent\textbf{1.1 Problema de pesquisa e justificativa}\par
 \vspace{\baselineskip}
 
-A questão que orienta a pesquisa é: em que medida um modelo da família YOLO permite detectar e contar automaticamente os instrumentos selecionados, em fotografias independentes do treinamento, considerando os erros de localização, classificação e contagem e as condições representadas no conjunto de avaliação?
+A possibilidade de contar instrumentos por imagens é atraente, mas seu uso depende de reconhecer os objetos apesar das variações presentes nas fotografias. Instrumentos metálicos podem produzir reflexos; peças diferentes podem ter formatos semelhantes; e um objeto pode esconder parte de outro. Essas condições dificultam a localização e a identificação, como discutido nos estudos de \textcite{ran2023} e \textcite{jiang2023}. Por isso, a existência de um detector capaz de reconhecer objetos em outras aplicações não é suficiente para concluir que ele atenderá à conferência pretendida no hospital.
 
-A análise distingue duas formas de representação dos objetos. Na primeira, os instrumentos são agrupados em categorias gerais: pinças, tesouras, afastadores, porta-agulhas, cabos de bisturi, bicos de aspiração e cúpulas. Na segunda, são representados por classes específicas, com distinção entre variantes retas e curvas quando prevista na taxonomia. Diferenças de tamanho permanecem na mesma classe. A contagem com categorias gerais constitui a prioridade experimental, enquanto a classificação específica permite examinar dificuldades que podem ficar ocultas no agrupamento.
+A pergunta que orienta esta pesquisa é: em que medida um modelo da família YOLO é tecnicamente viável para identificar e contar instrumentos selecionados da caixa de apendicectomia, nas condições representadas pelas fotografias de avaliação, visando ao apoio à conferência no expurgo e no preparo de caixas cirúrgicas?
 
-Essa distinção é relevante porque uma contagem total correta pode coexistir com erros de identificação. Por exemplo, atribuir a classe incorreta a um instrumento pode preservar o total de objetos detectados e, ao mesmo tempo, produzir uma contagem incorreta por classe. Além disso, uma omissão e uma detecção indevida podem se compensar numericamente. Por esse motivo, a avaliação proposta considera conjuntamente a qualidade das detecções, o erro de contagem e a análise dos casos de falha, evitando interpretar a concordância do total como evidência suficiente de reconhecimento correto.
+Neste contexto, avaliar a viabilidade significa examinar a qualidade das detecções, os erros de contagem, os recursos computacionais empregados e as situações em que o modelo apresenta dificuldades. Acertar somente o total de objetos não é suficiente. Em uma imagem com dois instrumentos, por exemplo, o modelo pode deixar de reconhecer um deles e marcar indevidamente outra região, produzindo duas detecções apesar do erro. Também pode localizar ambos e trocar suas classes. A análise precisa, portanto, considerar tanto o total quanto a identificação e a localização dos objetos que deram origem à contagem. Os indicadores e os procedimentos utilizados para essa análise são apresentados na metodologia.
 
-A contribuição pretendida é uma avaliação experimental documentada, apoiada em dados revisados e em critérios explícitos de seleção e anotação. A organização das imagens e a rastreabilidade das transformações também integram essa contribuição, pois permitem relacionar os resultados às condições em que o modelo foi desenvolvido. A pesquisa não parte da premissa de que a combinação de fontes, o uso de um modelo maior ou o agrupamento de classes produzirá necessariamente melhor desempenho; essas escolhas precisam ser examinadas à luz dos experimentos efetivamente realizados.
+A contribuição pretendida é oferecer evidências sobre as possibilidades e os limites dessa abordagem em um conjunto relacionado à rotina do HU-UEL. Para isso, foram reunidas imagens de bases disponíveis na internet e fotografias hospitalares, com revisão dos objetos e de suas anotações. A combinação dessas fontes fornece exemplos para o treinamento, enquanto a avaliação deve mostrar até que ponto o modelo consegue lidar com imagens que não foram utilizadas para ajustá-lo. O estudo trata a contagem automática como um possível recurso de apoio à conferência profissional, sem pressupor que o desempenho em fotografias demonstre, por si só, redução de acidentes ou prontidão para uso assistencial.
 
 \vspace{\baselineskip}
 \phantomsection
@@ -44,15 +68,15 @@ A contribuição pretendida é uma avaliação experimental documentada, apoiada
 \noindent\textbf{1.2 Objetivos}\par
 \vspace{\baselineskip}
 
-O objetivo geral é avaliar a viabilidade técnica da detecção e da contagem automática de instrumentos cirúrgicos selecionados a partir da caixa de apendicectomia de referência, por meio de um modelo da família YOLO, considerando o desempenho e as limitações observadas nas imagens de avaliação.
+O objetivo geral é avaliar a viabilidade técnica da identificação e da contagem automática de instrumentos selecionados da caixa de apendicectomia, por meio de um modelo da família YOLO, visando ao apoio à conferência no expurgo e no preparo de caixas cirúrgicas.
 
-Para alcançar esse objetivo, estabelecem-se os seguintes objetivos específicos:
+Para alcançar esse objetivo, foram definidos os seguintes objetivos específicos:
 \begin{list}{\alph{enumi})}{\usecounter{enumi}\setlength{\leftmargin}{1.25cm}\setlength{\labelsep}{0.5em}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}\setlength{\topsep}{0pt}}
-\item organizar e revisar as imagens provenientes da internet e do HU-UEL, padronizando as classes e as anotações em caixas delimitadoras;
-\item preparar conjuntos de treinamento, validação e teste com controle de duplicatas e de imagens relacionadas, registrando a distribuição por classe e por origem;
-\item treinar e avaliar a detecção com categorias gerais, mantendo uma representação específica das anotações para a investigação complementar da identificação dos instrumentos;
-\item quantificar o desempenho de detecção e os erros de contagem total e por classe, incluindo a frequência de imagens com contagem correta;
-\item analisar os casos de falha e os recursos computacionais empregados, delimitando as condições em que os resultados sustentam a viabilidade da abordagem.
+\item organizar e revisar as imagens da internet e do HU-UEL, padronizando as categorias e as anotações dos objetos;
+\item preparar os conjuntos de treinamento, validação e teste, com controle de duplicatas e agrupamento das imagens relacionadas identificadas;
+\item treinar um modelo YOLO para localizar e identificar os instrumentos nas categorias gerais adotadas;
+\item avaliar a detecção e a contagem, considerando os resultados totais, os resultados por categoria e a frequência de imagens com contagem correta;
+\item analisar os erros e os recursos computacionais empregados, identificando condições favoráveis e limitações para a aplicação pretendida.
 \end{list}
 
 \vspace{\baselineskip}
@@ -61,10 +85,10 @@ Para alcançar esse objetivo, estabelecem-se os seguintes objetivos específicos
 \noindent\textbf{1.3 Delimitação do estudo}\par
 \vspace{\baselineskip}
 
-O estudo utiliza fotografias estáticas e anotações por caixas delimitadoras, com foco na localização, na identificação e na contagem dos objetos presentes nas imagens. A versão inicialmente selecionada para os experimentos é o YOLO26. O uso de variantes com diferentes capacidades e a avaliação com classes específicas serão documentados de acordo com as execuções concluídas. A viabilidade será discutida a partir das evidências obtidas, sem adotar como resultado uma meta de desempenho previamente desejada.
+O experimento principal utiliza fotografias estáticas e sete categorias gerais: pinças, tesouras, afastadores, porta-agulhas, cabos de bisturi, bicos de aspiração e cúpulas. As cúpulas são recipientes que também integram a contagem dos objetos de interesse. A base preserva, adicionalmente, a identificação específica dos instrumentos, incluindo variantes retas e curvas quando previstas, para permitir análises ou experimentos posteriores. A correspondência entre os instrumentos e as categorias utilizadas no treinamento é apresentada na metodologia. Diferenças de tamanho não originam classes distintas.
 
-A seleção das classes depende da correspondência com os instrumentos de referência e da disponibilidade de imagens. A pinça Collin coração não integra a configuração inicial por ausência de exemplos, e as pinças anatômicas contam inicialmente apenas com imagens provenientes da internet. A cúpula integra a contagem entre os objetos de interesse, e os porta-agulhas constituem categoria própria. Essas delimitações impedem que os resultados sejam interpretados como validação de todos os componentes da caixa ou de todas as classes no contexto do HU-UEL.
+A seleção foi limitada aos objetos de interesse para os quais se obtiveram imagens. A pinça Collin coração não integra a configuração atual por ausência de exemplos. Além disso, as pinças anatômicas e os cabos de bisturi estão representados somente por imagens da internet na base consolidada. Essas diferenças de cobertura devem ser consideradas ao interpretar os resultados, especialmente quando se discute a aplicação no ambiente hospitalar.
 
-As fotografias hospitalares disponíveis incluem instrumentos isolados e alguns agrupamentos de objetos. O desempenho nesses registros não será interpretado automaticamente como desempenho em bandejas completas, cenas com oclusão acentuada ou acompanhamento de procedimentos cirúrgicos. Essas condições exigem exemplos e avaliações correspondentes. Do mesmo modo, não se pretende demonstrar redução de eventos adversos, benefício clínico ou substituição de profissionais, mas estabelecer as possibilidades e limitações técnicas da abordagem no recorte investigado.
+As fotografias incluem instrumentos isolados, alguns conjuntos com vários objetos e bandejas vazias. Embora tenham sido obtidas imagens nos dois ambientes de aplicação pretendidos, o estudo não equivale a uma implantação do sistema no fluxo de trabalho. A avaliação se refere aos objetos visíveis nas fotografias e às condições representadas no conjunto de teste. A conferência integral de uma caixa, o reconhecimento de materiais totalmente encobertos e a demonstração de benefícios durante o uso hospitalar exigem avaliações próprias. Dessa forma, a pesquisa busca estabelecer uma base experimental para decidir como a contagem por visão computacional pode avançar em direção à aplicação pretendida.
 
 \endgroup
