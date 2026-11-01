@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.10.31)  31 OCT 2026 23:29
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.10.31)  31 OCT 2026 23:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -686,7 +686,7 @@ Package csquotes Info: Redefining alias 'default' -> 'brazilian'.
  (c:\TCC\ESCRITA TCC\build\0_TCC.aux (c:\TCC\ESCRITA TCC\build\1_capa.aux)
 Package babel Info: 'brazilian' activates 'portuges' shorthands.
 (babel)             Reported on input line 10.
- (c:\TCC\ESCRITA TCC\build\2_folha-de-rosto.aux) (c:\TCC\ESCRITA TCC\build\3_ficha-catalografica.aux) (c:\TCC\ESCRITA TCC\build\4_folha-de-aprovação.aux) (c:\TCC\ESCRITA TCC\build\5_dedicatória.aux) (c:\TCC\ESCRITA TCC\build\6_agradecimentos.aux) (c:\TCC\ESCRITA TCC\build\7_epígrafe.aux) (c:\TCC\ESCRITA TCC\build\8_resumo.aux) (c:\TCC\ESCRITA TCC\build\9_abstract.aux) (c:\TCC\ESCRITA TCC\build\10_lista-de-figuras.aux) (c:\TCC\ESCRITA TCC\build\11_lista-de-tabelas.aux) (c:\TCC\ESCRITA TCC\build\12_lista-de-abreviaturas-e-siglas.aux) (c:\TCC\ESCRITA TCC\build\13_lista-de-símbolos.aux) (c:\TCC\ESCRITA TCC\build\14_sumário.aux) (c:\TCC\ESCRITA TCC\build\15_introducao.aux) (c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux) (c:\TCC\ESCRITA TCC\build\17_metodologia.aux) (c:\TCC\ESCRITA TCC\build\18_conclusão.aux) (c:\TCC\ESCRITA TCC\build\19_referencias.aux) (c:\TCC\ESCRITA TCC\build\21_glossario.aux) (c:\TCC\ESCRITA TCC\build\22_apêndice.aux) (c:\TCC\ESCRITA TCC\build\23_anexo.aux) (c:\TCC\ESCRITA TCC\build\24_índice.aux))
+ (c:\TCC\ESCRITA TCC\build\2_folha-de-rosto.aux) (c:\TCC\ESCRITA TCC\build\3_ficha-catalografica.aux) (c:\TCC\ESCRITA TCC\build\4_folha-de-aprovação.aux) (c:\TCC\ESCRITA TCC\build\5_dedicatória.aux) (c:\TCC\ESCRITA TCC\build\6_agradecimentos.aux) (c:\TCC\ESCRITA TCC\build\7_epígrafe.aux) (c:\TCC\ESCRITA TCC\build\8_resumo.aux) (c:\TCC\ESCRITA TCC\build\9_abstract.aux) (c:\TCC\ESCRITA TCC\build\10_lista-de-figuras.aux) (c:\TCC\ESCRITA TCC\build\11_lista-de-tabelas.aux) (c:\TCC\ESCRITA TCC\build\12_lista-de-abreviaturas-e-siglas.aux) (c:\TCC\ESCRITA TCC\build\13_lista-de-símbolos.aux) (c:\TCC\ESCRITA TCC\build\14_sumário.aux) (c:\TCC\ESCRITA TCC\build\15_introducao.aux) (c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux) (c:\TCC\ESCRITA TCC\build\17_metodologia.aux) (c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux) (c:\TCC\ESCRITA TCC\build\19_referencias.aux) (c:\TCC\ESCRITA TCC\build\21_glossario.aux) (c:\TCC\ESCRITA TCC\build\22_apêndice.aux) (c:\TCC\ESCRITA TCC\build\23_anexo.aux) (c:\TCC\ESCRITA TCC\build\24_índice.aux))
 \openout1 = `0_TCC.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -1119,13 +1119,13 @@ Underfull \hbox (badness 2653) in paragraph at lines 155--155
 
 
 ] [26] [27] [28] [29] [30] [31] [32]) [33]
-\openout2 = `18_conclusão.aux'.
+\openout2 = `18_resultados_discussao.aux'.
 
- (18_conclusão.tex) [34
+ (18_resultados_discussao.tex [34
 
 
 
-]
+] [35]) [36]
 \openout2 = `19_referencias.aux'.
 
  (19_referencias.tex
@@ -1133,56 +1133,56 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [35
+ [37
 
 
 
-]) [36]
+]) [38]
 \openout2 = `21_glossario.aux'.
 
- (21_glossario.tex) [37
+ (21_glossario.tex) [39
 
 
 
 ]
 \openout2 = `22_apêndice.aux'.
 
- (22_apêndice.tex) [38
+ (22_apêndice.tex) [40
 
 
 
 ]
 \openout2 = `23_anexo.aux'.
 
- (23_anexo.tex) [39
+ (23_anexo.tex) [41
 
 
 
 ]
 \openout2 = `24_índice.aux'.
 
- (24_índice.tex) [40
+ (24_índice.tex) [42
 
 
 
-] (c:\TCC\ESCRITA TCC\build\0_TCC.aux (c:\TCC\ESCRITA TCC\build\1_capa.aux) (c:\TCC\ESCRITA TCC\build\2_folha-de-rosto.aux) (c:\TCC\ESCRITA TCC\build\3_ficha-catalografica.aux) (c:\TCC\ESCRITA TCC\build\4_folha-de-aprovação.aux) (c:\TCC\ESCRITA TCC\build\5_dedicatória.aux) (c:\TCC\ESCRITA TCC\build\6_agradecimentos.aux) (c:\TCC\ESCRITA TCC\build\7_epígrafe.aux) (c:\TCC\ESCRITA TCC\build\8_resumo.aux) (c:\TCC\ESCRITA TCC\build\9_abstract.aux) (c:\TCC\ESCRITA TCC\build\10_lista-de-figuras.aux) (c:\TCC\ESCRITA TCC\build\11_lista-de-tabelas.aux) (c:\TCC\ESCRITA TCC\build\12_lista-de-abreviaturas-e-siglas.aux) (c:\TCC\ESCRITA TCC\build\13_lista-de-símbolos.aux) (c:\TCC\ESCRITA TCC\build\14_sumário.aux) (c:\TCC\ESCRITA TCC\build\15_introducao.aux) (c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux) (c:\TCC\ESCRITA TCC\build\17_metodologia.aux) (c:\TCC\ESCRITA TCC\build\18_conclusão.aux) (c:\TCC\ESCRITA TCC\build\19_referencias.aux) (c:\TCC\ESCRITA TCC\build\21_glossario.aux) (c:\TCC\ESCRITA TCC\build\22_apêndice.aux) (c:\TCC\ESCRITA TCC\build\23_anexo.aux) (c:\TCC\ESCRITA TCC\build\24_índice.aux))
+] (c:\TCC\ESCRITA TCC\build\0_TCC.aux (c:\TCC\ESCRITA TCC\build\1_capa.aux) (c:\TCC\ESCRITA TCC\build\2_folha-de-rosto.aux) (c:\TCC\ESCRITA TCC\build\3_ficha-catalografica.aux) (c:\TCC\ESCRITA TCC\build\4_folha-de-aprovação.aux) (c:\TCC\ESCRITA TCC\build\5_dedicatória.aux) (c:\TCC\ESCRITA TCC\build\6_agradecimentos.aux) (c:\TCC\ESCRITA TCC\build\7_epígrafe.aux) (c:\TCC\ESCRITA TCC\build\8_resumo.aux) (c:\TCC\ESCRITA TCC\build\9_abstract.aux) (c:\TCC\ESCRITA TCC\build\10_lista-de-figuras.aux) (c:\TCC\ESCRITA TCC\build\11_lista-de-tabelas.aux) (c:\TCC\ESCRITA TCC\build\12_lista-de-abreviaturas-e-siglas.aux) (c:\TCC\ESCRITA TCC\build\13_lista-de-símbolos.aux) (c:\TCC\ESCRITA TCC\build\14_sumário.aux) (c:\TCC\ESCRITA TCC\build\15_introducao.aux) (c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux) (c:\TCC\ESCRITA TCC\build\17_metodologia.aux) (c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux) (c:\TCC\ESCRITA TCC\build\19_referencias.aux) (c:\TCC\ESCRITA TCC\build\21_glossario.aux) (c:\TCC\ESCRITA TCC\build\22_apêndice.aux) (c:\TCC\ESCRITA TCC\build\23_anexo.aux) (c:\TCC\ESCRITA TCC\build\24_índice.aux))
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `0_TCC.out' has not changed.
-(rerunfilecheck)             Checksum: C19ED4580B1C490E8E2DF7779D05024E;4984.
+(rerunfilecheck)             Checksum: F0670217F5006A4B64DBED8748A103F9;6678.
 Package logreq Info: Writing requests to '0_TCC.run.xml'.
 \openout1 = `0_TCC.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26370 strings out of 402511
- 523449 string characters out of 5435977
- 1572325 words of memory out of 5000000
- 55107 multiletter control sequences out of 15000+600000
+ 26372 strings out of 402511
+ 523760 string characters out of 5435977
+ 1575163 words of memory out of 5000000
+ 55109 multiletter control sequences out of 15000+600000
  635179 words of font info for 114 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 83i,12n,98p,1023b,6996s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,12n,98p,1023b,6992s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on c:\TCC\ESCRITA TCC\build\0_TCC.xdv (41 pages, 597636 bytes).
+Output written on c:\TCC\ESCRITA TCC\build\0_TCC.xdv (43 pages, 643420 bytes).

@@ -257,9 +257,9 @@ INPUT c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux
 INPUT c:\TCC\ESCRITA TCC\build\17_metodologia.aux
 INPUT c:\TCC\ESCRITA TCC\build\17_metodologia.aux
 INPUT c:\TCC\ESCRITA TCC\build\17_metodologia.aux
-INPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
-INPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
-INPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
+INPUT c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux
+INPUT c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux
+INPUT c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux
 INPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
 INPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
 INPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
@@ -442,12 +442,12 @@ OUTPUT c:\TCC\ESCRITA TCC\build\17_metodologia.aux
 INPUT .\17_metodologia.tex
 INPUT .\17_metodologia.tex
 INPUT 17_metodologia.tex
-INPUT .\18_conclusão.tex
-INPUT .\18_conclusão.tex
-OUTPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
-INPUT .\18_conclusão.tex
-INPUT .\18_conclusão.tex
-INPUT 18_conclusão.tex
+INPUT .\18_resultados_discussao.tex
+INPUT .\18_resultados_discussao.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux
+INPUT .\18_resultados_discussao.tex
+INPUT .\18_resultados_discussao.tex
+INPUT 18_resultados_discussao.tex
 INPUT .\19_referencias.tex
 INPUT .\19_referencias.tex
 OUTPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
@@ -530,9 +530,9 @@ INPUT c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux
 INPUT c:\TCC\ESCRITA TCC\build\17_metodologia.aux
 INPUT c:\TCC\ESCRITA TCC\build\17_metodologia.aux
 INPUT c:\TCC\ESCRITA TCC\build\17_metodologia.aux
-INPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
-INPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
-INPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
+INPUT c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux
+INPUT c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux
+INPUT c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux
 INPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
 INPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
 INPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux

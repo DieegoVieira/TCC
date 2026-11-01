@@ -1,0 +1,117 @@
+% !TeX root = 0_TCC.tex
+% Versão PRELIMINAR. Resultados do modelo ainda não recebidos.
+% Não remover marcadores sem preencher com evidência real.
+\begingroup
+\justifying
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\onehalfspacing
+\renewcommand{\tablename}{Tabela}
+\captionsetup[table]{labelsep=endash,justification=raggedright,singlelinecheck=false,font=small}
+\phantomsection
+\addcontentsline{toc}{section}{4 RESULTADOS E DISCUSSÃO}
+\noindent\textbf{4 RESULTADOS E DISCUSSÃO}\par
+\vspace{\baselineskip}
+
+\noindent\textbf{[VERSÃO PRELIMINAR: a caracterização da base está preenchida com dados dos manifestos; os resultados do treinamento e da avaliação permanecem pendentes.]}\par
+\vspace{\baselineskip}
+
+A apresentação dos resultados distingue a base obtida após a preparação dos dados do desempenho do detector. As contagens do material disponível descrevem a amostra experimental, mas não demonstram, por si mesmas, a eficácia da identificação ou da contagem automática. Essa distinção orienta a análise da composição da base e a posterior interpretação das métricas do modelo.
+
+\vspace{\baselineskip}
+\phantomsection
+\addcontentsline{toc}{subsection}{4.1 Composição da base e cobertura das categorias}
+\noindent\textbf{4.1 Composição da base e cobertura das categorias}\par
+\vspace{\baselineskip}
+
+O manifesto consolidado da revisão v3 registra 10.327 imagens e 12.714 objetos. A Tabela~\ref{tab:res-origem-classe} discrimina a contribuição de cada origem para as categorias gerais. Seus valores representam instâncias anotadas em toda a base, abrangendo treino, validação e teste; não correspondem ao número de imagens de cada categoria nem a predições realizadas pelo modelo.
+
+\begin{table}[htbp]
+\centering
+\begin{minipage}{\linewidth}
+\singlespacing\small
+\caption{Objetos anotados por categoria geral e origem}
+\label{tab:res-origem-classe}
+\centering
+\begin{tabular}{lrrr}
+\hline
+Categoria & HU-UEL & Internet & Total \\
+\hline
+Pinças & 3.498 & 1.409 & 4.907 \\
+Tesouras & 1.617 & 2.359 & 3.976 \\
+Cabos de bisturi & 0 & 1.673 & 1.673 \\
+Afastadores & 815 & 33 & 848 \\
+Porta-agulhas & 182 & 578 & 760 \\
+Cúpulas & 285 & 21 & 306 \\
+Bicos de aspiração & 150 & 94 & 244 \\
+\hline
+Total & 6.547 & 6.167 & 12.714 \\
+\hline
+\end{tabular}\par
+\vspace{0.35em}\raggedright
+Fonte: elaboração própria, com base nos manifestos de imagens e objetos da revisão v3 (2026).\par
+Nota: são contagens de referência de toda a base. Fotografias negativas não acrescentam objetos à tabela.
+\end{minipage}
+\end{table}
+
+As categorias de pinças e tesouras concentram o maior número de objetos, enquanto bicos de aspiração e cúpulas possuem menor representação. A diferença exige que o desempenho seja examinado por categoria, pois uma medida agregada pode ocultar erros nos grupos menos representados. Entretanto, quantidade de anotações e diversidade visual não são equivalentes: várias fotografias de um mesmo instrumento ou cenário podem acrescentar menos variação do que imagens obtidas em condições distintas.
+
+A contribuição das origens também é desigual. As cúpulas e os afastadores são representados predominantemente por fotografias do HU-UEL; os cabos de bisturi, exclusivamente por imagens externas. Logo, a base atual não permite medir a recuperação de cabos de bisturi em fotografias hospitalares com exemplos positivos dessa categoria. A ausência de predições equivocadas em imagens hospitalares sem cabos, caso observada, não substitui essa avaliação.
+
+O agrupamento em categorias gerais reduz a quantidade de rótulos de saída, mas mantém a heterogeneidade visual dentro de cada grupo. A categoria de pinças reúne oito classes específicas, com distribuições diferentes entre origens. Em particular, as pinças anatômicas não possuem exemplos do HU-UEL na consolidação atual. Portanto, mesmo um resultado favorável para a categoria geral não demonstraria desempenho uniforme em todos os seus subtipos.
+
+Quanto à composição das cenas, o manifesto registra 8.568 imagens com um objeto, 1.659 com mais de um objeto e 100 sem objetos anotados. A presença de cenas com múltiplas instâncias permite examinar contagem além do caso de um único instrumento, mas não implica que todas essas imagens apresentem oclusão. A dificuldade de cada cena depende também da disposição, da escala e da visibilidade dos objetos. A avaliação deverá explicitar essa diferença em vez de tratar toda imagem com vários instrumentos como uma cena complexa equivalente.
+
+Essas características delimitam as conclusões possíveis. A combinação de imagens hospitalares e externas amplia a cobertura disponível para o treinamento, mas este experimento, sem uma comparação controlada entre bases, não demonstra que a mistura das origens seja a causa de eventual melhoria. Sua contribuição deverá ser discutida junto aos erros observados e à representatividade dos cenários efetivamente avaliados.
+
+\vspace{\baselineskip}
+\phantomsection
+\addcontentsline{toc}{subsection}{4.2 Evolução do treinamento e seleção do modelo}
+\noindent\textbf{4.2 Evolução do treinamento e seleção do modelo}\par
+\vspace{\baselineskip}
+
+\noindent\textbf{[PENDENTE R01: inserir os resultados reais do treinamento principal.]}\par
+% Preencher com results.csv, args.yaml e registros de conclusão.
+% Descrever épocas executadas, duração, parada, evolução das perdas e métricas de validação.
+% Identificar o checkpoint escolhido pelo critério efetivo da versão. Não presumir que seja a última época.
+% Figura futura: curvas_treinamento_gerais.pdf, gerada a partir do CSV, com eixos e legenda em português.
+% Distinguir valores de validação dos resultados do teste. Não importar números do piloto.
+
+\vspace{\baselineskip}
+\phantomsection
+\addcontentsline{toc}{subsection}{4.3 Desempenho de detecção e contagem}
+\noindent\textbf{4.3 Desempenho de detecção e contagem}\par
+\vspace{\baselineskip}
+
+\noindent\textbf{[PENDENTE R02: concluir a seleção do limiar na validação e executar a avaliação reservada de teste.]}\par
+% Antes do teste, fixar regra de seleção do limiar, checkpoint e pós-processamento.
+% Tabelas futuras: suporte de imagens/objetos, precisão, recall, mAP50, mAP50–95 por categoria.
+% Contagem: MAE total e por categoria, contagem total exata e vetor de contagens exato.
+% Discriminar HU e internet; usar “não avaliável” onde não houver exemplos positivos, nunca zero inventado.
+% Informar negativos e separar subcontagens/sobrecontagens. Não interpretar mAP como acerto de contagem.
+
+\vspace{\baselineskip}
+\phantomsection
+\addcontentsline{toc}{subsection}{4.4 Análise dos erros e condições de aplicação}
+\noindent\textbf{4.4 Análise dos erros e condições de aplicação}\par
+\vspace{\baselineskip}
+
+\noindent\textbf{[PENDENTE R03: analisar predições reais e selecionar exemplos rastreáveis de acertos e erros.]}\par
+% Figura futura: exemplos_predicoes_gerais.png. Identificar arquivo, origem, split, referência e predição.
+% Examinar omissões, excedentes, confusões e caixas; não escolher apenas exemplos favoráveis.
+% Separar evidência observada de hipóteses explicativas. Relação com quantidade de exemplos não prova causalidade.
+
+\vspace{\baselineskip}
+\phantomsection
+\addcontentsline{toc}{subsection}{4.5 Síntese da viabilidade e limitações}
+\noindent\textbf{4.5 Síntese da viabilidade e limitações}\par
+\vspace{\baselineskip}
+
+\noindent\textbf{[PENDENTE R04: redigir a síntese após reunir desempenho, erros e custo computacional.]}\par
+% Retomar objetivo do trabalho, sem antecipar sucesso ou inviabilidade.
+% Delimitar detecção geral vs específica, cobertura HU, dependência de sessões e ausência de avaliação clínica.
+% Novas fotos HU só serão avaliação externa se não forem usadas no ajuste do mesmo modelo.
+% Relacionar criticamente os resultados aos estudos já verificados, sem ranking entre datasets incompatíveis.
+
+\endgroup
