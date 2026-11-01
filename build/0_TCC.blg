@@ -1,18 +1,21 @@
 [0] Config.pm:329> INFO - This is Biber 2.22
 [0] Config.pm:332> INFO - Logfile is 'build/0_TCC.blg'
-[135] biber-MSWIN64:342> INFO - === 
-[191] Biber.pm:421> INFO - Reading 'build/0_TCC.bcf'
-[314] Biber.pm:1002> INFO - Found 9 citekeys in bib section 0
-[327] Biber.pm:4487> INFO - Processing section 0
-[337] Biber.pm:4680> INFO - Looking for bibtex file 'referencias_tcc.bib' for section 0
-[429] bibtex.pm:1713> INFO - LaTeX decoding ...
-[445] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias_tcc.bib'
-[538] Biber.pm:4680> INFO - Looking for bibtex file 'referencias_fundamentacao.bib' for section 0
-[623] bibtex.pm:1713> INFO - LaTeX decoding ...
-[633] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias_fundamentacao.bib'
-[675] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[675] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[675] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'pt-BR'
-[675] Biber.pm:4313> INFO - No sort tailoring available for locale 'pt-BR'
-[687] bbl.pm:676> INFO - Writing 'build/0_TCC.bbl' with encoding 'UTF-8'
-[694] bbl.pm:779> INFO - Output to build/0_TCC.bbl
+[104] biber-MSWIN64:342> INFO - === 
+[151] Biber.pm:421> INFO - Reading 'build/0_TCC.bcf'
+[255] Biber.pm:1002> INFO - Found 12 citekeys in bib section 0
+[267] Biber.pm:4487> INFO - Processing section 0
+[277] Biber.pm:4680> INFO - Looking for bibtex file 'referencias_tcc.bib' for section 0
+[349] bibtex.pm:1713> INFO - LaTeX decoding ...
+[365] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias_tcc.bib'
+[453] Biber.pm:4680> INFO - Looking for bibtex file 'referencias_fundamentacao.bib' for section 0
+[518] bibtex.pm:1713> INFO - LaTeX decoding ...
+[525] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias_fundamentacao.bib'
+[542] Biber.pm:4680> INFO - Looking for bibtex file 'referencias_metodologia.bib' for section 0
+[615] bibtex.pm:1713> INFO - LaTeX decoding ...
+[621] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias_metodologia.bib'
+[650] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[650] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[650] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'pt-BR'
+[650] Biber.pm:4313> INFO - No sort tailoring available for locale 'pt-BR'
+[666] bbl.pm:676> INFO - Writing 'build/0_TCC.bbl' with encoding 'UTF-8'
+[674] bbl.pm:779> INFO - Output to build/0_TCC.bbl

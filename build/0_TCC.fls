@@ -116,6 +116,10 @@ INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\reru
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
 INPUT .\configuracao_referencias.tex
 INPUT .\configuracao_referencias.tex
 INPUT .\configuracao_referencias.tex
@@ -250,9 +254,9 @@ INPUT c:\TCC\ESCRITA TCC\build\15_introducao.aux
 INPUT c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux
 INPUT c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux
 INPUT c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux
-INPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
-INPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
-INPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
+INPUT c:\TCC\ESCRITA TCC\build\17_metodologia.aux
+INPUT c:\TCC\ESCRITA TCC\build\17_metodologia.aux
+INPUT c:\TCC\ESCRITA TCC\build\17_metodologia.aux
 INPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
 INPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
 INPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
@@ -432,7 +436,12 @@ INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tf
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
-OUTPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
+INPUT .\17_metodologia.tex
+INPUT .\17_metodologia.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\17_metodologia.aux
+INPUT .\17_metodologia.tex
+INPUT .\17_metodologia.tex
+INPUT 17_metodologia.tex
 INPUT .\18_conclusão.tex
 INPUT .\18_conclusão.tex
 OUTPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
@@ -518,9 +527,9 @@ INPUT c:\TCC\ESCRITA TCC\build\15_introducao.aux
 INPUT c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux
 INPUT c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux
 INPUT c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux
-INPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
-INPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
-INPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
+INPUT c:\TCC\ESCRITA TCC\build\17_metodologia.aux
+INPUT c:\TCC\ESCRITA TCC\build\17_metodologia.aux
+INPUT c:\TCC\ESCRITA TCC\build\17_metodologia.aux
 INPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
 INPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux
 INPUT c:\TCC\ESCRITA TCC\build\18_conclusão.aux

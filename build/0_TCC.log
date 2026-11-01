@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.10.31)  31 OCT 2026 23:10
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.10.31)  31 OCT 2026 23:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -294,9 +294,30 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
 )
 \Hy@SectionHShift=\skip80
+) (C:\Users\diego\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (C:\Users\diego\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen171
+\captionmargin=\dimen172
+\caption@leftmargin=\dimen173
+\caption@rightmargin=\dimen174
+\caption@width=\dimen175
+\caption@indent=\dimen176
+\caption@parindent=\dimen177
+\caption@hangindent=\dimen178
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count314
+\c@continuedfloat=\count315
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen179
+\caption@adjustwidth@linewidth=\dimen180
+Package caption Info: hyperref package is loaded.
+Package caption Info: wrapfig package is loaded.
 ) (configuracao_referencias.tex (C:\Users\diego\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2026/10/15 v26.14 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
-\babel@savecnt=\count314
+\babel@savecnt=\count316
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2118.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2120.
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2122.
@@ -304,11 +325,11 @@ LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line
 LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2124.
 LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2126.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2151.
-\U@D=\dimen171
+\U@D=\dimen181
 \l@unhyphenated=\language80
  (C:\Users\diego\AppData\Local\Programs\MiKTeX\tex/generic/babel\xebabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count315
+\bbl@dirlevel=\count317
 Package babel Info: Configuration files are deprecated, as
 (babel)             they can break document portability.
 (babel)             Reported on input line 4366.
@@ -328,12 +349,12 @@ Package babel Info: Hyphen rules for 'brazilian' set to \l@portuguese
 Package babel Info: Making " an active character on input line 132.
 )) (C:\Users\diego\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2026-05-19 v5.2p context-sensitive quotations (JAW)
-\csq@reset=\count316
-\csq@gtype=\count317
-\csq@glevel=\count318
-\csq@qlevel=\count319
-\csq@maxlvl=\count320
-\csq@tshold=\count321
+\csq@reset=\count318
+\csq@gtype=\count319
+\csq@glevel=\count320
+\csq@qlevel=\count321
+\csq@maxlvl=\count322
+\csq@tshold=\count323
 \csq@ltx@everypar=\toks23
  (C:\Users\diego\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2026-05-19 v5.2p csquotes generic definitions (JAW)
@@ -346,55 +367,55 @@ File: csquotes.cfg
 Package: biblatex 2026/09/24 v3.22a programmable bibliographies (PK/MW)
  (C:\Users\diego\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count322
+\lrq@indent=\count324
  (C:\Users\diego\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 )) (C:\Users\diego\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
-\c@tabx@nest=\count323
-\c@listtotal=\count324
-\c@listcount=\count325
-\c@liststart=\count326
-\c@liststop=\count327
-\c@citecount=\count328
-\c@citetotal=\count329
-\c@multicitecount=\count330
-\c@multicitetotal=\count331
-\c@instcount=\count332
-\c@maxnames=\count333
-\c@minnames=\count334
-\c@maxitems=\count335
-\c@minitems=\count336
-\c@citecounter=\count337
-\c@maxcitecounter=\count338
-\c@savedcitecounter=\count339
-\c@uniquelist=\count340
-\c@uniquename=\count341
-\c@refsection=\count342
-\c@refsegment=\count343
-\c@maxextratitle=\count344
-\c@maxextratitleyear=\count345
-\c@maxextraname=\count346
-\c@maxextradate=\count347
-\c@maxextraalpha=\count348
-\c@abbrvpenalty=\count349
-\c@highnamepenalty=\count350
-\c@lownamepenalty=\count351
-\c@maxparens=\count352
-\c@parenlevel=\count353
-\blx@tempcnta=\count354
-\blx@tempcntb=\count355
-\blx@tempcntc=\count356
-\c@blx@maxsection=\count357
-\blx@maxsegment@0=\count358
-\blx@notetype=\count359
-\blx@parenlevel@text=\count360
-\blx@parenlevel@foot=\count361
-\blx@sectionciteorder@0=\count362
-\blx@sectionciteorderinternal@0=\count363
-\blx@entrysetcounter=\count364
-\blx@biblioinstance=\count365
+\c@tabx@nest=\count325
+\c@listtotal=\count326
+\c@listcount=\count327
+\c@liststart=\count328
+\c@liststop=\count329
+\c@citecount=\count330
+\c@citetotal=\count331
+\c@multicitecount=\count332
+\c@multicitetotal=\count333
+\c@instcount=\count334
+\c@maxnames=\count335
+\c@minnames=\count336
+\c@maxitems=\count337
+\c@minitems=\count338
+\c@citecounter=\count339
+\c@maxcitecounter=\count340
+\c@savedcitecounter=\count341
+\c@uniquelist=\count342
+\c@uniquename=\count343
+\c@refsection=\count344
+\c@refsegment=\count345
+\c@maxextratitle=\count346
+\c@maxextratitleyear=\count347
+\c@maxextraname=\count348
+\c@maxextradate=\count349
+\c@maxextraalpha=\count350
+\c@abbrvpenalty=\count351
+\c@highnamepenalty=\count352
+\c@lownamepenalty=\count353
+\c@maxparens=\count354
+\c@parenlevel=\count355
+\blx@tempcnta=\count356
+\blx@tempcntb=\count357
+\blx@tempcntc=\count358
+\c@blx@maxsection=\count359
+\blx@maxsegment@0=\count360
+\blx@notetype=\count361
+\blx@parenlevel@text=\count362
+\blx@parenlevel@foot=\count363
+\blx@sectionciteorder@0=\count364
+\blx@sectionciteorderinternal@0=\count365
+\blx@entrysetcounter=\count366
+\blx@biblioinstance=\count367
 \labelnumberwidth=\skip81
 \labelalphawidth=\skip82
 \biblabelsep=\skip83
@@ -406,9 +427,9 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 \blx@bcfin=\read3
 \blx@bcfout=\write3
 \blx@langwohyphens=\language81
-\c@mincomprange=\count366
-\c@maxcomprange=\count367
-\c@mincompwidth=\count368
+\c@mincomprange=\count368
+\c@maxcomprange=\count369
+\c@mincompwidth=\count370
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (C:\Users\diego\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
@@ -418,74 +439,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'abnt.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count369
-\c@savedafterword=\count370
-\c@annotator=\count371
-\c@savedannotator=\count372
-\c@author=\count373
-\c@savedauthor=\count374
-\c@bookauthor=\count375
-\c@savedbookauthor=\count376
-\c@commentator=\count377
-\c@savedcommentator=\count378
-\c@editor=\count379
-\c@savededitor=\count380
-\c@editora=\count381
-\c@savededitora=\count382
-\c@editorb=\count383
-\c@savededitorb=\count384
-\c@editorc=\count385
-\c@savededitorc=\count386
-\c@foreword=\count387
-\c@savedforeword=\count388
-\c@holder=\count389
-\c@savedholder=\count390
-\c@introduction=\count391
-\c@savedintroduction=\count392
-\c@namea=\count393
-\c@savednamea=\count394
-\c@nameb=\count395
-\c@savednameb=\count396
-\c@namec=\count397
-\c@savednamec=\count398
-\c@translator=\count399
-\c@savedtranslator=\count400
-\c@shortauthor=\count401
-\c@savedshortauthor=\count402
-\c@shorteditor=\count403
-\c@savedshorteditor=\count404
-\c@labelname=\count405
-\c@savedlabelname=\count406
-\c@institution=\count407
-\c@savedinstitution=\count408
-\c@lista=\count409
-\c@savedlista=\count410
-\c@listb=\count411
-\c@savedlistb=\count412
-\c@listc=\count413
-\c@savedlistc=\count414
-\c@listd=\count415
-\c@savedlistd=\count416
-\c@liste=\count417
-\c@savedliste=\count418
-\c@listf=\count419
-\c@savedlistf=\count420
-\c@location=\count421
-\c@savedlocation=\count422
-\c@organization=\count423
-\c@savedorganization=\count424
-\c@origlocation=\count425
-\c@savedoriglocation=\count426
-\c@origpublisher=\count427
-\c@savedorigpublisher=\count428
-\c@publisher=\count429
-\c@savedpublisher=\count430
-\c@language=\count431
-\c@savedlanguage=\count432
-\c@origlanguage=\count433
-\c@savedoriglanguage=\count434
-\c@pageref=\count435
-\c@savedpageref=\count436
+\c@afterword=\count371
+\c@savedafterword=\count372
+\c@annotator=\count373
+\c@savedannotator=\count374
+\c@author=\count375
+\c@savedauthor=\count376
+\c@bookauthor=\count377
+\c@savedbookauthor=\count378
+\c@commentator=\count379
+\c@savedcommentator=\count380
+\c@editor=\count381
+\c@savededitor=\count382
+\c@editora=\count383
+\c@savededitora=\count384
+\c@editorb=\count385
+\c@savededitorb=\count386
+\c@editorc=\count387
+\c@savededitorc=\count388
+\c@foreword=\count389
+\c@savedforeword=\count390
+\c@holder=\count391
+\c@savedholder=\count392
+\c@introduction=\count393
+\c@savedintroduction=\count394
+\c@namea=\count395
+\c@savednamea=\count396
+\c@nameb=\count397
+\c@savednameb=\count398
+\c@namec=\count399
+\c@savednamec=\count400
+\c@translator=\count401
+\c@savedtranslator=\count402
+\c@shortauthor=\count403
+\c@savedshortauthor=\count404
+\c@shorteditor=\count405
+\c@savedshorteditor=\count406
+\c@labelname=\count407
+\c@savedlabelname=\count408
+\c@institution=\count409
+\c@savedinstitution=\count410
+\c@lista=\count411
+\c@savedlista=\count412
+\c@listb=\count413
+\c@savedlistb=\count414
+\c@listc=\count415
+\c@savedlistc=\count416
+\c@listd=\count417
+\c@savedlistd=\count418
+\c@liste=\count419
+\c@savedliste=\count420
+\c@listf=\count421
+\c@savedlistf=\count422
+\c@location=\count423
+\c@savedlocation=\count424
+\c@organization=\count425
+\c@savedorganization=\count426
+\c@origlocation=\count427
+\c@savedoriglocation=\count428
+\c@origpublisher=\count429
+\c@savedorigpublisher=\count430
+\c@publisher=\count431
+\c@savedpublisher=\count432
+\c@language=\count433
+\c@savedlanguage=\count434
+\c@origlanguage=\count435
+\c@savedoriglanguage=\count436
+\c@pageref=\count437
+\c@savedpageref=\count438
 \shorthandwidth=\skip89
 \shortjournalwidth=\skip90
 \shortserieswidth=\skip91
@@ -512,19 +533,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (C:\Users\diego\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2026/09/24 v3.22a biblatex compatibility (PK/MW)
-\c@textcitecount=\count437
-\c@textcitetotal=\count438
-\c@textcitemaxnames=\count439
-\c@biburlbigbreakpenalty=\count440
-\c@biburlbreakpenalty=\count441
-\c@biburlnumpenalty=\count442
-\c@biburlucpenalty=\count443
-\c@biburllcpenalty=\count444
+\c@textcitecount=\count439
+\c@textcitetotal=\count440
+\c@textcitemaxnames=\count441
+\c@biburlbigbreakpenalty=\count442
+\c@biburlbreakpenalty=\count443
+\c@biburlnumpenalty=\count444
+\c@biburlucpenalty=\count445
+\c@biburllcpenalty=\count446
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count445
+\c@smartand=\count447
 )
 Package biblatex Info: Trying to load bibliography style 'abnt'...
 Package biblatex Info: ... file 'abnt.bbx' found.
@@ -534,9 +555,9 @@ File: abnt.bbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
 Package: expl3 2026-09-09 L3 programming layer (loader) 
  (C:\Users\diego\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\l3backend-xetex.def
 File: l3backend-xetex.def 2026-09-09 L3 backend support: XeTeX
-\g__graphics_track_int=\count446
-\g__pdfannot_backend_int=\count447
-\g__pdfannot_backend_link_int=\count448
+\g__graphics_track_int=\count448
+\g__pdfannot_backend_int=\count449
+\g__pdfannot_backend_link_int=\count450
 ))
 Package: xparse 2025-10-09 L3 Experimental document command parser
 ) (C:\Users\diego\AppData\Local\Programs\MiKTeX\tex/latex/xpatch\xpatch.sty
@@ -546,8 +567,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (C:\Users\diego\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2026/09/24 v3.22a biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count449
-\c@bbx:relatedtotal=\count450
+\c@bbx:relatedcount=\count451
+\c@bbx:relatedtotal=\count452
 ))
 Package biblatex Info: Trying to load citation style 'abnt'...
 Package biblatex Info: ... file 'abnt.cbx' found.
@@ -603,21 +624,21 @@ Package: amstext 2024/11/17 v2.01 AMS text
  (C:\Users\diego\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks24
-\ex@=\dimen172
+\ex@=\dimen182
 )) (C:\Users\diego\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen173
+\pmbraise@=\dimen183
 ) (C:\Users\diego\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count451
+\inf@bad=\count453
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count452
-\leftroot@=\count453
+\uproot@=\count454
+\leftroot@=\count455
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count454
-\DOTSCASE@=\count455
+\classnum@=\count456
+\DOTSCASE@=\count457
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
@@ -627,30 +648,30 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen174
+\big@size=\dimen184
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count456
+\macc@depth=\count458
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count457
+\c@MaxMatrixCols=\count459
 \dotsspace@=\muskip22
-\c@parentequation=\count458
-\dspbrk@lvl=\count459
+\c@parentequation=\count460
+\dspbrk@lvl=\count461
 \tag@help=\toks25
-\row@=\count460
-\column@=\count461
-\maxfields@=\count462
+\row@=\count462
+\column@=\count463
+\maxfields@=\count464
 \andhelp@=\toks26
-\eqnshift@=\dimen175
-\alignsep@=\dimen176
-\tagshift@=\dimen177
-\tagwidth@=\dimen178
-\totwidth@=\dimen179
-\lineht@=\dimen180
+\eqnshift@=\dimen185
+\alignsep@=\dimen186
+\tagshift@=\dimen187
+\tagwidth@=\dimen188
+\totwidth@=\dimen189
+\lineht@=\dimen190
 \@envbody=\toks27
 \multlinegap=\skip104
 \multlinetaggap=\skip105
@@ -665,29 +686,29 @@ Package csquotes Info: Redefining alias 'default' -> 'brazilian'.
  (c:\TCC\ESCRITA TCC\build\0_TCC.aux (c:\TCC\ESCRITA TCC\build\1_capa.aux)
 Package babel Info: 'brazilian' activates 'portuges' shorthands.
 (babel)             Reported on input line 10.
- (c:\TCC\ESCRITA TCC\build\2_folha-de-rosto.aux) (c:\TCC\ESCRITA TCC\build\3_ficha-catalografica.aux) (c:\TCC\ESCRITA TCC\build\4_folha-de-aprovação.aux) (c:\TCC\ESCRITA TCC\build\5_dedicatória.aux) (c:\TCC\ESCRITA TCC\build\6_agradecimentos.aux) (c:\TCC\ESCRITA TCC\build\7_epígrafe.aux) (c:\TCC\ESCRITA TCC\build\8_resumo.aux) (c:\TCC\ESCRITA TCC\build\9_abstract.aux) (c:\TCC\ESCRITA TCC\build\10_lista-de-figuras.aux) (c:\TCC\ESCRITA TCC\build\11_lista-de-tabelas.aux) (c:\TCC\ESCRITA TCC\build\12_lista-de-abreviaturas-e-siglas.aux) (c:\TCC\ESCRITA TCC\build\13_lista-de-símbolos.aux) (c:\TCC\ESCRITA TCC\build\14_sumário.aux) (c:\TCC\ESCRITA TCC\build\15_introducao.aux) (c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux) (c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux) (c:\TCC\ESCRITA TCC\build\18_conclusão.aux) (c:\TCC\ESCRITA TCC\build\19_referencias.aux) (c:\TCC\ESCRITA TCC\build\21_glossario.aux) (c:\TCC\ESCRITA TCC\build\22_apêndice.aux) (c:\TCC\ESCRITA TCC\build\23_anexo.aux) (c:\TCC\ESCRITA TCC\build\24_índice.aux))
+ (c:\TCC\ESCRITA TCC\build\2_folha-de-rosto.aux) (c:\TCC\ESCRITA TCC\build\3_ficha-catalografica.aux) (c:\TCC\ESCRITA TCC\build\4_folha-de-aprovação.aux) (c:\TCC\ESCRITA TCC\build\5_dedicatória.aux) (c:\TCC\ESCRITA TCC\build\6_agradecimentos.aux) (c:\TCC\ESCRITA TCC\build\7_epígrafe.aux) (c:\TCC\ESCRITA TCC\build\8_resumo.aux) (c:\TCC\ESCRITA TCC\build\9_abstract.aux) (c:\TCC\ESCRITA TCC\build\10_lista-de-figuras.aux) (c:\TCC\ESCRITA TCC\build\11_lista-de-tabelas.aux) (c:\TCC\ESCRITA TCC\build\12_lista-de-abreviaturas-e-siglas.aux) (c:\TCC\ESCRITA TCC\build\13_lista-de-símbolos.aux) (c:\TCC\ESCRITA TCC\build\14_sumário.aux) (c:\TCC\ESCRITA TCC\build\15_introducao.aux) (c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux) (c:\TCC\ESCRITA TCC\build\17_metodologia.aux) (c:\TCC\ESCRITA TCC\build\18_conclusão.aux) (c:\TCC\ESCRITA TCC\build\19_referencias.aux) (c:\TCC\ESCRITA TCC\build\21_glossario.aux) (c:\TCC\ESCRITA TCC\build\22_apêndice.aux) (c:\TCC\ESCRITA TCC\build\23_anexo.aux) (c:\TCC\ESCRITA TCC\build\24_índice.aux))
 \openout1 = `0_TCC.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 57.
-LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -730,63 +751,63 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 57.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 57.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 57.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 57.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 57.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 57.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 57.
-LaTeX Font Info:    Redeclaring math accent \check on input line 57.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 57.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 57.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 57.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 57.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 57.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 60.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 60.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 60.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 60.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 60.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 60.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 60.
+LaTeX Font Info:    Redeclaring math accent \check on input line 60.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 60.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 60.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 60.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 60.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 57.
+(Font)              `operators' in the math version `normal' on input line 60.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/Arial(0)/m/n on input line 57.
+(Font)                  OT1/cmr/m/n --> TU/Arial(0)/m/n on input line 60.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 57.
+(Font)              `operators' in the math version `bold' on input line 60.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/m/n on input line 57.
+(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/m/n on input line 60.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/m/n on input line 57.
+(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/m/n on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/Arial(0)/m/it on input line 57.
+(Font)                  OT1/cmr/m/it --> TU/Arial(0)/m/it on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/b/n on input line 57.
+(Font)                  OT1/cmr/bx/n --> TU/Arial(0)/b/n on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 57.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 57.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 60.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/b/n on input line 57.
+(Font)                  TU/Arial(0)/m/n --> TU/Arial(0)/b/n on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/Arial(0)/b/it on input line 57.
+(Font)                  OT1/cmr/bx/it --> TU/Arial(0)/b/it on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 57.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 57.
-LaTeX Info: Redefining \microtypecontext on input line 57.
-Package microtype Info: Applying patch `item' on input line 57.
-Package microtype Info: Applying patch `toc' on input line 57.
-Package microtype Info: Applying patch `eqnum' on input line 57.
-Package microtype Info: Applying patch `footnote' on input line 57.
-Package microtype Info: Applying patch `verbatim' on input line 57.
-LaTeX Info: Redefining \microtypesetup on input line 57.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 60.
+LaTeX Info: Redefining \microtypecontext on input line 60.
+Package microtype Info: Applying patch `item' on input line 60.
+Package microtype Info: Applying patch `toc' on input line 60.
+Package microtype Info: Applying patch `eqnum' on input line 60.
+Package microtype Info: Applying patch `footnote' on input line 60.
+Package microtype Info: Applying patch `verbatim' on input line 60.
+LaTeX Info: Redefining \microtypesetup on input line 60.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -796,11 +817,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Arial' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package hyperref Info: Link coloring OFF on input line 57.
+Package hyperref Info: Link coloring OFF on input line 60.
 (c:\TCC\ESCRITA TCC\build\0_TCC.out) (c:\TCC\ESCRITA TCC\build\0_TCC.out)
 \@outlinefile=\write4
 \openout4 = `0_TCC.out'.
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 Package biblatex Info: Trying to load language 'brazilian' -> 'brazilian-abnt'...
 Package biblatex Info: ... file 'brazilian-abnt.lbx' found.
  (C:\Users\diego\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-abnt/lbx\brazilian-abnt.lbx
@@ -846,8 +869,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file '0_TCC.bbl' found.
  (c:\TCC\ESCRITA TCC\build\0_TCC.bbl)
-Package biblatex Info: Reference section=0 on input line 57.
-Package biblatex Info: Reference segment=0 on input line 57.
+Package biblatex Info: Reference section=0 on input line 60.
+Package biblatex Info: Reference segment=0 on input line 60.
 Package babel Info: Main language set to 'brazilian'.
 \openout2 = `1_capa.aux'.
 
@@ -1089,16 +1112,16 @@ Underfull \hbox (badness 2653) in paragraph at lines 155--155
  []
 
 ) [24]
-\openout2 = `17_desenvolvimento2.aux'.
+\openout2 = `17_metodologia.aux'.
+
+ (17_metodologia.tex [25
 
 
-No file 17_desenvolvimento2.tex.
+
+] [26] [27] [28] [29] [30] [31] [32]) [33]
 \openout2 = `18_conclusão.aux'.
 
-(18_conclusão.tex) [25
-
-
-
+ (18_conclusão.tex) [34
 
 
 
@@ -1110,56 +1133,56 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [26
+ [35
 
 
 
-]) [27]
+]) [36]
 \openout2 = `21_glossario.aux'.
 
- (21_glossario.tex) [28
+ (21_glossario.tex) [37
 
 
 
 ]
 \openout2 = `22_apêndice.aux'.
 
- (22_apêndice.tex) [29
+ (22_apêndice.tex) [38
 
 
 
 ]
 \openout2 = `23_anexo.aux'.
 
- (23_anexo.tex) [30
+ (23_anexo.tex) [39
 
 
 
 ]
 \openout2 = `24_índice.aux'.
 
- (24_índice.tex) [31
+ (24_índice.tex) [40
 
 
 
-] (c:\TCC\ESCRITA TCC\build\0_TCC.aux (c:\TCC\ESCRITA TCC\build\1_capa.aux) (c:\TCC\ESCRITA TCC\build\2_folha-de-rosto.aux) (c:\TCC\ESCRITA TCC\build\3_ficha-catalografica.aux) (c:\TCC\ESCRITA TCC\build\4_folha-de-aprovação.aux) (c:\TCC\ESCRITA TCC\build\5_dedicatória.aux) (c:\TCC\ESCRITA TCC\build\6_agradecimentos.aux) (c:\TCC\ESCRITA TCC\build\7_epígrafe.aux) (c:\TCC\ESCRITA TCC\build\8_resumo.aux) (c:\TCC\ESCRITA TCC\build\9_abstract.aux) (c:\TCC\ESCRITA TCC\build\10_lista-de-figuras.aux) (c:\TCC\ESCRITA TCC\build\11_lista-de-tabelas.aux) (c:\TCC\ESCRITA TCC\build\12_lista-de-abreviaturas-e-siglas.aux) (c:\TCC\ESCRITA TCC\build\13_lista-de-símbolos.aux) (c:\TCC\ESCRITA TCC\build\14_sumário.aux) (c:\TCC\ESCRITA TCC\build\15_introducao.aux) (c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux) (c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux) (c:\TCC\ESCRITA TCC\build\18_conclusão.aux) (c:\TCC\ESCRITA TCC\build\19_referencias.aux) (c:\TCC\ESCRITA TCC\build\21_glossario.aux) (c:\TCC\ESCRITA TCC\build\22_apêndice.aux) (c:\TCC\ESCRITA TCC\build\23_anexo.aux) (c:\TCC\ESCRITA TCC\build\24_índice.aux))
+] (c:\TCC\ESCRITA TCC\build\0_TCC.aux (c:\TCC\ESCRITA TCC\build\1_capa.aux) (c:\TCC\ESCRITA TCC\build\2_folha-de-rosto.aux) (c:\TCC\ESCRITA TCC\build\3_ficha-catalografica.aux) (c:\TCC\ESCRITA TCC\build\4_folha-de-aprovação.aux) (c:\TCC\ESCRITA TCC\build\5_dedicatória.aux) (c:\TCC\ESCRITA TCC\build\6_agradecimentos.aux) (c:\TCC\ESCRITA TCC\build\7_epígrafe.aux) (c:\TCC\ESCRITA TCC\build\8_resumo.aux) (c:\TCC\ESCRITA TCC\build\9_abstract.aux) (c:\TCC\ESCRITA TCC\build\10_lista-de-figuras.aux) (c:\TCC\ESCRITA TCC\build\11_lista-de-tabelas.aux) (c:\TCC\ESCRITA TCC\build\12_lista-de-abreviaturas-e-siglas.aux) (c:\TCC\ESCRITA TCC\build\13_lista-de-símbolos.aux) (c:\TCC\ESCRITA TCC\build\14_sumário.aux) (c:\TCC\ESCRITA TCC\build\15_introducao.aux) (c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux) (c:\TCC\ESCRITA TCC\build\17_metodologia.aux) (c:\TCC\ESCRITA TCC\build\18_conclusão.aux) (c:\TCC\ESCRITA TCC\build\19_referencias.aux) (c:\TCC\ESCRITA TCC\build\21_glossario.aux) (c:\TCC\ESCRITA TCC\build\22_apêndice.aux) (c:\TCC\ESCRITA TCC\build\23_anexo.aux) (c:\TCC\ESCRITA TCC\build\24_índice.aux))
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `0_TCC.out' has not changed.
-(rerunfilecheck)             Checksum: 86AEE14F69940DC4AF2192940FC4B05D;2832.
+(rerunfilecheck)             Checksum: C19ED4580B1C490E8E2DF7779D05024E;4984.
 Package logreq Info: Writing requests to '0_TCC.run.xml'.
 \openout1 = `0_TCC.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25046 strings out of 402511
- 497410 string characters out of 5435977
- 1552415 words of memory out of 5000000
- 53790 multiletter control sequences out of 15000+600000
+ 26370 strings out of 402511
+ 523449 string characters out of 5435977
+ 1572325 words of memory out of 5000000
+ 55107 multiletter control sequences out of 15000+600000
  635179 words of font info for 114 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  83i,12n,98p,1023b,6996s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on c:\TCC\ESCRITA TCC\build\0_TCC.xdv (32 pages, 379632 bytes).
+Output written on c:\TCC\ESCRITA TCC\build\0_TCC.xdv (41 pages, 597636 bytes).
