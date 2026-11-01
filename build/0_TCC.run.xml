@@ -85,6 +85,7 @@
     </requires>
     <requires type="editable">
       <file>referencias_tcc.bib</file>
+      <file>referencias_fundamentacao.bib</file>
     </requires>
   </external>
 </requests>

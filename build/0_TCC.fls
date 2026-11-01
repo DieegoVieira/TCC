@@ -189,6 +189,16 @@ INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.c
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.cfg
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
 INPUT c:\TCC\ESCRITA TCC\build\0_TCC.aux
 INPUT c:\TCC\ESCRITA TCC\build\0_TCC.aux
 INPUT c:\TCC\ESCRITA TCC\build\0_TCC.aux
@@ -237,9 +247,9 @@ INPUT c:\TCC\ESCRITA TCC\build\14_sumário.aux
 INPUT c:\TCC\ESCRITA TCC\build\15_introducao.aux
 INPUT c:\TCC\ESCRITA TCC\build\15_introducao.aux
 INPUT c:\TCC\ESCRITA TCC\build\15_introducao.aux
-INPUT c:\TCC\ESCRITA TCC\build\16_desenvolvimento.aux
-INPUT c:\TCC\ESCRITA TCC\build\16_desenvolvimento.aux
-INPUT c:\TCC\ESCRITA TCC\build\16_desenvolvimento.aux
+INPUT c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux
+INPUT c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux
+INPUT c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux
 INPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
 INPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
 INPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
@@ -316,6 +326,8 @@ INPUT .\2_folha-de-rosto.tex
 INPUT 2_folha-de-rosto.tex
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
@@ -374,6 +386,9 @@ INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
@@ -407,12 +422,16 @@ OUTPUT c:\TCC\ESCRITA TCC\build\15_introducao.aux
 INPUT .\15_introducao.tex
 INPUT .\15_introducao.tex
 INPUT 15_introducao.tex
-INPUT .\16_desenvolvimento.tex
-INPUT .\16_desenvolvimento.tex
-OUTPUT c:\TCC\ESCRITA TCC\build\16_desenvolvimento.aux
-INPUT .\16_desenvolvimento.tex
-INPUT .\16_desenvolvimento.tex
-INPUT 16_desenvolvimento.tex
+INPUT .\16_fundamentacao_teorica.tex
+INPUT .\16_fundamentacao_teorica.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux
+INPUT .\16_fundamentacao_teorica.tex
+INPUT .\16_fundamentacao_teorica.tex
+INPUT 16_fundamentacao_teorica.tex
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 OUTPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
 INPUT .\18_conclusão.tex
 INPUT .\18_conclusão.tex
@@ -496,9 +515,9 @@ INPUT c:\TCC\ESCRITA TCC\build\14_sumário.aux
 INPUT c:\TCC\ESCRITA TCC\build\15_introducao.aux
 INPUT c:\TCC\ESCRITA TCC\build\15_introducao.aux
 INPUT c:\TCC\ESCRITA TCC\build\15_introducao.aux
-INPUT c:\TCC\ESCRITA TCC\build\16_desenvolvimento.aux
-INPUT c:\TCC\ESCRITA TCC\build\16_desenvolvimento.aux
-INPUT c:\TCC\ESCRITA TCC\build\16_desenvolvimento.aux
+INPUT c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux
+INPUT c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux
+INPUT c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux
 INPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
 INPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux
 INPUT c:\TCC\ESCRITA TCC\build\17_desenvolvimento2.aux

@@ -69,6 +69,57 @@
       \verb https://bvsms.saude.gov.br/bvs/publicacoes/documento_referencia_programa_nacional_seguranca.pdf
       \endverb
     \endentry
+    \entry{goodfellow2016}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=5d2585c11210cf1d4512e6e0a03ec315}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
+           family={Courville},
+           familyi={C\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, MA}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{fullhash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{fullhashraw}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{bibnamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authorbibnamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authornamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authorfullhash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authorfullhashraw}{3ae53fe582e8a815b118d26947eaa326}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Deep Learning}
+      \field{urlday}{31}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.deeplearningbook.org/
+      \endverb
+      \verb{url}
+      \verb https://www.deeplearningbook.org/
+      \endverb
+    \endentry
     \entry{jiang2023}{article}{}{}
       \name{author}{6}{}{%
         {{hash=8735f41e8b2acff52e86f907a6b48829}{%
@@ -139,6 +190,123 @@
       \verb https://www.mdpi.com/2076-3417/13/21/11709
       \endverb
     \endentry
+    \entry{jocher2026}{online}{}{}
+      \name{author}{6}{}{%
+        {{hash=c5c5e5cd7f4f477f617289b32613deb0}{%
+           family={Jocher},
+           familyi={J\bibinitperiod},
+           given={Glenn},
+           giveni={G\bibinitperiod}}}%
+        {{hash=b8739ebbf3f871d471b6720a02ed541f}{%
+           family={Qiu},
+           familyi={Q\bibinitperiod},
+           given={Jing},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b6510dd225990a437097a936227d3a8b}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Mengyu},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7a7e4253cb5e498d2f0cba80e69cf2e7}{%
+           family={Lyu},
+           familyi={L\bibinitperiod},
+           given={Shuai},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f6c6a71bff43788245f168246ee6fab3}{%
+           family={Akyon},
+           familyi={A\bibinitperiod},
+           given={Fatih\bibnamedelima Cagatay},
+           giveni={F\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=6425a732f52f679efa1912481034307e}{%
+           family={Kalfaoglu},
+           familyi={K\bibinitperiod},
+           given={Muhammet\bibnamedelima Esat},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{b71b7268164b9120e178882fafc98c9e}
+      \strng{fullhash}{fd37a71c070ed187eb99e5b44c4b4be3}
+      \strng{fullhashraw}{fd37a71c070ed187eb99e5b44c4b4be3}
+      \strng{bibnamehash}{fd37a71c070ed187eb99e5b44c4b4be3}
+      \strng{authorbibnamehash}{fd37a71c070ed187eb99e5b44c4b4be3}
+      \strng{authornamehash}{b71b7268164b9120e178882fafc98c9e}
+      \strng{authorfullhash}{fd37a71c070ed187eb99e5b44c4b4be3}
+      \strng{authorfullhashraw}{fd37a71c070ed187eb99e5b44c4b4be3}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{2}
+      \field{month}{6}
+      \field{note}{Preprint. Versão 1}
+      \field{title}{Ultralytics {YOLO26}: Unified Real-Time End-to-End Vision Models}
+      \field{urlday}{31}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2606.03748
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2606.03748v1
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2606.03748v1
+      \endverb
+    \endentry
+    \entry{kapoor2023}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=d8f567f02ba9a9531285bd06846298de}{%
+           family={Kapoor},
+           familyi={K\bibinitperiod},
+           given={Sayash},
+           giveni={S\bibinitperiod}}}%
+        {{hash=95dc795a2be14c50fb6a924acc135ff8}{%
+           family={Narayanan},
+           familyi={N\bibinitperiod},
+           given={Arvind},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c082cfb1d4f4958edb5dbe40d2a6d814}
+      \strng{fullhash}{c082cfb1d4f4958edb5dbe40d2a6d814}
+      \strng{fullhashraw}{c082cfb1d4f4958edb5dbe40d2a6d814}
+      \strng{bibnamehash}{c082cfb1d4f4958edb5dbe40d2a6d814}
+      \strng{authorbibnamehash}{c082cfb1d4f4958edb5dbe40d2a6d814}
+      \strng{authornamehash}{c082cfb1d4f4958edb5dbe40d2a6d814}
+      \strng{authorfullhash}{c082cfb1d4f4958edb5dbe40d2a6d814}
+      \strng{authorfullhashraw}{c082cfb1d4f4958edb5dbe40d2a6d814}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{100804}
+      \field{journaltitle}{Patterns}
+      \field{number}{9}
+      \field{title}{Leakage and the reproducibility crisis in machine-learning-based science}
+      \field{urlday}{31}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{volume}{4}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1016/j.patter.2023.100804
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.patter.2023.100804
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.patter.2023.100804
+      \endverb
+    \endentry
     \entry{oms2009}{book}{}{}
       \name{author}{1}{}{%
         {{hash=ae81c3ac63305831dfe0e40bce7cd0ee}{%
@@ -196,6 +364,73 @@
       \endverb
       \verb{url}
       \verb https://bvsms.saude.gov.br/bvs/publicacoes/seguranca_paciente_cirurgias_seguras_salvam_vidas.pdf
+      \endverb
+    \endentry
+    \entry{padilla2021}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=d115bdfa8f1fff2c9e1d606791bfae43}{%
+           family={Padilla},
+           familyi={P\bibinitperiod},
+           given={Rafael},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f399a6c9c0fe041e9bc2a15a222410bd}{%
+           family={Passos},
+           familyi={P\bibinitperiod},
+           given={Wesley\bibnamedelima L.},
+           giveni={W\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=58d1e8adb51657a8c2382bf8d64903b3}{%
+           family={Dias},
+           familyi={D\bibinitperiod},
+           given={Thadeu\bibnamedelimb L.\bibnamedelimi B.},
+           giveni={T\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=95aaf141d71f5e22acc646c5a2f162fc}{%
+           family={Netto},
+           familyi={N\bibinitperiod},
+           given={Sergio\bibnamedelima L.},
+           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=e2d66730cb151eef9a7646388bb6d643}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={Eduardo\bibnamedelimb A.\bibnamedelimi B.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={da},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Basel}%
+      }
+      \strng{namehash}{22802a54cdf2e58c14ac1eee2439077c}
+      \strng{fullhash}{abb476dd76327920670c004d9264711c}
+      \strng{fullhashraw}{abb476dd76327920670c004d9264711c}
+      \strng{bibnamehash}{abb476dd76327920670c004d9264711c}
+      \strng{authorbibnamehash}{abb476dd76327920670c004d9264711c}
+      \strng{authornamehash}{22802a54cdf2e58c14ac1eee2439077c}
+      \strng{authorfullhash}{abb476dd76327920670c004d9264711c}
+      \strng{authorfullhashraw}{abb476dd76327920670c004d9264711c}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{279}
+      \field{journaltitle}{Electronics}
+      \field{number}{3}
+      \field{title}{A Comparative Analysis of Object Detection Metrics with a Companion Open-Source Toolkit}
+      \field{urlday}{31}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{volume}{10}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.3390/electronics10030279
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2079-9292/10/3/279
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2079-9292/10/3/279
       \endverb
     \endentry
     \entry{ran2023}{article}{}{}
