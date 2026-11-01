@@ -1,164 +1,265 @@
-% Fundamentação teórica v1. Requer a configuração bibliográfica já instalada.
-% Incluir no documento principal; não compilar este arquivo isoladamente.
+% Fundamentação teórica — versão 2, 01/11/2026.
+% Incluir no documento principal. Não compilar isoladamente.
+% Dependências e bases bibliográficas descritas no LEIA_ME_FUNDAMENTACAO_V2.md.
 \begingroup
 \justifying
 \setlength{\parindent}{1.25cm}
 \setlength{\parskip}{0pt}
 \setlength{\emergencystretch}{2em}
 \onehalfspacing
+\clubpenalty=10000
+\widowpenalty=10000
 
 \phantomsection
 \addcontentsline{toc}{section}{2 FUNDAMENTAÇÃO TEÓRICA}
 \noindent\textbf{2 FUNDAMENTAÇÃO TEÓRICA}\par
 \vspace{\baselineskip}
 
-A contagem de instrumentos por imagem depende de duas etapas logicamente distintas: reconhecer as instâncias visíveis e agregar as detecções aceitas. A primeira envolve localização e classificação; a segunda transforma essas saídas em quantidades. Este capítulo apresenta os conceitos que sustentam essa abordagem, relaciona estudos sobre instrumentos cirúrgicos e discute os cuidados necessários para interpretar os resultados de uma avaliação experimental.
+Reconhecer uma tesoura em uma fotografia parece uma tarefa simples para quem conhece o instrumento. Para um computador, entretanto, a imagem é inicialmente um conjunto de números. Transformar esses números em informações como a posição, o tipo e a quantidade de objetos exige um método de análise. Este capítulo apresenta esse percurso: começa pelas relações entre inteligência artificial e aprendizado, explica como imagens podem ser processadas por redes neurais e chega aos critérios utilizados para avaliar a detecção e a contagem. Os exemplos numéricos e os esquemas são didáticos; os resultados do experimento são tratados em capítulo próprio.
 
 \vspace{\baselineskip}
 \phantomsection
-\addcontentsline{toc}{subsection}{2.1 Representação visual e aprendizagem supervisionada}
-\noindent\textbf{2.1 Representação visual e aprendizagem supervisionada}\par
+\addcontentsline{toc}{subsection}{2.1 Inteligência artificial, aprendizado e visão computacional}
+\noindent\textbf{2.1 Inteligência artificial, aprendizado e visão computacional}\par
 \vspace{\baselineskip}
 
-Na aprendizagem supervisionada, um modelo é ajustado a partir de exemplos associados a respostas de referência. O objetivo não se limita a reproduzir esses exemplos: espera-se que o modelo apresente desempenho adequado em dados novos. A diferença entre ajuste aos dados disponíveis e generalização é central para interpretar o treinamento de redes neurais \parencite{goodfellow2016}.
+A inteligência artificial (IA) reúne métodos destinados a realizar tarefas que envolvem capacidades como reconhecer padrões e tomar decisões. Uma de suas abordagens é o aprendizado de máquina, também chamado de \textit{machine learning} (ML): o sistema ajusta um modelo a partir de dados, em vez de depender somente de regras definidas manualmente. Uma rede neural artificial é uma família de modelos que combina operações numéricas interligadas. Seus parâmetros, entre eles os pesos das conexões, determinam como as informações são transformadas e podem ser ajustados durante o aprendizado \parencite{goodfellow2016}.
 
-Em imagens, as redes convolucionais exploram a organização espacial dos pixels por meio de filtros com parâmetros aprendidos. A aplicação de filtros em diferentes posições permite construir mapas de características, enquanto a composição de camadas possibilita representar padrões progressivamente mais complexos. O compartilhamento de parâmetros reduz a necessidade de aprender uma transformação independente para cada posição da imagem \parencite{goodfellow2016}. Isso não elimina, entretanto, a influência das condições de aquisição sobre a resposta da rede.
+Aprendizado profundo, ou \textit{deep learning} (DL), refere-se ao aprendizado de representações por múltiplas camadas de processamento. A saída de uma camada fornece informações para as seguintes, permitindo combinar padrões mais simples em representações mais complexas \parencite{lecun2015}. Não se trata de considerar que a máquina compreende uma fotografia da mesma maneira que uma pessoa: ela realiza operações aprendidas com os exemplos e pode falhar diante de condições diferentes daquelas representadas nos dados.
 
-Para instrumentos cirúrgicos, detalhes como a extremidade ativa, a presença de dentes e a curvatura podem ser decisivos para distinguir classes específicas. Uma fotografia em alta resolução pode conter esses detalhes, mas o redimensionamento para a entrada do detector pode torná-los pouco visíveis. Por outro lado, uma imagem que mostra apenas a ponta pode favorecer a identificação de uma característica e oferecer pouca informação sobre a localização do instrumento completo. Essas situações representam exigências diferentes para o sistema e precisam ser consideradas na seleção dos exemplos de treinamento e avaliação.
+Esses conceitos se relacionam, mas não são sinônimos. O aprendizado de máquina integra o campo da IA; redes neurais são uma das famílias de modelos de aprendizado; e existem redes rasas e profundas. Portanto, nem toda rede neural pertence ao aprendizado profundo. A Figura~\ref{fig:fund-conceitos} apresenta um recorte dessas relações. As redes neurais convolucionais, discutidas adiante, podem ser organizadas em arquiteturas profundas para analisar imagens.
 
-Classificação de imagens, detecção de objetos e segmentação de instâncias também produzem respostas diferentes. A classificação associa categorias à imagem; a detecção localiza objetos por caixas e atribui classes; a segmentação de instâncias delimita regiões de pixels de cada objeto. Na formulação original do YOLO, a rede estima caixas delimitadoras e probabilidades de classe a partir da imagem completa \parencite{redmon2016}. Para a contagem aqui investigada, a unidade de interesse é a instância de instrumento, e uma caixa deve representar um objeto, mesmo que ele tenha partes separadas visualmente por oclusão.
+\begin{figure}[htbp]
+\centering
+\caption{Relações entre conceitos de aprendizado utilizados nesta pesquisa}
+\label{fig:fund-conceitos}
+\includegraphics[width=\linewidth]{figuras/fund_conceitos_ia.pdf}
+\par\smallskip
+{\footnotesize Fonte: elaboração própria, com base em \textcite{goodfellow2016,lecun2015}.\par}
+\end{figure}
 
-Uma caixa delimitadora alinhada aos eixos descreve uma região retangular, não o contorno exato do instrumento. Por isso, pode incluir fundo e partes de outros objetos, sobretudo quando o instrumento está inclinado ou sobreposto. Converter um polígono em sua caixa envolvente permite utilizar a anotação em detecção, mas descarta a informação fina de contorno. A conversão também não corrige automaticamente um polígono que abranja componentes fora do objeto desejado; essa adequação depende de revisão da anotação.
+A visão computacional é a área voltada à obtenção de informações a partir de imagens e vídeos. Ela define o tipo de problema a resolver, como localizar um objeto, enquanto o aprendizado profundo oferece uma das maneiras de enfrentá-lo. Também há métodos de visão computacional que utilizam operações de processamento de imagens sem uma rede treinada. Essa distinção ajuda a compreender a proposta desta pesquisa: o problema é detectar e contar instrumentos; a abordagem selecionada utiliza uma rede neural treinada para reconhecer seus padrões visuais.
 
-\vspace{\baselineskip}
-\phantomsection
-\addcontentsline{toc}{subsection}{2.2 Detecção com a família YOLO}
-\noindent\textbf{2.2 Detecção com a família YOLO}\par
-\vspace{\baselineskip}
-
-\textcite{redmon2016} propuseram tratar a detecção como uma predição conjunta de localização e classe em uma única rede. Essa formulação utiliza informação da imagem completa para estimar os objetos presentes. A designação YOLO, contudo, passou a reunir modelos com mudanças de arquitetura e treinamento; características da proposta original não devem ser atribuídas automaticamente às versões posteriores.
-
-O YOLO26 é descrito por \textcite{jocher2026} como uma família com diferentes escalas de modelo e suporte a tarefas de visão computacional. Para detecção, os autores apresentam uma arquitetura com duas cabeças e a possibilidade de inferência sem uma etapa separada de supressão de não máximos, conhecida pela sigla NMS. Essa supressão é utilizada em detectores para reduzir caixas redundantes a partir de suas pontuações e sobreposição. A existência de um caminho de inferência sem NMS não dispensa a conferência da configuração efetivamente utilizada pelo software.
-
-O estudo de \textcite{jocher2026} está disponível como \textit{preprint}; sua descrição técnica é útil para identificar o modelo, mas não constitui validação independente para a aplicação hospitalar deste trabalho. Resultados obtidos pelos autores em bases de referência e dispositivos específicos não antecipam a precisão nem o tempo de execução nas imagens de instrumentos e no equipamento aqui empregado.
-
-O uso de pesos pré-treinados permite iniciar o ajuste de um detector a partir de parâmetros já aprendidos, em vez de partir apenas de uma inicialização aleatória. Ainda assim, o novo treinamento precisa adaptar a saída às classes e aos exemplos disponíveis. O reaproveitamento de representações entre tarefas integra as estratégias de transferência de aprendizagem discutidas por \textcite{goodfellow2016}. No presente problema, uma categoria reconhecida em uma base genérica não equivale à distinção entre instrumentos visualmente próximos.
-
-A escolha entre variantes de menor e maior capacidade envolve recursos computacionais, tempo disponível e desempenho observado. Um modelo maior pode exigir mais memória e processamento sem resolver problemas de anotação, baixa diversidade ou ausência de exemplos representativos. Consequentemente, a comparação de variantes precisa manter condições de avaliação compatíveis e apresentar os resultados medidos, sem tomar o tamanho do modelo como evidência antecipada de superioridade.
+Nesse contexto, uma característica visual pode ser a presença de uma borda, uma textura ou uma combinação de formas. Em instrumentos cirúrgicos, anéis, hastes, curvaturas e extremidades fornecem pistas relevantes. Ao aprender com imagens, porém, o modelo também pode utilizar informações pouco desejáveis, como um fundo associado repetidamente a uma classe. Por isso, ensinar a reconhecer um instrumento exige mais que reunir muitas fotografias: é necessário considerar quais diferenças e semelhanças estão presentes nos exemplos.
 
 \vspace{\baselineskip}
 \phantomsection
-\addcontentsline{toc}{subsection}{2.3 Estudos sobre reconhecimento de instrumentos cirúrgicos}
-\noindent\textbf{2.3 Estudos sobre reconhecimento de instrumentos cirúrgicos}\par
+\addcontentsline{toc}{subsection}{2.2 Da imagem digital às características aprendidas}
+\noindent\textbf{2.2 Da imagem digital às características aprendidas}\par
 \vspace{\baselineskip}
 
-\textcite{ran2023} investigaram uma adaptação do YOLOv7x para detectar instrumentos cirúrgicos. O trabalho aborda dificuldades relacionadas à semelhança entre objetos, à disposição dos instrumentos e às condições visuais das imagens. Sua contribuição sustenta o uso da detecção como abordagem pertinente ao problema, mas os resultados relatados estão vinculados às classes, às imagens e ao protocolo empregados naquele estudo.
+Uma imagem digital pode ser representada por uma grade de elementos chamados pixels. Cada pixel armazena valores relacionados à aparência de uma pequena região da imagem. Em uma representação RGB, há canais correspondentes ao vermelho, ao verde e ao azul; em uma representação em tons de cinza, utiliza-se um valor de intensidade. A resolução indica quantos pixels compõem a largura e a altura. Uma imagem de $640\times640$ pixels, por exemplo, possui 409.600 posições nessa grade, antes de considerar seus canais de cor.
 
-\textcite{jiang2023} estudaram uma versão modificada do YOLOv5 para reconhecimento de instrumentos. A base descrita pelos autores inclui imagens com instrumentos sem empilhamento e com empilhamento, utilizando tecido azul como fundo. A consideração de sobreposição aproxima o estudo de uma dificuldade relevante para a contagem, pois a presença de vários objetos exige que o detector separe instâncias e mantenha sua identificação mesmo quando parte delas está encoberta.
+Essa representação explica por que a resolução influencia o processamento. Mais pixels podem preservar detalhes, mas também aumentam a quantidade de informação que precisa ser tratada. Os modelos recebem imagens preparadas para um tamanho de entrada definido na configuração. O redimensionamento modifica as dimensões, enquanto o preenchimento com bordas permite ajustar o formato sem necessariamente deformar a proporção do objeto. As caixas de referência precisam acompanhar essas transformações para continuarem posicionadas corretamente.
 
-Os dois trabalhos fornecem referências de aplicação, mas não estabelecem uma comparação direta com este TCC. Diferenças na composição das bases, no número de classes, nas condições de captura e nos critérios de avaliação impedem interpretar métricas publicadas como metas automaticamente transferíveis. Tampouco a adoção de uma versão mais recente da família YOLO garante superar os resultados de versões anteriores avaliadas em outros dados.
+Considere uma fotografia de $2.048\times1.536$ pixels ajustada proporcionalmente para caber em $640\times640$. A largura passa a 640 e a altura a 480; o espaço restante pode ser preenchido com bordas. Um detalhe que ocupava dez pixels de largura passa a ocupar aproximadamente três. Esse exemplo mostra por que uma fotografia nítida no arquivo original pode perder informação útil quando apresentada à rede. Aumentar novamente a imagem não recupera automaticamente o detalhe perdido. O tamanho de entrada, portanto, envolve uma escolha entre preservação de informação e custo de processamento.
 
-A contribuição deste trabalho concentra-se na avaliação da contagem para o conjunto de instrumentos selecionado e nas condições documentadas de aquisição e organização das imagens. Isso exige observar não apenas se há detecções, mas quais instrumentos foram omitidos, confundidos ou contados mais de uma vez. As orientações de cirurgia segura da Organização Mundial da Saúde contextualizam a importância da conferência de materiais \parencite{oms2009}; contudo, uma avaliação computacional em fotografias não demonstra, por si só, redução de eventos adversos ou substituição de procedimentos assistenciais.
+Uma forma de analisar a grade de pixels é aplicar filtros. Um filtro combina valores de uma pequena vizinhança para produzir uma nova resposta em cada posição. Na suavização por média, por exemplo, uma janela de $3\times3$ pixels substitui a intensidade central pela média dos nove valores. Isso reduz diferenças locais, mas também pode tornar menos nítidas as bordas. A suavização gaussiana utiliza uma combinação ponderada dos valores próximos, em vez de atribuir a todos a mesma contribuição \parencite{opencvFiltros}.
+
+Outros filtros realçam mudanças de intensidade. O operador Sobel calcula respostas a variações em direções da imagem, que podem destacar bordas \parencite{opencvGradientes}. Na Figura~\ref{fig:fund-filtros}, a imagem sintética contém uma região clara sobre fundo escuro. A suavização torna sua transição mais gradual; a resposta de bordas destaca as regiões de mudança. Esses filtros fixos são apresentados para explicar a ideia de processamento local, não como etapas adicionais aplicadas às fotografias do experimento.
+
+\begin{figure}[htbp]
+\centering
+\caption{Exemplo didático de suavização e realce de bordas}
+\label{fig:fund-filtros}
+\includegraphics[width=\linewidth]{figuras/fund_filtros_didaticos.pdf}
+\par\smallskip
+{\footnotesize Fonte: elaboração própria, em imagem sintética, com operações descritas na documentação do OpenCV \parencite{opencvFiltros,opencvGradientes}.\par}
+\end{figure}
+
+Nas redes neurais convolucionais, conhecidas pela sigla CNN, do inglês \textit{convolutional neural network}, os filtros têm valores aprendidos durante o treinamento. A aplicação de um filtro em diferentes posições gera um mapa de características: uma nova grade que indica onde o padrão associado ao filtro produz respostas. Diversos filtros geram diferentes mapas, e camadas posteriores combinam essas informações. O compartilhamento dos valores do filtro entre posições evita aprender uma operação inteiramente diferente para cada ponto da imagem \parencite{goodfellow2016}.
+
+As camadas convolucionais são combinadas com outras operações, incluindo funções de ativação, que permitem representar relações não lineares. Em termos intuitivos, a rede não fica limitada a somar sempre as informações da mesma maneira: consegue construir respostas mais complexas a partir dos padrões intermediários. O aprendizado em várias camadas é um dos fundamentos do avanço das redes profundas na análise visual \parencite{lecun2015}. Ainda assim, os mapas internos não devem ser interpretados como uma lista garantida de conceitos humanos, como ``dente'', ``anel'' ou ``ponta curva''. Essas são características úteis para explicar o problema, mas não uma descrição previamente conhecida do que cada filtro aprendeu.
 
 \vspace{\baselineskip}
 \phantomsection
-\addcontentsline{toc}{subsection}{2.4 Qualidade dos dados e independência da avaliação}
-\noindent\textbf{2.4 Qualidade dos dados e independência da avaliação}\par
+\addcontentsline{toc}{subsection}{2.3 Classificação, detecção e modelos da família YOLO}
+\noindent\textbf{2.3 Classificação, detecção e modelos da família YOLO}\par
 \vspace{\baselineskip}
 
-A separação entre treinamento, validação e teste atribui funções diferentes aos dados. O treinamento ajusta os parâmetros; a validação auxilia a escolha de configurações; o teste estima o desempenho após essas escolhas. Utilizar repetidamente o teste para orientar modificações compromete sua função de avaliação independente. \textcite{kapoor2023} discutem como o vazamento de informação pode levar a conclusões excessivamente otimistas em pesquisas baseadas em aprendizagem de máquina.
+O tipo de resposta esperado define a tarefa de análise. Na classificação de imagens, o sistema atribui uma categoria, ou um conjunto de categorias, à imagem. Na detecção, localiza cada objeto e informa sua classe. Na segmentação de instâncias, identifica os pixels correspondentes a cada objeto individual. O termo instância significa, nesse caso, um exemplar: duas pinças da mesma classe são duas instâncias. Assim, saber que há pinças em uma fotografia não determina quantas existem nem onde estão; a detecção acrescenta as informações necessárias para a contagem por objeto \parencite{padilla2021}.
 
-No caso de fotografias de instrumentos, a independência não pode ser verificada apenas pelo nome do arquivo. Cópias recomprimidas, recortes e transformações de uma mesma fotografia podem preservar grande parte do conteúdo visual. Imagens capturadas em sequência também podem compartilhar objeto, posição, iluminação e fundo. Se exemplos fortemente relacionados forem distribuídos entre treinamento e teste, a avaliação pode refletir a familiaridade com aquela aquisição, em vez da resposta a uma condição nova. O controle desse risco demanda rastreabilidade e agrupamento dos exemplos relacionados antes da divisão.
+Uma caixa delimitadora alinhada aos eixos é um retângulo definido por sua posição, largura e altura. Ela envolve o objeto, mas não acompanha seu contorno. Por isso, uma pinça inclinada pode ter bastante fundo dentro da caixa sem que a anotação esteja necessariamente incorreta. Já um polígono utilizado na segmentação acompanha o contorno por vários pontos. Sua conversão em caixa utiliza os limites mínimo e máximo nas direções horizontal e vertical, preservando a região envolvente e descartando o detalhamento do contorno.
 
-Identidade digital e similaridade visual são evidências diferentes. Um resumo criptográfico permite comparar os bytes dos arquivos, mas uma alteração de compressão pode modificar esses bytes sem produzir uma mudança visual relevante. Métodos perceptuais auxiliam a busca por candidatos semelhantes, porém não substituem a análise dos casos ambíguos: instrumentos distintos podem ter aparência próxima. O procedimento adotado precisa registrar os critérios e as decisões, sem afirmar que um único limiar garante ausência de vazamento.
+Quando um instrumento encobre parte de outro, ocorre oclusão. A sobreposição das caixas, entretanto, não comprova que os instrumentos estejam fisicamente sobrepostos: os retângulos podem se cruzar apenas por incluírem áreas de fundo. Da mesma forma, instrumentos empilhados são um caso particular de disposição em que peças ficam sobre outras. Essas distinções são relevantes tanto para anotar quanto para analisar falhas. É preciso reconhecer cada objeto individual visível sem criar uma anotação adicional para cada uma de suas partes.
 
-O aumento de dados produz variações dos exemplos de treinamento, como mudanças de orientação e aparência. Essas transformações são formas de introduzir variação e regularizar o aprendizado \parencite{goodfellow2016}. Elas não criam novas sessões independentes de coleta. Quando aplicadas durante o carregamento dos lotes, também não correspondem necessariamente a uma nova quantidade fixa de arquivos no disco. Por essa razão, é mais informativo registrar as técnicas, suas probabilidades e as épocas de aplicação do que apresentar uma multiplicação arbitrária do número de imagens.
+Para produzir caixas e classes, diferentes detectores organizam o processamento de maneiras distintas. O Faster R-CNN utiliza uma rede de proposta de regiões para indicar áreas potencialmente ocupadas por objetos, que são analisadas para classificação e refinamento das caixas \parencite{ren2015faster}. A proposta original do YOLO, de \textcite{redmon2016}, formula a localização e a classificação conjuntamente a partir da imagem completa. O nome \textit{You Only Look Once} expressa essa ideia de uma passagem pela rede para gerar as previsões, em vez de avaliar separadamente uma grande coleção de recortes.
 
-Outro aspecto é a distribuição conjunta de classes e origens. Uma classe numerosa pode estar representada quase exclusivamente por imagens da internet, enquanto outra pode ter maior variedade de fotografias hospitalares. Assim, a quantidade de exemplos, isoladamente, não expressa a cobertura das condições de uso. Para este estudo, resultados separados por origem e por classe ajudam a localizar limitações que uma média global pode ocultar. Classes sem exemplos hospitalares de teste não permitem estimar diretamente seu desempenho nesse domínio.
+A família YOLO evoluiu desde essa proposta. Em termos gerais, um detector moderno extrai características da imagem, combina informações em diferentes níveis e gera as saídas de localização e classe. A parte responsável por produzir essas saídas é frequentemente chamada de cabeça de detecção. O uso do mesmo nome de família não significa que todas as versões tenham arquitetura ou procedimentos idênticos; a descrição do modelo precisa corresponder à versão efetivamente empregada.
+
+O YOLO26 disponibiliza variantes n, s, m, l e x, associadas a diferentes escalas de tamanho. A variante n é a mais compacta; variantes maiores ampliam a capacidade do modelo e normalmente exigem mais memória e processamento \parencite{ultralyticsYOLO26intro}. Capacidade, nesse contexto, está relacionada à quantidade e à organização dos parâmetros que podem ser ajustados. Uma rede maior não corrige automaticamente imagens mal anotadas ou a ausência de exemplos relevantes. A escolha deve considerar o equipamento disponível e o desempenho observado, sem tratar tamanho como garantia de qualidade.
+
+A descrição técnica do YOLO26 também apresenta um caminho de inferência sem uma etapa separada de supressão de não máximos, ou NMS, do inglês \textit{non-maximum suppression} \parencite{jocher2026}. Inferência é o uso do modelo já treinado para analisar uma imagem. Em detectores que utilizam NMS, essa etapa procura reduzir previsões redundantes sobre um mesmo objeto, considerando suas pontuações e sobreposição. Como o comportamento depende da configuração e da implementação, a avaliação deve registrar o caminho realmente utilizado. Para a contagem, a questão prática é evitar que um único instrumento resulte em várias detecções aceitas.
+
+Além da caixa e da classe, as previsões recebem uma pontuação de confiança, utilizada para selecionar as respostas que serão consideradas. Uma pontuação elevada indica maior confiança segundo o modelo, mas não deve ser tomada automaticamente como probabilidade real de acerto. O limiar de confiança é o valor mínimo exigido para aceitar uma detecção. Escolher esse limiar modifica quais objetos entram na contagem, razão pela qual sua definição precisa ocorrer na validação, antes da avaliação final.
 
 \vspace{\baselineskip}
 \phantomsection
-\addcontentsline{toc}{subsection}{2.5 Avaliação da detecção}
-\noindent\textbf{2.5 Avaliação da detecção}\par
+\addcontentsline{toc}{subsection}{2.4 Treinamento, preparação dos dados e generalização}
+\noindent\textbf{2.4 Treinamento, preparação dos dados e generalização}\par
 \vspace{\baselineskip}
 
-A avaliação exige comparar predições com anotações de referência segundo critérios explícitos. A interseção sobre união, ou IoU, mede a sobreposição entre a caixa predita $B_p$ e a caixa de referência $B_r$:
+Na aprendizagem supervisionada, cada exemplo utilizado para ensinar o modelo está associado a uma resposta de referência. Para detectar instrumentos, essa resposta contém as caixas e suas classes. Durante o treinamento, a rede produz previsões, compara-as com as referências e ajusta seus parâmetros. O objetivo é aprender relações que também funcionem em novos exemplos. Essa capacidade de responder adequadamente a dados não utilizados no ajuste é chamada de generalização \parencite{goodfellow2016}.
+
+A diferença entre previsão e referência é expressa por uma função de perda. Em um detector, podem existir componentes relacionados à localização das caixas e à classificação. A retropropagação calcula como os parâmetros influenciam essa perda; o otimizador utiliza essas informações para atualizá-los. A taxa de aprendizado controla a escala dos ajustes. Atualizações muito grandes podem prejudicar a estabilidade, enquanto atualizações muito pequenas podem tornar o processo lento. Esses elementos fazem parte do procedimento de otimização descrito por \textcite{goodfellow2016}.
+
+Os pesos são parâmetros aprendidos; já as configurações escolhidas para conduzir o processo, como taxa de aprendizado, tamanho do lote e limite de épocas, são chamadas de hiperparâmetros. Um lote é um grupo de exemplos processados em uma etapa do treinamento. Uma época corresponde a uma passagem pelo conjunto de treinamento, conforme o procedimento de amostragem utilizado. Por exemplo, uma base com mil imagens, processada em lotes de dez sem descarte de exemplos, resulta em cem lotes por época. Esse cálculo ajuda a relacionar a configuração ao tempo de execução, mas não determina a qualidade do resultado.
+
+Entre os otimizadores está o AdamW, que combina atualização adaptativa dos parâmetros com um procedimento de decaimento de pesos separado dessa atualização \parencite{loshchilov2019adamw}. O decaimento reduz os pesos de forma controlada e participa das estratégias de regularização, utilizadas para limitar ajustes excessivos aos exemplos de treinamento. A escolha de um otimizador é apenas uma parte do experimento: seus valores de configuração e sua interação com os dados também precisam ser considerados.
+
+O treinamento pode começar com pesos pré-treinados, isto é, valores obtidos anteriormente em outra base. Essa estratégia permite aproveitar representações já aprendidas e adaptá-las à nova tarefa, procedimento conhecido como transferência de aprendizagem. O ajuste posterior pode atualizar a rede ou manter parte de seus parâmetros fixos, conforme a configuração \parencite{pytorchTransferencia}. Para instrumentos cirúrgicos, reconhecer objetos em uma base genérica constitui um ponto de partida, não uma evidência de que o modelo já distingue as classes selecionadas.
+
+Para verificar o aprendizado, os dados são separados em treinamento, validação e teste. O treinamento ajusta os parâmetros; a validação acompanha o desempenho e orienta escolhas, como a seleção de uma época ou do limiar de confiança; o teste é reservado à avaliação após essas escolhas. Usar o teste repetidamente para selecionar configurações compromete sua independência, pois suas respostas passam a orientar o desenvolvimento \parencite{kapoor2023}. A validação executada ao fim de uma época, portanto, não deve ser confundida com a avaliação final no conjunto de teste.
+
+Quando o modelo melhora nos dados de treinamento, mas não mantém essa melhora em dados novos, pode estar ocorrendo sobreajuste. A análise das curvas de perda e de validação ajuda a acompanhar esse comportamento, sem que uma oscilação isolada seja suficiente para diagnosticá-lo. A parada antecipada interrompe o treinamento quando o indicador monitorado deixa de melhorar por determinado período, chamado de paciência. Trata-se de uma forma de controle do aprendizado, discutida entre as estratégias de regularização por \textcite{goodfellow2016}. O melhor estado salvo durante a execução pode ser diferente daquele produzido na última época.
+
+A independência dos conjuntos também depende de como as fotografias foram obtidas. Uma cópia com outro nome continua representando a mesma cena; um recorte ou uma inversão pode preservar grande parte de seu conteúdo; e fotografias consecutivas podem diferir pouco entre si. Se exemplos fortemente relacionados aparecem no treinamento e no teste, o desempenho pode refletir a familiaridade com aquela captura. Agrupar imagens relacionadas antes da separação reduz esse risco, mas a quantidade de arquivos não deve ser interpretada automaticamente como quantidade de observações independentes \parencite{kapoor2023}.
+
+Essa preocupação é especialmente relevante para as imagens hospitalares: variar a posição do instrumento pode acrescentar informação, mas fotografá-lo repetidamente com o mesmo fundo e iluminação não reproduz toda a diversidade de uso. Um identificador calculado a partir dos bytes permite localizar cópias exatas de arquivos. Métodos de similaridade visual podem indicar outras repetições, porém precisam de revisão, pois objetos diferentes também podem se parecer. A limpeza da base deve combinar verificação automática e análise dos casos ambíguos, preservando a correspondência entre cada imagem e suas anotações.
+
+O aumento de dados, ou \textit{data augmentation}, introduz variações nos exemplos de treinamento. Rotações e inversões alteram a orientação; mudanças de escala e deslocamento modificam o enquadramento; ajustes de cor e brilho variam a aparência. O mosaico combina imagens em uma composição, criando novas disposições dos objetos. As anotações precisam ser transformadas junto com as imagens, e a intensidade dessas operações deve preservar exemplos coerentes com a tarefa \parencite{ultralyticsAugmentation}.
+
+Quando esse aumento ocorre durante o carregamento dos lotes, a base no disco mantém sua quantidade de arquivos. A cada apresentação, uma imagem pode receber uma transformação diferente ou nenhuma transformação, de acordo com as probabilidades configuradas. Assim, afirmar que mil imagens se tornaram dez mil exige especificar o que foi contado: arquivos salvos, apresentações ao modelo ou combinações produzidas. Variações artificiais também não substituem novas fotografias obtidas em condições diferentes. Na avaliação usual, validação e teste recebem a preparação necessária à entrada do modelo, sem as transformações aleatórias utilizadas para diversificar o treinamento.
+
+Outro cuidado é o equilíbrio entre classes e origens. Uma classe pode possuir muitos objetos anotados, mas pouca variedade de cenas; outra pode reunir menos exemplos, porém capturados em condições diversas. Imagens e objetos são unidades diferentes: uma foto com quatro pinças representa uma imagem e quatro anotações. Além disso, exemplos da internet e do hospital podem diferir em fundo, iluminação e enquadramento. Por esse motivo, a distribuição por classe e por origem ajuda a interpretar o que o modelo teve oportunidade de aprender e quais condições estão pouco representadas.
+
+Por fim, a repetição de um experimento depende do registro de suas configurações. A semente inicializa geradores de números pseudoaleatórios, utilizados em operações como a ordem dos exemplos e as transformações. Fixá-la auxilia a repetibilidade, mas não garante resultados idênticos em qualquer dispositivo ou versão de software. A documentação do PyTorch ressalta que a disponibilidade de operações determinísticas e as diferenças de plataforma também influenciam esse comportamento \parencite{pytorchReprodutibilidade}. A metodologia precisa, portanto, registrar tanto a configuração quanto as limitações efetivamente observadas.
+
+\vspace{\baselineskip}
+\phantomsection
+\addcontentsline{toc}{subsection}{2.5 Pesquisas relacionadas à conferência de instrumentos}
+\noindent\textbf{2.5 Pesquisas relacionadas à conferência de instrumentos}\par
+\vspace{\baselineskip}
+
+A avaliação computacional precisa ser relacionada ao problema que motiva a pesquisa. No contexto brasileiro, \textcite{freitas2016} analisaram a contagem cirúrgica a partir dos relatos de 55 enfermeiros. O estudo examinou como, quando e por quem a contagem era realizada e contribui para compreender a organização desse processo. Seu foco é a prática de conferência, não a avaliação de um detector. Essa distinção é útil porque melhorar o reconhecimento em imagens e melhorar um processo assistencial são objetivos relacionados, mas exigem evidências diferentes.
+
+No contexto do HU-UEL, \textcite{moreto2025} investigou o desenvolvimento de um protótipo para contagem e rastreabilidade de instrumentos, considerando o fluxo do CME. Contagem informa quantos objetos estão presentes; rastreabilidade envolve acompanhar sua identificação e seu percurso no processo. O estudo fornece uma referência local para compreender as conferências no expurgo e no preparo das caixas. A presente pesquisa concentra sua avaliação na detecção e na contagem por fotografias, sem equiparar o reconhecimento de uma categoria à identificação individual de cada peça ao longo de seu histórico de uso.
+
+Na investigação de detectores, \textcite{ran2023} propuseram modificações no YOLOv7x e apresentaram a base OSI26. O trabalho considera dificuldades de reconhecimento relacionadas à semelhança entre instrumentos e às condições visuais. Sua contribuição para esta pesquisa é mostrar que a detecção de instrumentos envolve desafios próprios e pode exigir atenção à representação dos objetos, além da escolha de uma arquitetura genérica.
+
+\textcite{jiang2023} estudaram uma adaptação do YOLOv5 em imagens de instrumentos, incluindo disposições com e sem empilhamento. A presença de peças sobrepostas aproxima a investigação de uma dificuldade importante para a contagem: localizar objetos distintos quando parte de sua aparência está escondida. Os dois estudos examinam alterações nos detectores, enquanto a presente pesquisa prioriza a preparação da base e a avaliação de uma implementação disponível no recorte de instrumentos selecionado.
+
+Uma contribuição adicional é o estudo experimental de \textcite{deol2024}, que utilizou YOLOv9 em uma base com 1.004 imagens, 13.213 objetos e 11 categorias. Os autores incluíram cenas com vários instrumentos, um subconjunto com sobreposição e uma avaliação em vídeo simulado. Isso aproxima o problema de situações em que a contagem precisa considerar diversos objetos simultaneamente. Por outro lado, a necessidade de validação clínica posterior reconhecida pelos autores reforça a diferença entre demonstrar funcionamento experimental e comprovar adequação ao uso hospitalar.
+
+Esses trabalhos orientam aspectos complementares: a rotina de conferência, o contexto local de aplicação, as dificuldades visuais e a avaliação de cenas com múltiplos objetos. Suas métricas não formam, contudo, uma classificação direta de qual modelo seria melhor para esta pesquisa. Bases, categorias, divisões e condições de captura distintas produzem problemas diferentes. A comparação útil está nos critérios empregados e nas limitações observadas; qualquer comparação numérica entre modelos exige condições de avaliação compatíveis.
+
+\vspace{\baselineskip}
+\phantomsection
+\addcontentsline{toc}{subsection}{2.6 Como avaliar a detecção dos objetos}
+\noindent\textbf{2.6 Como avaliar a detecção dos objetos}\par
+\vspace{\baselineskip}
+
+Avaliar a detecção significa comparar as caixas e as classes previstas com as anotações de referência. Uma previsão precisa localizar o objeto com qualidade suficiente e atribuir-lhe a classe esperada. Para medir a proximidade entre duas caixas, utiliza-se a interseção sobre união, conhecida como IoU, do inglês \textit{intersection over union}. Seu cálculo divide a área comum às caixas pela área total ocupada por ambas, contando a região comum apenas uma vez \parencite{padilla2021}:
 \begin{equation}
 \mathrm{IoU}(B_p,B_r)=\frac{|B_p\cap B_r|}{|B_p\cup B_r|}.
 \label{eq:fund_iou}
 \end{equation}
-Na Equação~\ref{eq:fund_iou}, as barras representam áreas. A correspondência de uma detecção depende da classe, do limiar de IoU e da regra de associação entre predições e referências. Na avaliação usual de instâncias individuais, uma referência não deve contabilizar várias predições como acertos \parencite{padilla2021}.
 
-Sejam $VP$, $FP$ e $FN$ as quantidades de verdadeiros positivos, falsos positivos e falsos negativos. Precisão e revocação são expressas, para denominadores não nulos, por
+Na Equação~\ref{eq:fund_iou}, $B_p$ é a caixa prevista e $B_r$ a caixa de referência. O símbolo $\cap$ indica a interseção, ou parte comum; $\cup$ indica a união; e as barras representam área. O resultado varia de zero a um: zero corresponde à ausência de área comum e um à coincidência completa. Quanto maior a sobreposição relativa, maior a IoU. Na Figura~\ref{fig:fund-iou}, cada caixa tem área 12, a parte comum tem área 6 e a união tem área $12+12-6=18$. Assim, a IoU é $6/18$, aproximadamente $0{,}33$.
+
+\begin{figure}[htbp]
+\centering
+\caption{Cálculo ilustrativo da interseção sobre união entre duas caixas}
+\label{fig:fund-iou}
+\includegraphics[width=0.9\linewidth]{figuras/fund_iou_exemplo.pdf}
+\par\smallskip
+{\footnotesize Fonte: elaboração própria. Áreas expressas em unidades quadradas arbitrárias.\par}
+\end{figure}
+
+Um limiar de IoU define a sobreposição mínima exigida para aceitar uma correspondência. Se o limiar for $0{,}50$, as caixas do exemplo não satisfazem o critério. Esse valor não é o limiar de confiança: a confiança seleciona as previsões emitidas pelo modelo; a IoU avalia sua localização em relação à referência. A associação também considera a classe e deve evitar que várias previsões sejam contadas como acertos para um único objeto \parencite{padilla2021}.
+
+Uma detecção corretamente associada é um verdadeiro positivo ($VP$). Uma previsão sem correspondência válida é um falso positivo ($FP$), como uma caixa sobre o fundo ou uma detecção duplicada. Um objeto anotado que não recebe correspondência é um falso negativo ($FN$). Quando a classe está errada, a avaliação por classe registra uma previsão indevida na classe atribuída e a ausência do objeto na classe de referência. Esses termos descrevem erros diferentes e ajudam a interpretar o resultado para além do número total de caixas.
+
+A precisão responde: entre as detecções aceitas, quantas estão corretas? A revocação, também chamada de sensibilidade ou \textit{recall}, responde: entre os objetos que deveriam ser encontrados, quantos foram detectados corretamente? Para denominadores diferentes de zero, calculam-se:
 \begin{equation}
 P=\frac{VP}{VP+FP},\qquad R=\frac{VP}{VP+FN}.
 \label{eq:fund_pr}
 \end{equation}
-A precisão relaciona os acertos às detecções aceitas; a revocação relaciona os acertos aos objetos de referência. A precisão média, AP, resume a curva precisão--revocação segundo uma regra de integração ou interpolação. A mAP agrega AP entre classes. As convenções de cálculo precisam ser informadas, pois diferenças de implementação afetam a comparação \parencite{padilla2021}.
 
-Na notação usual, mAP@0,50 utiliza IoU de 0,50; mAP@0,50:0,95 agrega os limiares de 0,50 a 0,95 em passos de 0,05. Esses valores não representam a porcentagem de fotografias cuja contagem está correta. Além disso, o limiar de IoU empregado para julgar a localização não é o limiar de confiança utilizado para aceitar uma predição. A metodologia deve registrar ambos e distinguir a avaliação da curva de detecção da configuração usada para produzir as contagens.
+Considere, como exemplo didático, dez instrumentos anotados e nove detecções, das quais oito corretas. Nesse caso, há $VP=8$, $FP=1$ e $FN=2$. A precisão é $8/9\approx88{,}9\%$ e a revocação é $8/10=80\%$. A primeira informa a proporção de respostas corretas; a segunda mostra a parcela dos instrumentos encontrados. Se aumentam os falsos positivos mantendo os acertos, a precisão diminui. Se aumentam as omissões mantendo os acertos, a revocação diminui.
 
-Uma caixa imprecisa pode ainda contribuir com uma unidade para a contagem, enquanto uma classificação errada pode preservar o total e alterar a composição por instrumento. Por isso, as métricas de detecção e de contagem respondem a perguntas complementares. A análise dos erros deve relacionar o resultado numérico às caixas e às classes preditas.
+O limiar de confiança interfere nesse equilíbrio. Elevar o limiar elimina previsões de menor pontuação, podendo retirar tanto erros quanto acertos; reduzi-lo permite aceitar mais previsões, incluindo potenciais falsos positivos. Em geral, utiliza-se uma curva precisão--revocação para observar o comportamento em vários limiares. A precisão média, AP, resume essa curva de acordo com uma convenção de cálculo, e a média das AP entre as classes é denominada mAP \parencite{ultralyticsValidacao}. Por reunir diferentes pontos de operação, a mAP não é a precisão obtida em um único limiar escolhido para contar objetos.
+
+Na notação mAP@0,50, a localização é avaliada com IoU de $0{,}50$. Já mAP@0,50:0,95 combina avaliações em dez limiares, de $0{,}50$ a $0{,}95$, com intervalos de $0{,}05$. Os critérios mais altos exigem maior coincidência entre as caixas. Essas métricas descrevem a detecção; não representam a porcentagem de imagens com contagem exata \parencite{ultralyticsValidacao}. Também é necessário informar quais classes possuem exemplos na avaliação, pois uma classe ausente não fornece evidência de desempenho positivo naquele conjunto.
+
+Os resultados por classe e a matriz de confusão complementam as médias. Essa matriz organiza as correspondências entre categorias de referência e previstas, permitindo identificar trocas recorrentes. Sua interpretação depende da orientação dos eixos e dos critérios de associação empregados. Para esta aplicação, uma média global satisfatória pode esconder dificuldades em categorias menos representadas, tornando necessária a análise conjunta das métricas e de exemplos visuais dos erros.
 
 \vspace{\baselineskip}
 \phantomsection
-\addcontentsline{toc}{subsection}{2.6 Contagem por detecção e critérios de interpretação}
-\noindent\textbf{2.6 Contagem por detecção e critérios de interpretação}\par
+\addcontentsline{toc}{subsection}{2.7 Da detecção à avaliação da contagem}
+\noindent\textbf{2.7 Da detecção à avaliação da contagem}\par
 \vspace{\baselineskip}
 
-Considere $N$ imagens e $C$ classes. Para a imagem $i$, seja $D_i$ o conjunto de detecções aceitas após a aplicação dos critérios de confiança e pós-processamento definidos. A contagem estimada da classe $c$ pode ser escrita como
+Depois de selecionar as detecções, a contagem pode ser obtida somando os objetos atribuídos a cada classe. Para expressar essa operação, considere $N$ imagens e $C$ classes. O índice $i$ identifica uma imagem e $c$ uma classe. Seja $D_i$ o conjunto de detecções aceitas na imagem $i$. A quantidade prevista para uma classe e o total previsto são:
 \begin{equation}
 \widehat{n}_{ic}=\sum_{d\in D_i}\mathbf{1}[\operatorname{classe}(d)=c],
-\qquad \widehat{n}_i=\sum_{c=1}^{C}\widehat{n}_{ic},
+\qquad
+\widehat{n}_i=\sum_{c=1}^{C}\widehat{n}_{ic}.
 \label{eq:fund_contagem}
 \end{equation}
-em que $\mathbf{1}[\cdot]$ vale um quando a condição é verdadeira e zero caso contrário. Os índices matemáticos das classes vão de um a $C$, independentemente da numeração adotada nos arquivos de anotação. Essa formulação explicita que a contagem depende das detecções efetivamente aceitas, não de todas as hipóteses internas da rede.
 
-Se $n_i$ é a contagem total de referência, o erro absoluto médio total é
+O símbolo $\sum$ indica uma soma. Na primeira expressão, percorrem-se as detecções $d$ e acrescenta-se uma unidade quando sua classe é $c$; a função $\mathbf{1}[\cdot]$ vale um se a condição for verdadeira e zero se for falsa. Na segunda, somam-se as quantidades de todas as classes. O acento sobre $\widehat{n}$ indica que se trata de uma estimativa. Os índices de um a $C$ são uma convenção matemática e não alteram a numeração dos arquivos de anotação. Se a saída contém duas pinças e uma tesoura, as contagens são dois e um, e o total é três.
+
+Para avaliar o total, compara-se a estimativa $\widehat{n}_i$ com a quantidade de referência $n_i$. O erro absoluto médio, ou MAE, do inglês \textit{mean absolute error}, é definido por:
 \begin{equation}
 \mathrm{MAE}_{\mathrm{total}}=\frac{1}{N}\sum_{i=1}^{N}|\widehat{n}_i-n_i|.
 \label{eq:fund_mae}
 \end{equation}
-O valor informa quantos objetos, em média por imagem, separam a estimativa do total anotado. Para examinar a identificação, calcula-se também o erro por classe, substituindo os totais por $\widehat{n}_{ic}$ e $n_{ic}$. Quando a maioria das imagens não contém determinada classe, a média calculada sobre todas as imagens pode ser pequena mesmo com falhas nos exemplos positivos; convém, portanto, explicitar o suporte e separar a análise de presença e ausência.
 
-A proporção de imagens com total exato e a proporção com todas as contagens por classe corretas podem ser definidas, respectivamente, por
+Primeiro, calcula-se a diferença entre o total previsto e o total real em cada imagem. As barras indicam valor absoluto: um erro de menos dois ou de mais dois contribui com dois. Em seguida, somam-se os erros e divide-se pelo número de imagens. Um MAE menor indica maior proximidade entre os totais; zero significa que todos os totais coincidiram. A unidade é objetos por imagem, e não porcentagem.
+
+Por exemplo, suponha três imagens com totais de referência $(2,3,0)$ e previsões $(2,1,1)$. Os erros absolutos são $(0,2,1)$, e o MAE é $(0+2+1)/3=1$. Isso não significa que houve exatamente um erro em cada fotografia: uma teve total correto, outra apresentou subcontagem de dois e a terceira, sobrecontagem de um. Registrar separadamente omissões e excessos torna a interpretação mais útil para uma tarefa de conferência.
+
+O cálculo também pode ser realizado por classe:
 \begin{equation}
-E_{\mathrm{total}}=\frac{1}{N}\sum_{i=1}^{N}\mathbf{1}[\widehat{n}_i=n_i],
+\mathrm{MAE}_{c}=\frac{1}{N}\sum_{i=1}^{N}|\widehat{n}_{ic}-n_{ic}|.
+\label{eq:fund_mae_classe}
+\end{equation}
+
+Aqui, $n_{ic}$ é a quantidade de referência da classe $c$ na imagem $i$. Essa medida revela, por exemplo, que uma contagem total aparentemente adequada pode esconder trocas entre pinças e tesouras. A base utilizada no denominador deve ficar explícita: calcular a média sobre todas as imagens inclui aquelas em que a classe está ausente. Para uma classe rara, muitos zeros corretos podem reduzir a média mesmo com falhas nas poucas imagens positivas. Informar a quantidade de imagens e objetos avaliados e distinguir os casos de presença e ausência ajuda a evitar essa interpretação equivocada.
+
+Outra pergunta importante é quantas fotografias tiveram a contagem exata. A proporção de imagens com total correto é:
+\begin{equation}
+E_{\mathrm{total}}=\frac{1}{N}\sum_{i=1}^{N}\mathbf{1}[\widehat{n}_i=n_i].
 \label{eq:fund_exato_total}
 \end{equation}
+
+Cada imagem contribui com um se o total previsto coincide com a referência, ou com zero se existe diferença. A soma é dividida por $N$; multiplicando o resultado por cem, obtém-se a porcentagem. No exemplo dos totais $(2,3,0)$ e $(2,1,1)$, apenas a primeira imagem teve acerto, portanto $E_{\mathrm{total}}=1/3$, ou aproximadamente $33{,}3\%$. Diferentemente do MAE, esse indicador não distingue um erro de uma unidade de um erro de várias unidades: ambos tornam aquela contagem inexata.
+
+Também é possível exigir que todas as categorias estejam corretas simultaneamente. O vetor de contagens é a lista ordenada das quantidades de cada classe; por exemplo, $(2,1,0)$ pode representar duas pinças, uma tesoura e nenhum afastador. Define-se a proporção de vetores exatos por:
 \begin{equation}
 E_{\mathrm{classes}}=\frac{1}{N}\sum_{i=1}^{N}
-\mathbf{1}[\widehat{n}_{ic}=n_{ic}\ \mathrm{para\ todo}\ c].
+\mathbf{1}[\widehat{n}_{ic}=n_{ic}\ \text{para todo }c].
 \label{eq:fund_exato_classes}
 \end{equation}
-Essas expressões são definições operacionais para organizar a avaliação deste problema, e não resultados experimentais. Uma omissão e uma detecção indevida podem se compensar no total; até a igualdade das contagens por classe pode coexistir com erros de localização. Nenhum desses indicadores substitui a inspeção das detecções.
 
-O Quadro~\ref{qua:fund_interpretacao} sintetiza as diferenças entre as perguntas de avaliação. O agrupamento em categorias gerais exige atenção adicional: confundir duas classes específicas pertencentes ao mesmo grupo deixa de ser um erro de classe nessa representação. Logo, um resultado superior com categorias gerais não demonstra, por si só, melhor reconhecimento específico.
+A condição ``para todo $c$'' exige coincidência em cada posição da lista. Uma previsão $(1,2,0)$ tem o mesmo total de $(2,1,0)$, mas falha nesse critério porque troca a composição das classes. Assim, o acerto exato por classe é mais exigente que o acerto apenas do total. Entretanto, nem mesmo a coincidência do vetor garante que todas as caixas estejam corretas: uma omissão e uma detecção indevida na mesma categoria podem se compensar.
 
-\begin{table}[htbp]
+A Figura~\ref{fig:fund-compensacao} ilustra essa compensação. Há dois instrumentos na referência. Na previsão esquemática, um é corretamente localizado, o outro é omitido e uma região vazia recebe uma caixa. O total continua igual a dois, mas existem um falso negativo e um falso positivo. Se ambos forem atribuídos à mesma categoria, o vetor de contagens também poderá coincidir. Por isso, as medidas de contagem precisam ser analisadas junto com a qualidade das detecções.
+
+\begin{figure}[htbp]
 \centering
-\begin{minipage}{\linewidth}
-\singlespacing
-\refstepcounter{table}\label{qua:fund_interpretacao}
-\noindent Quadro \thetable{} -- Interpretação complementar dos resultados\par
-\smallskip
-\small
-\setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{1.25}
-\begin{tabular}{|p{0.24\linewidth}|p{0.32\linewidth}|p{0.32\linewidth}|}
-\hline
-\textbf{Aspecto} & \textbf{Pergunta respondida} & \textbf{Limite de interpretação}\\\hline
-Detecção & Os instrumentos foram localizados e classificados? & Não informa diretamente a frequência de contagens exatas.\\\hline
-Contagem total & Quantos objetos há na imagem? & Erros podem se compensar; classes podem estar trocadas.\\\hline
-Contagem por classe & A composição por instrumento está correta? & Contagens iguais não garantem caixas corretas.\\\hline
-Imagens sem objetos & O sistema produz detecções indevidas? & Bandejas vazias não representam todos os fundos possíveis.\\\hline
-Tempo de execução & Qual o custo no equipamento utilizado? & Depende da resolução e das etapas incluídas na medição.\\\hline
-\end{tabular}
+\caption{Contagem total correta apesar de uma omissão e uma detecção indevida}
+\label{fig:fund-compensacao}
+\includegraphics[width=\linewidth]{figuras/fund_contagem_compensada.pdf}
 \par\smallskip
-\footnotesize Fonte: elaboração própria.
-\end{minipage}
-\end{table}
+{\footnotesize Fonte: elaboração própria. Representação esquemática de instrumentos e previsões hipotéticas, sem resultados do modelo treinado.\par}
+\end{figure}
 
-Finalmente, a viabilidade técnica depende do cenário avaliado. Fotografias de objetos isolados, imagens com poucos instrumentos e fotografias de bandejas completas impõem dificuldades distintas. Uma conclusão favorável em um desses cenários deve permanecer limitada às condições observadas. Neste trabalho, a articulação entre detecção, contagem, análise visual dos erros e custo computacional fornece a base para essa delimitação, sem converter desempenho experimental em comprovação de segurança clínica.
+As imagens sem objetos de interesse também contribuem para a avaliação. Nelas, o resultado esperado é zero; qualquer detecção aceita produz uma sobrecontagem. Esse teste permite observar respostas indevidas em fundos, mas um conjunto de bandejas vazias não representa todos os objetos desconhecidos que poderiam aparecer no ambiente. É necessário explicitar quais situações negativas foram incluídas, assim como a quantidade de imagens com um ou vários instrumentos.
+
+\vspace{\baselineskip}
+\phantomsection
+\addcontentsline{toc}{subsection}{2.8 Interpretação da viabilidade técnica}
+\noindent\textbf{2.8 Interpretação da viabilidade técnica}\par
+\vspace{\baselineskip}
+
+Os indicadores apresentados respondem a perguntas complementares: a detecção avalia localização e classe; o MAE expressa a diferença média entre quantidades; e o acerto exato informa a frequência de contagens sem divergência numérica. A análise por categoria, origem e número de objetos ajuda a identificar condições em que o desempenho muda. Uma condição pouco representada, como forte oclusão, não pode ser considerada validada apenas pelo resultado global.
+
+As categorias também delimitam a interpretação. Se dois instrumentos específicos pertencem ao grupo ``pinças'', distingui-los não faz parte da tarefa do modelo geral. Um bom resultado nesse grupo, portanto, não demonstra reconhecimento de cada tipo específico. Da mesma forma, resultados com instrumentos isolados não comprovam desempenho equivalente em bandejas completas.
+
+O custo computacional complementa a qualidade das respostas. O tempo de treinamento informa o esforço para obter o modelo; o de inferência, o tempo para analisar novas imagens. A medição deve indicar equipamento, tamanho de entrada e etapas incluídas: somente a rede ou também leitura, preparação e apresentação da imagem. Essas condições impedem transportar diretamente tempos medidos em outro dispositivo.
+
+A viabilidade técnica depende dessas evidências e do cenário pretendido. A avaliação deve mostrar onde a abordagem funciona, onde falha e quais condições ainda exigem investigação. A metodologia apresentada a seguir transforma os conceitos discutidos em procedimentos de preparação dos dados, treinamento e avaliação da detecção e da contagem.
 
 \endgroup

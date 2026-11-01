@@ -120,6 +120,16 @@ INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
 INPUT .\configuracao_referencias.tex
 INPUT .\configuracao_referencias.tex
 INPUT .\configuracao_referencias.tex
@@ -193,16 +203,6 @@ INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.c
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.cfg
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amstext.sty
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amstext.sty
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsgen.sty
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsgen.sty
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
 INPUT c:\TCC\ESCRITA TCC\build\0_TCC.aux
 INPUT c:\TCC\ESCRITA TCC\build\0_TCC.aux
 INPUT c:\TCC\ESCRITA TCC\build\0_TCC.aux
@@ -434,16 +434,28 @@ OUTPUT c:\TCC\ESCRITA TCC\build\16_fundamentacao_teorica.aux
 INPUT .\16_fundamentacao_teorica.tex
 INPUT .\16_fundamentacao_teorica.tex
 INPUT 16_fundamentacao_teorica.tex
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
+INPUT .\figuras\fund_conceitos_ia.pdf
+INPUT .\figuras\fund_conceitos_ia.pdf
+INPUT .\figuras\fund_conceitos_ia.pdf
+INPUT .\figuras\fund_filtros_didaticos.pdf
+INPUT .\figuras\fund_filtros_didaticos.pdf
+INPUT .\figuras\fund_filtros_didaticos.pdf
+INPUT .\figuras\fund_iou_exemplo.pdf
+INPUT .\figuras\fund_iou_exemplo.pdf
+INPUT .\figuras\fund_iou_exemplo.pdf
+INPUT .\figuras\fund_contagem_compensada.pdf
+INPUT .\figuras\fund_contagem_compensada.pdf
+INPUT .\figuras\fund_contagem_compensada.pdf
 INPUT .\17_metodologia.tex
 INPUT .\17_metodologia.tex
 OUTPUT c:\TCC\ESCRITA TCC\build\17_metodologia.aux
 INPUT .\17_metodologia.tex
 INPUT .\17_metodologia.tex
 INPUT 17_metodologia.tex
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT .\18_resultados_discussao.tex
 INPUT .\18_resultados_discussao.tex
 OUTPUT c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux
