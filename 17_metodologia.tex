@@ -1,7 +1,6 @@
 % !TeX root = 0_TCC.tex
-% Metodologia v1 — 31/10/2026. Não compilar isoladamente.
+% Metodologia v2 — 01/11/2026. Não compilar isoladamente.
 % Mantém o padrão do template e a bibliografia já instalada.
-% Pendências editoriais: ver P05, P06, P07, P08, P15 e P18 no controle.
 \begingroup
 \justifying
 \setlength{\parindent}{1.25cm}
@@ -14,29 +13,31 @@
 \phantomsection
 \addcontentsline{toc}{section}{3 METODOLOGIA}
 \noindent\textbf{3 METODOLOGIA}\par
-\vspace{\baselineskip}
+\nobreak\vspace{\baselineskip}\nobreak
 
-Este trabalho adota uma abordagem quantitativa, de caráter aplicado e experimental, para avaliar a detecção e a contagem de instrumentos cirúrgicos em fotografias. A unidade de entrada do sistema é uma imagem, enquanto a unidade de anotação é cada instrumento individualmente delimitado. O procedimento compreende a seleção das fontes, a revisão das imagens e anotações, a consolidação das classes, a separação dos dados e o treinamento de um detector. A avaliação considera tanto a localização dos objetos quanto as quantidades obtidas a partir das detecções.
+Esta pesquisa avalia se um modelo de visão computacional consegue localizar instrumentos cirúrgicos em fotografias e contar quantos exemplares de cada categoria estão presentes. Para isso, foi organizado um experimento com imagens da internet e do Hospital Universitário da Universidade Estadual de Londrina (HU-UEL). Cada fotografia constitui uma entrada para o modelo; cada instrumento marcado nessa fotografia constitui um objeto de referência. Essa distinção permite avaliar separadamente o reconhecimento dos instrumentos e o acerto das quantidades.
 
-O escopo é delimitado por instrumentos associados à caixa de apendicectomia adotada como referência. A investigação não abrange o reconhecimento irrestrito de materiais cirúrgicos nem a verificação de esterilidade, integridade física ou utilização de cada instrumento. A viabilidade examinada é computacional e condicionada às imagens disponíveis; não corresponde à validação de um dispositivo para uso assistencial.
+O procedimento foi organizado em cinco etapas: seleção das fontes; limpeza e anotação das imagens; reunião e separação dos dados; treinamento do modelo; e avaliação da detecção e da contagem. A sequência parte da preparação dos exemplos que o modelo utilizará para aprender e termina na análise de fotografias reservadas para o teste. Assim, o desempenho será examinado em dados que não participam do ajuste dos pesos da rede.
+
+Os instrumentos selecionados têm como referência a caixa de apendicectomia, isto é, o conjunto de materiais utilizado na cirurgia de retirada do apêndice. A aplicação pretendida abrange a conferência de instrumentos no expurgo e no preparo, ambientes que integram o fluxo de processamento de materiais descrito por \textcite{moreto2025}. O experimento avalia a contagem em fotografias, sem abranger esterilidade, integridade física ou funcionamento dos instrumentos. Portanto, a viabilidade investigada é a de um apoio computacional à conferência, dentro das condições representadas pela base de imagens.
 
 \vspace{\baselineskip}
 \phantomsection
 \addcontentsline{toc}{subsection}{3.1 Constituição e procedência da base de imagens}
 \noindent\textbf{3.1 Constituição e procedência da base de imagens}\par
-\vspace{\baselineskip}
+\nobreak\vspace{\baselineskip}\nobreak
 
-A base foi constituída por duas origens: conjuntos obtidos na internet e fotografias disponibilizadas por uma enfermeira do Hospital Universitário da Universidade Estadual de Londrina (HU-UEL). As fontes externas foram identificadas internamente como DS01 a DS07 para preservar sua procedência durante a preparação. Essa identificação é operacional e não substitui a referência ao conjunto original, à sua versão e às condições de uso.
+A base de imagens reuniu duas origens complementares. Os conjuntos públicos ofereceram exemplos previamente anotados de diferentes instrumentos, enquanto as fotografias do HU-UEL acrescentaram registros dos materiais nos ambientes em que se pretende utilizar a contagem. As fontes da internet receberam os identificadores DS01 a DS07 para permitir acompanhar sua contribuição durante a organização. Esses identificadores são utilizados nas tabelas deste capítulo.
 
-Os conjuntos DS01, DS03, DS04 e DS05 foram obtidos no Roboflow, e o DS06, no Kaggle. O DS07 foi incorporado a partir de imagens cujas anotações haviam sido convertidas de JSONL para o formato YOLO. O DS02 foi integralmente descartado após a identificação de conteúdo repetido em relação ao DS01, incluindo versões com diferenças de borda ou ampliação. Assim, seis conjuntos externos contribuíram para a consolidação. A identificação bibliográfica completa dessas fontes permanece em conferência documental.
-% P05: inserir nomes públicos, URLs, versões, datas de obtenção e licenças das seis fontes, sem inferi-las pela plataforma.
+Os conjuntos DS01, DS03, DS04 e DS05 foram obtidos no Roboflow; o DS06, no Kaggle; e o DS07, no Hugging Face. Os endereços das fontes são indicados em nota.\footnote{DS01: \url{https://universe.roboflow.com/fmsurg/isef-training-dataset-p360u/dataset/1}; DS03: \url{https://universe.roboflow.com/surgical-tools-hnzri/surgical_tools-6b7ze}; DS04: \url{https://universe.roboflow.com/new-workspace-fjl7e/set_1_11/dataset/2}; DS05: \url{https://universe.roboflow.com/practicum-ii-iii/suturing-kit-tools}; DS06: \url{https://www.kaggle.com/datasets/dilavado/labeled-surgical-tools}; DS07: \url{https://huggingface.co/datasets/joonhaim/surgical-tool-recognition-full-multiview}.} O DS02 foi descartado integralmente após a revisão identificar imagens já presentes no DS01, inclusive versões com alterações de borda e ampliação. Dessa forma, seis conjuntos externos contribuíram para a base final.
 
 As fotografias do HU-UEL foram organizadas inicialmente por instrumento e, em casos específicos, por composição de objetos. Entre as composições anotadas estão imagens com pinça dente de rato, pinça Backhaus e cúpula, além de imagens contendo uma tesoura Metzenbaum reta e outra curva. Também foram incorporadas 100 fotografias de bandejas vazias como exemplos negativos. Imagens sem instrumentos possuem arquivo de anotação vazio; por isso, a ausência de objetos nesses casos é intencional e não deve ser interpretada como falha de rotulagem.
 
-Os registros fornecidos para o estudo representam instrumentos e superfícies de apoio. Não se atribui a essas fotografias a condição de registros de procedimentos cirúrgicos em andamento. Datas, dispositivos e organização das sessões de aquisição devem acompanhar a documentação da coleta para permitir interpretar sua diversidade. A disponibilização por uma profissional do hospital não é apresentada neste trabalho como parecer de comitê de ética ou como autorização institucional formal.
-% P06: complementar período de coleta, dispositivo(s), sessões e condições de aquisição com informação do responsável. Confirmar documentação institucional aplicável, sem inventar dispensa.
+As fotografias do HU-UEL foram produzidas por uma enfermeira em diferentes dias, ao longo de aproximadamente três semanas, nos ambientes de expurgo e preparo. Foi utilizado um \textbf{iPhone xx}. No primeiro dia, parte das imagens foi registrada em HEIC; posteriormente, o aparelho foi configurado no modo de alta compatibilidade, passando a produzir arquivos JPEG. As primeiras imagens foram aproveitadas após conversão para um formato compatível com o fluxo de anotação. Os registros utilizados mostram instrumentos e superfícies de apoio, sem pessoas ou procedimentos cirúrgicos em andamento.
 
-A Tabela~\ref{tab:met-origens} apresenta a composição registrada no manifesto da revisão v3. As quantidades correspondem ao material após a seleção, e não ao volume originalmente baixado. A distinção entre imagens e objetos é necessária porque uma fotografia pode conter várias instâncias, inclusive de uma mesma classe.
+A produção em dias e ambientes distintos acrescenta variação às fotografias, mas não permite assumir que todos os registros sejam independentes: imagens próximas podem mostrar o mesmo instrumento, sobre a mesma superfície, com pequenas mudanças de posição. Essa característica foi considerada na busca de repetições e na separação dos dados, descritas na Seção 3.3.
+
+A Tabela~\ref{tab:met-origens} apresenta a composição após a seleção e a revisão. Essas quantidades descrevem os dados utilizados no experimento, e não resultados de desempenho do modelo. A contagem foi realizada por scripts Python que verificaram os pares de imagens e anotações. Uma fotografia com três instrumentos acrescenta uma unidade ao total de imagens e três ao total de objetos; uma bandeja vazia acrescenta apenas uma imagem.
 
 \begin{table}[htbp]
 \centering
@@ -62,7 +63,7 @@ Total & 10.327 & 12.714 \\
 \hline
 \end{tabular}\par
 \vspace{0.35em}\raggedright
-Fonte: elaboração própria, com base nos manifestos da revisão v3 (2026).\par
+Fonte: elaboração própria, a partir da revisão e contagem dos dados por scripts Python (2026).\par
 Nota: as 100 imagens negativas estão incluídas no total do HU-UEL e não acrescentam objetos.
 \end{minipage}
 \end{table}
@@ -71,17 +72,23 @@ Nota: as 100 imagens negativas estão incluídas no total do HU-UEL e não acres
 \phantomsection
 \addcontentsline{toc}{subsection}{3.2 Seleção, anotação e padronização dos instrumentos}
 \noindent\textbf{3.2 Seleção, anotação e padronização dos instrumentos}\par
-\vspace{\baselineskip}
+\nobreak\vspace{\baselineskip}\nobreak
 
-A seleção foi orientada pela correspondência com os instrumentos definidos para o estudo, pela possibilidade de identificação visual e pela adequação das anotações. Foram retiradas imagens de baixa qualidade que impediam a inspeção, exemplos incompatíveis com a caixa de referência e versões repetidas identificadas durante a revisão. O processo considerou conteúdo e aparência, e não apenas nomes de arquivos ou rótulos originais. Dúvidas sobre determinados instrumentos foram submetidas à apreciação da enfermeira colaboradora; não foi realizado um estudo formal de concordância entre múltiplos anotadores.
+Antes do treinamento, as imagens e suas anotações passaram por limpeza e conferência. Essa preparação é necessária porque o modelo aprende a partir dos exemplos disponíveis: uma classe incorreta ensina uma associação inadequada, um instrumento sem caixa pode ser interpretado como fundo e uma repetição entre treino e teste pode tornar a avaliação excessivamente favorável. A revisão procurou reduzir esses problemas antes de reunir os conjuntos.
+
+Foram retiradas imagens de baixa qualidade que impediam identificar o instrumento, materiais incompatíveis com a caixa selecionada e versões repetidas reconhecidas durante a inspeção. Entre as repetições estavam imagens com espelhamento, alterações de perspectiva ou regiões cobertas por quadrados escuros, provenientes de aumento de dados aplicado previamente. Sempre que possível, foi preservada a versão original de melhor qualidade. A seleção considerou o conteúdo da fotografia, e não apenas seu nome ou o nome da classe no conjunto de origem. Dúvidas sobre instrumentos específicos foram esclarecidas com a enfermeira colaboradora.
 
 Instrumentos visualmente semelhantes, mas fora do escopo, não foram incluídos apenas para aumentar o volume da base. Quando sua presença poderia gerar supervisão contraditória, optou-se pela retirada da imagem, inclusive se ela também apresentasse um objeto desejado. Um exemplo foi o afastador Army-Navy, cuja aparência em determinadas posições se aproxima daquela do Farabeuf. Essa escolha delimita o domínio do experimento: o detector não é avaliado como classificador universal de instrumentos semelhantes aos selecionados.
 
-A revisão dos conjuntos externos foi realizada com apoio do CVAT e de inspeções no Roboflow. As imagens do HU-UEL foram anotadas no X-AnyLabeling com caixas delimitadoras horizontais, uma por objeto. O arquivo exportado associa a cada caixa um identificador de classe e quatro coordenadas normalizadas, correspondentes ao centro, à largura e à altura. As anotações foram organizadas de forma que cada imagem e seu arquivo de rótulos compartilhassem o mesmo nome-base.
+A revisão dos conjuntos externos foi realizada com apoio do CVAT e de inspeções no Roboflow. As fotografias do HU-UEL foram anotadas no X-AnyLabeling. Anotar uma imagem, neste estudo, significa traçar um retângulo que envolva cada instrumento e atribuir a ele uma classe. Esses retângulos, ou caixas delimitadoras, constituem as referências utilizadas para ensinar e avaliar o detector. Foram utilizadas caixas horizontais, com lados paralelos às bordas da fotografia, mesmo quando o instrumento estava inclinado.
+
+As anotações foram exportadas no formato YOLO para detecção. Cada linha do arquivo TXT representa um objeto e contém o identificador da classe, as coordenadas do centro da caixa, sua largura e sua altura. As quatro medidas são divididas pelas dimensões da imagem, ficando normalizadas entre zero e um. Por exemplo, uma largura de 0,25 representa um quarto da largura da fotografia. A imagem e seu TXT compartilham o mesmo nome-base, permitindo associá-los sem depender da ordem dos arquivos na pasta.
 
 Nos conjuntos com polígonos, a conversão para detecção utilizou os menores e maiores valores de cada coordenada para obter a caixa envolvente de cada instância. Esse procedimento conserva a extensão espacial do contorno anotado, mas não verifica sua pertinência semântica. Por isso, caixas que abrangiam componentes indesejados, como tubos conectados ao bico de aspiração ou partes além do cabo de bisturi, foram submetidas à revisão manual. No DS07, as anotações convertidas de JSONL foram inspecionadas visualmente, e foram mantidas as classes correspondentes a porta-agulhas e cabos de bisturi.
 
-Foram preservadas duas taxonomias. A específica distingue 17 classes, incluindo versões retas e curvas de Kelly, Mayo e Metzenbaum. A geral reúne os mesmos objetos em sete categorias, utilizadas no primeiro treinamento. Diferenças de tamanho não originam classes distintas. O porta-agulhas permanece separado das tesouras, apesar da semelhança visual de alguns modelos. A pinça Collin coração não integra a configuração inicial por falta de imagens, e a Kocher curva não integra o conjunto de instrumentos selecionado.
+Para utilizar os mesmos dados em diferentes níveis de detalhe, foram preservadas duas organizações das classes, também chamadas de taxonomias. A específica distingue 17 instrumentos ou variantes, incluindo Kelly, Mayo e Metzenbaum retas e curvas. A geral reúne essas classes em sete categorias e foi utilizada no treinamento principal. A correspondência é fixa: cada objeto de uma classe específica recebe uma única categoria geral. O agrupamento reduz o número de nomes que o modelo precisa distinguir, mas conserva diferenças visuais dentro de categorias como pinças; não se pressupõe que todos os instrumentos agrupados tenham a mesma aparência.
+
+Diferenças de tamanho não originam classes distintas. Porta-agulhas, cúpula e bico de aspiração foram mantidos em categorias próprias. A pinça Collin coração não integra esta etapa por falta de imagens, e a Kocher curva não pertence ao conjunto selecionado. Os exemplares Yankauer aceitos na conferência foram reunidos à categoria de bicos de aspiração.
 
 A Tabela~\ref{tab:met-taxonomias} explicita a correspondência entre as taxonomias e a quantidade de objetos em cada categoria geral. Os nomes em português são utilizados na apresentação do trabalho; os identificadores em inglês são empregados nos arquivos de treinamento. As duas organizações mantêm as mesmas caixas e divisões, alterando apenas os identificadores de classe. Portanto, não constituem duas bases independentes.
 
@@ -107,7 +114,7 @@ Total & 17 classes específicas e 7 categorias gerais & 12.714 \\
 \hline
 \end{tabular}\par
 \vspace{0.35em}\raggedright
-Fonte: elaboração própria, com base no mapeamento de classes e no manifesto de objetos da revisão v3 (2026).
+Fonte: elaboração própria, a partir da revisão e contagem dos dados por scripts Python (2026).
 \end{minipage}
 \end{table}
 
@@ -117,19 +124,23 @@ A representação é desigual entre classes e origens. Por exemplo, as pinças a
 \phantomsection
 \addcontentsline{toc}{subsection}{3.3 Consolidação, verificação e separação dos dados}
 \noindent\textbf{3.3 Consolidação, verificação e separação dos dados}\par
-\vspace{\baselineskip}
+\nobreak\vspace{\baselineskip}\nobreak
 
-A consolidação foi executada por scripts Python sobre cópias dos conjuntos selecionados. Os arquivos brutos foram mantidos separados da base de trabalho. Foram produzidos manifestos de imagens e objetos, mapas de classes e registros de exclusões, de forma a vincular cada arquivo consolidado à origem e à divisão atribuída. A organização foi preparada no Windows e transferida para o Mac utilizado no treinamento.
+Neste estudo, consolidação significa reunir os conjuntos selecionados em uma única base organizada, compatibilizando nomes de classes, formatos de anotação e estrutura de pastas. Esse processo foi executado por scripts Python sobre cópias dos arquivos, preservando os conjuntos originais. Cada imagem consolidada manteve uma identificação de sua origem, de suas classes e da divisão à qual foi destinada. A preparação ocorreu no Windows, e a base organizada foi transferida para o Mac utilizado no treinamento.
 
-A verificação combinou comparação de nomes-base, leitura dos rótulos, conferência das classes e validação geométrica das caixas. Foram calculados resumos criptográficos SHA-256 para conferir integridade de arquivos, além de resumos dos pixels decodificados e assinaturas perceptuais dHash para investigar repetições. Esses mecanismos têm finalidades distintas: igualdade criptográfica verifica o conteúdo comparado, enquanto proximidade perceptual apenas indica candidatos que exigem inspeção. Fundos semelhantes podem produzir assinaturas próximas mesmo quando os objetos são diferentes.
+A conferência automática verificou se cada imagem podia ser aberta, se possuía a anotação correspondente e se os identificadores de classe estavam previstos no mapeamento. Também foram examinadas as coordenadas das caixas, incluindo dimensões positivas e limites válidos. Os arquivos vazios foram tratados separadamente para distinguir as bandejas sem instrumentos de uma possível ausência de anotação. As duas taxonomias foram comparadas para verificar a manutenção das mesmas imagens, caixas e divisões, com alteração apenas das classes.
 
-Na revisão complementar, pares entre divisões com distância de Hamming de até dois bits em assinaturas dHash de 64 bits foram selecionados para inspeção visual. Essa busca resultou em 373 pares candidatos envolvendo 197 imagens; a sequência de 42 imagens do DS07 foi acrescentada à coleta visual, totalizando 239 imagens examinadas nessa etapa. Esses números descrevem candidatos e material revisado, não quantidades de duplicatas. Vários pares do DS06 foram reconhecidos como cenas distintas sobre fundos semelhantes.
+A busca por repetições combinou comparação de arquivos, comparação dos pixels decodificados e semelhança visual. Para isso, foram utilizados resumos digitais, chamados \textit{hashes}: o SHA-256 permitiu conferir a integridade dos arquivos comparados, enquanto o dHash forneceu uma assinatura simplificada da aparência. Assinaturas perceptuais próximas indicaram candidatos à revisão, mas não foram tratadas como prova suficiente de duplicação. Fotografias de instrumentos diferentes sobre o mesmo fundo podem apresentar grande semelhança nessa representação.
 
-A revisão também identificou uma imagem do DS05 com três caixas para um único objeto. Duas caixas coincidentes abrangiam praticamente toda a fotografia, enquanto a terceira delimitava o instrumento; as duas primeiras foram removidas. Em outro caso, foi excluída a versão de menor resolução de uma fotografia repetida do DS04, juntamente com seu rótulo. Imagens relacionadas já identificadas foram mantidas na mesma divisão, e 42 fotografias de uma sequência de cabo de bisturi do DS07 foram reunidas em um único grupo de treino.
+Os candidatos foram examinados visualmente para distinguir cópias de fotografias diferentes. Quando uma mesma imagem apareceu em resoluções distintas, a versão de melhor qualidade foi priorizada. Fotografias relacionadas por repetição ou sequência identificada foram reunidas em grupos destinados à mesma divisão. Dessa forma, procurou-se evitar que uma versão fosse utilizada no aprendizado e outra muito próxima fosse usada para avaliar o mesmo modelo.
+
+
 
 O agrupamento procura reduzir a dependência entre dados usados para aprender e dados usados para avaliar. Como discutem \textcite{kapoor2023}, falhas na separação podem produzir conclusões excessivamente otimistas. Entretanto, a ausência de grupos cadastrados em mais de uma divisão não comprova independência de todas as sessões de aquisição. A base contém imagens de instrumentos reposicionados em cenários semelhantes, e os registros disponíveis não permitem reconstruir integralmente todas as sessões das fontes externas. Essa restrição permanece como limitação do experimento.
 
-A divisão preserva conjuntos de treino, validação e teste, com as quantidades da Tabela~\ref{tab:met-splits}. A distribuição foi ajustada pelas revisões de grupos e duplicatas, em vez de se refazer uma separação aleatória apenas para obter percentuais exatos. A mesma atribuição foi mantida nas duas taxonomias. Entre as imagens negativas, 80 pertencem ao treino, dez à validação e dez ao teste.
+Após a organização, a base foi separada em treino, validação e teste. O treino fornece os exemplos utilizados para ajustar os pesos da rede. A validação acompanha o aprendizado e permite selecionar o estado do modelo e o limiar de confiança. O teste permanece reservado para avaliar o procedimento após essas escolhas. A distribuição final se aproxima de 80\%, 10\% e 10\%, respectivamente, com pequenos ajustes necessários para manter os grupos identificados na mesma divisão.
+
+A Tabela~\ref{tab:met-splits} apresenta as quantidades efetivas. A mesma divisão foi preservada nas duas taxonomias, permitindo uma eventual comparação sobre as mesmas fotografias. Entre os exemplos negativos, 80 bandejas vazias pertencem ao treino, dez à validação e dez ao teste. A separação por grupos reduz um risco de dependência, mas não equivale a uma divisão completa por dia, paciente ou hospital: as fontes disponíveis não fornecem todos esses metadados.
 
 \begin{table}[htbp]
 \centering
@@ -150,7 +161,7 @@ Total & 10.327 & 12.714 \\
 \hline
 \end{tabular}\par
 \vspace{0.35em}\raggedright
-Fonte: elaboração própria, com base nos manifestos da revisão v3 (2026).
+Fonte: elaboração própria, a partir da revisão e contagem dos dados por scripts Python (2026).
 \end{minipage}
 \end{table}
 
@@ -158,13 +169,15 @@ Fonte: elaboração própria, com base nos manifestos da revisão v3 (2026).
 \phantomsection
 \addcontentsline{toc}{subsection}{3.4 Ambiente computacional e configuração do treinamento}
 \noindent\textbf{3.4 Ambiente computacional e configuração do treinamento}\par
-\vspace{\baselineskip}
+\nobreak\vspace{\baselineskip}\nobreak
 
-O ambiente de execução utiliza um Mac mini com chip Apple M4 e 16~GB de memória unificada, com aceleração pela interface Metal Performance Shaders (MPS) do PyTorch. O ambiente informado nos testes compreende Python 3.13, PyTorch 2.15.0 e Ultralytics 8.4.192, em arquitetura arm64. A configuração foi mantida após os testes de instalação para evitar mudanças de dependências durante o experimento.
+O ambiente de execução utiliza um Mac mini com chip Apple M4 e 16~GB de memória unificada, com aceleração pela interface Metal Performance Shaders (MPS) do PyTorch. O ambiente utilizado compreende Python 3.13, PyTorch 2.15.0 e Ultralytics 8.4.192, em arquitetura arm64. A configuração foi mantida após os testes de instalação para evitar mudanças de dependências durante o experimento.
 
-Antes da execução principal, foi realizado um piloto de três épocas com uma fração de 10\% do conjunto de treino, destinado a verificar carregamento, uso do dispositivo e funcionamento do procedimento. Esse piloto não foi adotado como resultado definitivo de viabilidade, nem seus pesos foram utilizados como ponto de partida do treinamento principal. Para este, selecionou-se o YOLO26n com pesos pré-treinados e utilização integral da divisão de treino.
+Antes do treinamento principal, foi executado um piloto de três épocas com 10\% das imagens de treino. Sua finalidade foi verificar o carregamento das imagens e dos rótulos, a execução na GPU por MPS, o comportamento do consumo de memória e o tempo necessário para processar os lotes. Essa etapa permitiu verificar a execução do procedimento no equipamento disponível antes de iniciar uma tarefa mais longa.
 
-A variante de menor porte foi escolhida em razão do recurso computacional disponível e do tempo de execução observado no piloto. Essa escolha não pressupõe superioridade em relação a modelos maiores. Da mesma forma, o uso de pré-treinamento constitui uma estratégia de inicialização e adaptação, sem garantir precisão para instrumentos não representados adequadamente nos dados.
+O treinamento principal foi iniciado com o YOLO26n e pesos pré-treinados, utilizando toda a divisão de treino. Portanto, o aprendizado principal começou a partir do pré-treinamento, e não dos pesos obtidos no piloto. Como apresentado na fundamentação, a letra \textit{n} identifica a variante de menor porte da família utilizada, que também inclui variantes maiores. Foi priorizada uma configuração compatível com a memória e o tempo disponíveis, sem supor que ela apresentaria o melhor desempenho entre todas as alternativas.
+
+O pré-treinamento fornece uma inicialização que já aprendeu características visuais em outra base. Durante a adaptação aos instrumentos cirúrgicos, os pesos podem ser atualizados, pois não foi configurado congelamento de camadas. Essa escolha reduz a necessidade de iniciar o aprendizado com parâmetros aleatórios, mas não substitui a presença de exemplos adequados das classes e dos cenários de interesse \parencite{pytorchTransferencia}.
 
 A configuração principal está sintetizada na Tabela~\ref{tab:met-treino}. O limite de 50 épocas foi definido como orçamento inicial de treinamento, e não como valor ótimo estabelecido por busca sistemática. A parada antecipada foi configurada com tolerância de dez épocas sem melhora no critério de validação da implementação. A quantidade efetivamente executada, a época selecionada e a duração serão informadas a partir dos registros, após o encerramento.
 
@@ -185,7 +198,7 @@ Dimensão de entrada configurada & 640 pixels \\
 Lote físico / lote nominal & 4 / 64 \\
 Otimizador & AdamW \\
 Taxa inicial / fator final & 0,001 / 0,01 \\
-Decaimento de pesos solicitado & 0,0005 \\
+Decaimento de pesos configurado & 0,0005 \\
 Parâmetro de momento & 0,9 \\
 Aquecimento & 3 épocas \\
 Semente & 42 \\
@@ -195,24 +208,30 @@ Salvamento periódico & A cada 5 épocas \\
 \hline
 \end{tabular}\par
 \vspace{0.35em}\raggedright
-Fonte: elaboração própria, com base no script de treinamento da revisão v3 (2026).\par
+Fonte: elaboração própria, a partir da configuração do treinamento (2026).\par
 Nota: o lote nominal é uma referência interna para a otimização; não equivale ao número de imagens simultaneamente processadas no dispositivo.
 \end{minipage}
 \end{table}
 
 O AdamW emprega decaimento de pesos desacoplado da atualização adaptativa, conforme a formulação de \textcite{loshchilov2019adamw}. Sua adoção neste experimento representa uma escolha explícita de otimização, sem reproduzir integralmente a receita de pré-treinamento do YOLO26. A taxa de aprendizagem foi configurada com aquecimento e redução linear, sem busca automática de hiperparâmetros. As definições operacionais dos argumentos são apresentadas na documentação do software \parencite{ultralyticsTreinamento}.
 
-A dimensão de entrada é aplicada durante o carregamento e o processamento das imagens. Os arquivos preservados na base não foram recomprimidos nem redimensionados por essa etapa. Entretanto, a redução para a entrada da rede pode eliminar detalhes de instrumentos finos, aspecto que será examinado na análise dos erros. O processamento utiliza lote físico de quatro imagens, sem cache de imagens em memória e sem processos auxiliares de carregamento, priorizando a execução no equipamento disponível.
+O tamanho de entrada foi configurado em 640 pixels para limitar o custo de processamento e utilizar uma dimensão usual da implementação. Durante o carregamento, as imagens são adaptadas às entradas do modelo por redimensionamento e, conforme a transformação aplicada, preenchimento ou recorte. Os arquivos de origem não são alterados por esse processamento. Não foi ativado treinamento com tamanhos variáveis entre lotes. A redução de resolução pode remover detalhes de pontas, serrilhas e instrumentos pequenos; por isso, o tamanho escolhido constitui uma condição do experimento, e não uma resolução comprovadamente ideal.
 
-A semente foi fixada e foi solicitada execução determinística. Isso favorece a rastreabilidade, mas não implica reprodução bit a bit, pois determinadas operações do ambiente MPS podem não dispor de implementação determinística. Os argumentos efetivos, as versões dos pacotes e os caminhos dos arquivos são registrados junto à execução. O treinamento preserva o último estado e o estado selecionado pelo critério de validação da biblioteca; o conjunto de teste não participa dessa seleção.
+O lote físico foi limitado a quatro imagens, isto é, quatro entradas processadas de cada vez. O lote nominal de 64 é uma referência interna da implementação para a otimização e não indica que 64 imagens estejam simultaneamente carregadas na GPU. O cache de imagens e os processos auxiliares de carregamento foram desativados, assim como a precisão mista. Essas decisões priorizam uma configuração de execução compatível com o Mac utilizado; não foram comparadas sistematicamente com outras combinações.
+
+A semente foi fixada em 42 e foi configurada execução determinística. A semente controla as sequências de escolhas aleatórias, contribuindo para documentar o experimento. Entretanto, algumas operações do MPS não dispõem de implementação determinística, e o próprio ambiente apresentou aviso dessa limitação. Assim, a configuração favorece a repetibilidade, mas não garante resultados numericamente idênticos em todas as execuções \parencite{pytorchReprodutibilidade}.
+
+Durante o treino, a validação é realizada ao final das épocas. São registrados os argumentos efetivos, as versões dos programas, as perdas e as métricas de validação, além dos pesos do último estado e do estado considerado melhor pelo critério da implementação. O conjunto de teste não participa dessa seleção. Os registros permitem diferenciar a configuração planejada da quantidade de épocas e da duração efetivamente observadas.
 
 \vspace{\baselineskip}
 \phantomsection
 \addcontentsline{toc}{subsection}{3.5 Aumento de dados durante o treinamento}
 \noindent\textbf{3.5 Aumento de dados durante o treinamento}\par
-\vspace{\baselineskip}
+\nobreak\vspace{\baselineskip}\nobreak
 
-O aumento de dados foi configurado para aplicação durante o treinamento, sem produzir uma nova coleção permanente de fotografias. A estratégia procura introduzir variações de aparência e disposição dos objetos e constitui uma forma de regularização \parencite{goodfellow2016}. A política solicitada compreende espelhamentos horizontal e vertical com probabilidade de 0,5 cada, rotações de até aproximadamente $\pm15^{\circ}$, translação relativa de 0,1 e variação de escala de 0,25. Os parâmetros de matiz, saturação e valor foram definidos, respectivamente, como 0,015, 0,3 e 0,2.
+O aumento de dados cria variações das imagens durante o aprendizado, procurando reduzir a dependência de posições e aparências muito específicas \parencite{goodfellow2016}. Neste experimento, essas transformações foram configuradas para ocorrer durante o treino, sem salvar uma nova coleção permanente de fotografias. Assim, a mesma imagem pode ser apresentada de formas diferentes em épocas distintas, com atualização correspondente das caixas.
+
+Foram configurados espelhamentos horizontal e vertical com probabilidade de 0,5 cada, rotações de até aproximadamente $\pm15^{\circ}$, translação relativa de até 0,1 e variação de escala de 0,25. Essas operações procuram representar mudanças de orientação, posição e tamanho aparente. As variações de matiz, saturação e brilho, controladas pelos parâmetros HSV, foram definidas como 0,015, 0,3 e 0,2. Elas introduzem diferenças de cor e iluminação, sem demonstrar, por si só, que o modelo será robusto a todas as condições do hospital.
 
 A transformação mosaic foi configurada com probabilidade de 0,5 para compor entradas a partir de diferentes imagens. Sua aplicação busca ampliar a variedade de composições, mas não reproduz necessariamente oclusões e interações físicas entre instrumentos em uma bandeja real. MixUp, Copy-Paste, cisalhamento e perspectiva adicional foram desativados. A documentação da Ultralytics descreve essas operações e seus parâmetros \parencite{ultralyticsAugmentation}.
 
@@ -224,19 +243,27 @@ As 8.304 imagens de treino permanecem como quantidade física de referência. Re
 \phantomsection
 \addcontentsline{toc}{subsection}{3.6 Protocolo de avaliação da detecção e da contagem}
 \noindent\textbf{3.6 Protocolo de avaliação da detecção e da contagem}\par
-\vspace{\baselineskip}
+\nobreak\vspace{\baselineskip}\nobreak
 
-A avaliação será realizada após o encerramento do treinamento. A seleção do estado do modelo e o ajuste do limiar de confiança utilizarão a validação, preservando o teste para a aplicação do procedimento escolhido. O limiar determina quais predições serão aceitas para a contagem; sua definição deve considerar omissões e falsas detecções, sem utilizar o teste para procurar a configuração mais favorável.
-% P08/P15: registrar regra de escolha e valor do limiar, parâmetros de pós-processamento e caminho efetivo de inferência ANTES da avaliação final. Ainda não foram executados.
+A avaliação final será realizada após o encerramento do treinamento e terá duas perguntas complementares: o modelo localiza e classifica os instrumentos corretamente? As detecções aceitas produzem a quantidade correta por imagem e por categoria? Essas perguntas precisam ser analisadas em conjunto, pois uma quantidade correta pode resultar da compensação entre uma omissão e uma detecção indevida.
 
-Para detecção, serão examinados precisão, revocação, mAP com interseção sobre união de 0,50 e mAP no intervalo de 0,50 a 0,95, com os resultados discriminados por categoria. A interpretação seguirá as definições apresentadas na fundamentação e as distinções entre métricas discutidas por \textcite{padilla2021}. As opções efetivas de inferência e associação de predições serão registradas, pois não devem ser inferidas exclusivamente a partir da designação YOLO26.
+O estado do modelo será selecionado a partir da validação. Nessa mesma divisão será definido o limiar de confiança, valor mínimo exigido para aceitar uma predição na contagem. O teste não será utilizado para procurar esse valor. Antes de sua execução, serão fixados os pesos, o tamanho de entrada, o limiar e as opções de pós-processamento. Essa separação evita ajustar o procedimento às fotografias utilizadas para apresentar seu desempenho final.
+% PENDENCIA AVAL-01: registrar a regra de calibração e o limiar efetivamente adotados antes do teste; proposta no roteiro complementar, ainda não executada.
 
-Para contagem, as detecções aceitas serão agregadas por imagem e por categoria. Serão calculados o erro absoluto médio e a proporção de imagens com contagem total correta, acompanhados dos resultados por classe. Também será examinada a coincidência do vetor de contagens das categorias, que exige acerto simultâneo em todas elas. Essa análise é mais restritiva que o acerto do total: uma falsa detecção e uma omissão podem compensar-se numericamente sem que os objetos tenham sido reconhecidos corretamente.
+Para detecção, serão obtidos precisão, revocação, mAP a 0,50 de interseção sobre união e mAP de 0,50 a 0,95, com resultados por categoria. A interseção sobre união mede quanto a caixa prevista coincide com a caixa de referência. As métricas serão interpretadas conforme as definições da fundamentação e as diferenças discutidas por \textcite{padilla2021}. O cálculo padrão da implementação será registrado separadamente das medidas produzidas no limiar escolhido para a contagem, pois os procedimentos podem utilizar condições distintas \parencite{ultralyticsValidacao}.
 
-A análise qualitativa distinguirá omissões, contagens excedentes, confusões entre categorias e problemas de localização. Serão considerados o número de objetos na cena, sua sobreposição e a origem das imagens, conforme a informação disponível. Resultados do HU-UEL e da internet serão apresentados separadamente quando houver suporte amostral, evitando atribuir desempenho hospitalar a uma categoria avaliada apenas em imagens externas.
+As métricas de contagem serão calculadas por um script que leia as anotações de referência e as predições. Para cada imagem, o programa contará os objetos de cada categoria e comparará as quantidades. Serão obtidos o erro absoluto médio do total, a proporção de imagens com total correto, o erro por categoria e a proporção com acerto simultâneo em todas as categorias. Esta última medida compara o vetor de contagens, isto é, a lista de quantidades na ordem fixa das classes. Uma troca entre duas categorias pode preservar o total e, ainda assim, tornar esse vetor incorreto.
 
-O custo computacional será descrito a partir do equipamento e das condições reais de execução. A duração do treinamento e, quando medido, o tempo de inferência deverão indicar o que foi incluído na medição, como carregamento, pré-processamento e pós-processamento. Tempos obtidos em outros dispositivos ou bases não serão empregados como resultados deste experimento.
+Também serão separadas as imagens com contagem inferior e superior à referência. Fotografias sem instrumentos serão incluídas, pois permitem verificar se o modelo acrescenta objetos indevidamente. As medidas serão apresentadas para o conjunto de teste e, quando houver dados suficientes, por origem e categoria. Serão informados os respectivos números de imagens e objetos, evitando interpretar a ausência de exemplos de uma classe como desempenho nulo ou perfeito.
 
-A interpretação da viabilidade combinará desempenho de detecção, erros de contagem, condições de falha e custo computacional. Não foi estabelecido um limiar clínico de aceitação nem será atribuída aprovação assistencial ao modelo. A conclusão deverá permanecer limitada aos cenários avaliados e à necessidade de conferência humana. Fotografias futuras de uma nova sessão poderão ampliar a avaliação externa, desde que não sejam utilizadas para ajustar o mesmo modelo que será avaliado nelas.
+O número de objetos por fotografia será obtido diretamente das anotações. A análise por quantidade distinguirá cenas vazias, com um objeto e com múltiplos objetos, permitindo observar se o comportamento muda conforme a composição. Já a sobreposição física, os reflexos, o desfoque e os cortes de instrumentos dependem de inspeção visual. A interseção entre caixas não será utilizada como prova de oclusão, pois caixas de objetos separados também podem se sobrepor.
+
+A revisão qualitativa examinará exemplos de omissões, detecções excedentes, trocas de categoria e localização inadequada. As possíveis condições associadas às falhas serão descritas sem atribuir causalidade apenas pela inspeção. Caso seja realizada comparação quantitativa entre imagens com e sem oclusão, essa característica precisará ser anotada previamente nas imagens avaliadas. Sem essa classificação, a discussão sobre oclusões permanecerá qualitativa.
+
+O custo computacional será descrito pela duração efetiva do treinamento e por medições de processamento no Mac utilizado. Na avaliação de tempo por imagem, será necessário distinguir a inferência da rede do tempo total, que também pode incluir leitura, preparação da imagem e organização das saídas. As primeiras execuções de aquecimento serão separadas das medições repetidas, e a sincronização do dispositivo será considerada para não medir apenas o envio de operações à GPU.
+
+Um eventual experimento com as 17 classes específicas utilizará as mesmas divisões de imagens. Seus resultados de detecção serão apresentados como uma tarefa de maior detalhamento, sem tratar os valores de mAP das duas taxonomias como diretamente equivalentes. Para comparar contagens nas sete categorias, as predições específicas poderão ser reunidas pelo mesmo mapeamento da Tabela~\ref{tab:met-taxonomias}. A análise só incluirá execuções efetivamente concluídas.
+
+A viabilidade será discutida a partir da combinação entre localização e classificação, acerto das contagens, frequência e natureza das falhas e custo de processamento. Não foi definido um limite clínico de aceitação. Portanto, a conclusão deverá explicitar as condições em que a contagem apresentou resultados favoráveis e aquelas em que permaneceu insuficiente, sem converter o desempenho em fotografias em autorização para substituir a conferência profissional. Novas fotografias de bandejas completas poderão ampliar a avaliação externa, caso estejam disponíveis, mas não serão tratadas como parte de um teste já executado.
 
 \endgroup
