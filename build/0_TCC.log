@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.10.31)  1 NOV 2026 05:58
+This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.10.31)  1 NOV 2026 09:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1104,54 +1104,101 @@ File: figuras/fund_contagem_compensada.pdf Graphic file (type pdf)
  [33]) [34]
 \openout2 = `17_metodologia.aux'.
 
- (17_metodologia.tex [35
-
-
-
-] [36] [37] [38] [39] [40] [41] [42]) [43]
-\openout2 = `18_resultados_discussao.aux'.
-
- (18_resultados_discussao.tex [44
-
-
-
-] [45]) [46]
-\openout2 = `19_referencias.aux'.
-
- (19_referencias.tex
+ (17_metodologia.tex
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [47
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[][][]\TU/Arial(0)/m/n/10 DS01: []$[][][][][] [] [] [] [][][][][][][][] [] [][][][][][][][] [] [][][] [] [][][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[][][][][][][] [] []$[]\TU/Arial(0)/m/n/10 ; DS03: []$[][][][][] [] [] [] [][][][][][][][] [] [][][][][][][][] [] [][][] [] [][][][][][][][][][][][][][][][][][][][][][] [] [][][][][][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[][][][][][][][][][][][]$[]\TU/Arial(0)/m/n/10 ; DS04: []$[][][][][] [] [] [] [][][][][][][][] [] [][][][][][][][] [] [][][] [] [][][][][][][][][][][][][][][][][][][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[][][] [] [] [] [][] [] [][][][][][][] [] []$[]\TU/Arial(0)/m/n/10 ; DS05: []$[][][][][] [] [] [] [][][][][][][][] [] [][][][][][][][] [] [][][] [] [][][][][][][][][][][][][][][][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[][][][][][][][][][][][][][][][][][][][]$[]\TU/Arial(0)/m/n/10 ; DS06: []$[][][][][] [] [] [] [][][] [] [][][][][][] [] [][][] [] [][][][][][][][] [] [][][][][][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+[][][][][][][][][][][][][][][][][][][][][][][][]$[]\TU/Arial(0)/m/n/10 ; DS07: []$[][][][][] [] [] [] [][][][][][][][][][][] [] [][] [] [][][][][][][][] [] [][][][][][][][] []
+ []
+
+[35
 
 
 
-] [48]) [49]
+] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45]) [46]
+\openout2 = `18_resultados_discussao.aux'.
+
+ (18_resultados_discussao.tex
+File: figuras/resultados_evolucao_treinamento.pdf Graphic file (type pdf)
+<use figuras/resultados_evolucao_treinamento.pdf>
+
+Overfull \hbox (5.13298pt too wide) in paragraph at lines 36--37
+[]\TU/TeXGyreHeros(0)/m/n/12 Na última época, a validação alcançou mAP@0,50 de 97,02% e mAP@0,50:
+ []
+
+[47
+
+
+
+] [48]
+File: figuras/resultados_calibracao.pdf Graphic file (type pdf)
+<use figuras/resultados_calibracao.pdf>
+ [49] [50] [51]
+File: figuras/resultados_contagem_cenas.pdf Graphic file (type pdf)
+<use figuras/resultados_contagem_cenas.pdf>
+ [52]
+File: figuras/resultados_exemplos_erros.pdf Graphic file (type pdf)
+<use figuras/resultados_exemplos_erros.pdf>
+ [53] [54] [55]) [56]
+\openout2 = `19_referencias.aux'.
+
+ (19_referencias.tex [57
+
+
+
+] [58]) [59]
 \openout2 = `21_glossario.aux'.
 
- (21_glossario.tex) [50
+ (21_glossario.tex) [60
 
 
 
 ]
 \openout2 = `22_apêndice.aux'.
 
- (22_apêndice.tex) [51
+ (22_apêndice.tex) [61
 
 
 
 ]
 \openout2 = `23_anexo.aux'.
 
- (23_anexo.tex) [52
+ (23_anexo.tex) [62
 
 
 
 ]
 \openout2 = `24_índice.aux'.
 
- (24_índice.tex) [53
+ (24_índice.tex) [63
 
 
 
@@ -1161,18 +1208,18 @@ LaTeX2e <2026-06-01>
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `0_TCC.out' has not changed.
-(rerunfilecheck)             Checksum: A0511F0F6F9742650D4245D6D855A72F;7445.
+(rerunfilecheck)             Checksum: 2C9421530888A08DF4C5076AD2B4454F;5929.
 Package logreq Info: Writing requests to '0_TCC.run.xml'.
 \openout1 = `0_TCC.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26505 strings out of 402511
- 528180 string characters out of 5435977
- 1579773 words of memory out of 5000000
- 55234 multiletter control sequences out of 15000+600000
- 635195 words of font info for 116 fonts, out of 8000000 for 9000
+ 26578 strings out of 402511
+ 530594 string characters out of 5435977
+ 1579807 words of memory out of 5000000
+ 55297 multiletter control sequences out of 15000+600000
+ 635462 words of font info for 122 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 83i,12n,98p,1023b,6992s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,12n,98p,1023b,7005s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on c:\TCC\ESCRITA TCC\build\0_TCC.xdv (54 pages, 917532 bytes).
+Output written on c:\TCC\ESCRITA TCC\build\0_TCC.xdv (64 pages, 1163132 bytes).

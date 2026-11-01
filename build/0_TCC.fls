@@ -452,6 +452,7 @@ OUTPUT c:\TCC\ESCRITA TCC\build\17_metodologia.aux
 INPUT .\17_metodologia.tex
 INPUT .\17_metodologia.tex
 INPUT 17_metodologia.tex
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
@@ -462,6 +463,18 @@ OUTPUT c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux
 INPUT .\18_resultados_discussao.tex
 INPUT .\18_resultados_discussao.tex
 INPUT 18_resultados_discussao.tex
+INPUT .\figuras\resultados_evolucao_treinamento.pdf
+INPUT .\figuras\resultados_evolucao_treinamento.pdf
+INPUT .\figuras\resultados_evolucao_treinamento.pdf
+INPUT .\figuras\resultados_calibracao.pdf
+INPUT .\figuras\resultados_calibracao.pdf
+INPUT .\figuras\resultados_calibracao.pdf
+INPUT .\figuras\resultados_contagem_cenas.pdf
+INPUT .\figuras\resultados_contagem_cenas.pdf
+INPUT .\figuras\resultados_contagem_cenas.pdf
+INPUT .\figuras\resultados_exemplos_erros.pdf
+INPUT .\figuras\resultados_exemplos_erros.pdf
+INPUT .\figuras\resultados_exemplos_erros.pdf
 INPUT .\19_referencias.tex
 INPUT .\19_referencias.tex
 OUTPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
