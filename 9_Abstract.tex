@@ -1,15 +1,15 @@
 \thispagestyle{empty}
-\noindent SURNAME, Full Name. \textbf{Title}: subtitle (if applicable). Year. 8 p. Undergraduate Thesis (Bachelor's in Computer Science) – Center of Technological Sciences, Northern Paraná State University, Bandeirantes, Year
+\normalfont\normalsize
+\onehalfspacing
+VIEIRA, Diego Souza. \textbf{Feasibility of automatic surgical instrument detection and counting using computer vision}. 2026. 61 p. Undergraduate Final Project (Bachelor's Degree in Computer Science) -- Center of Technological Sciences,
+Northern Paraná State University, Bandeirantes, 2026.
 \vspace{8pt}
 
-\centering \textbf{Absctract}
+\centering \textbf{Abstract}
 \vspace{24pt}
 
 \raggedright
-It is suggested that the summary contains a brief introduction/contextualization of the research, briefly presenting its objectives, the results obtained and some considerations or conclusions about the research. Number of suggested characters: between 150 and 500.
+Checking surgical instruments involves identifying items and verifying their quantities at different stages of hospital workflows. This study evaluated the technical feasibility of automatically detecting and counting selected instruments from an appendectomy set to support checking activities in the decontamination and preparation areas. Images from public sources and photographs from the University Hospital of the State University of Londrina were reviewed, their annotations were standardized, and repeated images were checked. The consolidated dataset comprised 10,327 images and 12,714 annotated objects organized into seven broad categories. A YOLO26n model was trained for 50 epochs with the input image size configured to 640 pixels. The confidence threshold for counting was selected using the validation set and then applied to the test set, which contained 1,008 images and 1,377 objects. The evaluation achieved a mAP@0.50 of 98.06\% and a mAP@0.50:0.95 of 86.73\%. The total count was correct in 96.43\% of the images, while counts for all categories simultaneously matched the reference in 95.63\%. The mean absolute error of the total count was 0.0536 objects per image. Exact total-count accuracy decreased from 99.29\% for single-object images to 78.43\% for scenes containing four or more objects. The mean processing time per complete call was 29.24 ms on the equipment used. These findings indicate initial technical feasibility under the evaluated conditions, with limitations related to test-set composition, category coverage, and difficulties in scenes containing multiple instruments. The approach shows potential to support instrument checking but requires further evaluation before use in hospital workflows.
 \vspace{8pt}
 
-Reference standard: ABNT NBR 6028 – Summary, review and review (2021).
-\vspace{8pt}
-
-\textbf{Keywords}: Word 1. Word 2. Word 3. Word 4. Word 5.
+\noindent\textbf{Keywords:} computer vision; surgical instruments; object detection; automatic counting; YOLO.

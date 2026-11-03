@@ -67,6 +67,8 @@ INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\wrapfig\wrapfig.sty
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\wrapfig\wrapfig.sty
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref.sty
@@ -260,21 +262,12 @@ INPUT c:\TCC\ESCRITA TCC\build\17_metodologia.aux
 INPUT c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux
 INPUT c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux
 INPUT c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux
+INPUT c:\TCC\ESCRITA TCC\build\18_Conclusão.aux
+INPUT c:\TCC\ESCRITA TCC\build\18_Conclusão.aux
+INPUT c:\TCC\ESCRITA TCC\build\18_Conclusão.aux
 INPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
 INPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
 INPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
-INPUT c:\TCC\ESCRITA TCC\build\21_glossario.aux
-INPUT c:\TCC\ESCRITA TCC\build\21_glossario.aux
-INPUT c:\TCC\ESCRITA TCC\build\21_glossario.aux
-INPUT c:\TCC\ESCRITA TCC\build\22_apêndice.aux
-INPUT c:\TCC\ESCRITA TCC\build\22_apêndice.aux
-INPUT c:\TCC\ESCRITA TCC\build\22_apêndice.aux
-INPUT c:\TCC\ESCRITA TCC\build\23_anexo.aux
-INPUT c:\TCC\ESCRITA TCC\build\23_anexo.aux
-INPUT c:\TCC\ESCRITA TCC\build\23_anexo.aux
-INPUT c:\TCC\ESCRITA TCC\build\24_índice.aux
-INPUT c:\TCC\ESCRITA TCC\build\24_índice.aux
-INPUT c:\TCC\ESCRITA TCC\build\24_índice.aux
 OUTPUT c:\TCC\ESCRITA TCC\build\0_TCC.aux
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\zapfding\pzdr.tfm
 INPUT c:\TCC\ESCRITA TCC\build\0_TCC.out
@@ -366,6 +359,18 @@ OUTPUT c:\TCC\ESCRITA TCC\build\7_epígrafe.aux
 INPUT .\7_epígrafe.tex
 INPUT .\7_epígrafe.tex
 INPUT 7_epígrafe.tex
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
 INPUT .\8_resumo.tex
 INPUT .\8_resumo.tex
 OUTPUT c:\TCC\ESCRITA TCC\build\8_resumo.aux
@@ -384,24 +389,20 @@ OUTPUT c:\TCC\ESCRITA TCC\build\10_lista-de-figuras.aux
 INPUT .\10_lista-de-figuras.tex
 INPUT .\10_lista-de-figuras.tex
 INPUT 10_lista-de-figuras.tex
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
-INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.lof
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.lof
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.lof
+OUTPUT c:\TCC\ESCRITA TCC\build\0_TCC.lof
 INPUT .\11_lista-de-tabelas.tex
 INPUT .\11_lista-de-tabelas.tex
 OUTPUT c:\TCC\ESCRITA TCC\build\11_lista-de-tabelas.aux
 INPUT .\11_lista-de-tabelas.tex
 INPUT .\11_lista-de-tabelas.tex
 INPUT 11_lista-de-tabelas.tex
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.lot
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.lot
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.lot
+OUTPUT c:\TCC\ESCRITA TCC\build\0_TCC.lot
 INPUT .\12_lista-de-abreviaturas-e-siglas.tex
 INPUT .\12_lista-de-abreviaturas-e-siglas.tex
 OUTPUT c:\TCC\ESCRITA TCC\build\12_lista-de-abreviaturas-e-siglas.aux
@@ -420,6 +421,10 @@ OUTPUT c:\TCC\ESCRITA TCC\build\14_sumário.aux
 INPUT .\14_sumário.tex
 INPUT .\14_sumário.tex
 INPUT 14_sumário.tex
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.toc
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.toc
+INPUT c:\TCC\ESCRITA TCC\build\0_TCC.toc
+OUTPUT c:\TCC\ESCRITA TCC\build\0_TCC.toc
 INPUT .\15_introducao.tex
 INPUT .\15_introducao.tex
 OUTPUT c:\TCC\ESCRITA TCC\build\15_introducao.aux
@@ -457,6 +462,9 @@ INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tf
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Users\diego\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
+INPUT .\figuras\instrumentos_categorias.pdf
+INPUT .\figuras\instrumentos_categorias.pdf
+INPUT .\figuras\instrumentos_categorias.pdf
 INPUT .\18_resultados_discussao.tex
 INPUT .\18_resultados_discussao.tex
 OUTPUT c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux
@@ -472,39 +480,30 @@ INPUT .\figuras\resultados_calibracao.pdf
 INPUT .\figuras\resultados_contagem_cenas.pdf
 INPUT .\figuras\resultados_contagem_cenas.pdf
 INPUT .\figuras\resultados_contagem_cenas.pdf
-INPUT .\figuras\resultados_exemplos_erros.pdf
-INPUT .\figuras\resultados_exemplos_erros.pdf
-INPUT .\figuras\resultados_exemplos_erros.pdf
+INPUT .\figuras\fig10_a_farabeuf_referencia.png
+INPUT .\figuras\fig10_a_farabeuf_referencia.png
+INPUT .\figuras\fig10_a_farabeuf_referencia.png
+INPUT .\figuras\fig10_b_farabeuf_predicao.png
+INPUT .\figuras\fig10_b_farabeuf_predicao.png
+INPUT .\figuras\fig10_b_farabeuf_predicao.png
+INPUT .\figuras\fig10_c_cabo_referencia.png
+INPUT .\figuras\fig10_c_cabo_referencia.png
+INPUT .\figuras\fig10_c_cabo_referencia.png
+INPUT .\figuras\fig10_d_cabo_predicao.png
+INPUT .\figuras\fig10_d_cabo_predicao.png
+INPUT .\figuras\fig10_d_cabo_predicao.png
+INPUT .\18_Conclusão.tex
+INPUT .\18_Conclusão.tex
+OUTPUT c:\TCC\ESCRITA TCC\build\18_Conclusão.aux
+INPUT .\18_Conclusão.tex
+INPUT .\18_Conclusão.tex
+INPUT 18_Conclusão.tex
 INPUT .\19_referencias.tex
 INPUT .\19_referencias.tex
 OUTPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
 INPUT .\19_referencias.tex
 INPUT .\19_referencias.tex
 INPUT 19_referencias.tex
-INPUT .\21_glossario.tex
-INPUT .\21_glossario.tex
-OUTPUT c:\TCC\ESCRITA TCC\build\21_glossario.aux
-INPUT .\21_glossario.tex
-INPUT .\21_glossario.tex
-INPUT 21_glossario.tex
-INPUT .\22_apêndice.tex
-INPUT .\22_apêndice.tex
-OUTPUT c:\TCC\ESCRITA TCC\build\22_apêndice.aux
-INPUT .\22_apêndice.tex
-INPUT .\22_apêndice.tex
-INPUT 22_apêndice.tex
-INPUT .\23_anexo.tex
-INPUT .\23_anexo.tex
-OUTPUT c:\TCC\ESCRITA TCC\build\23_anexo.aux
-INPUT .\23_anexo.tex
-INPUT .\23_anexo.tex
-INPUT 23_anexo.tex
-INPUT .\24_índice.tex
-INPUT .\24_índice.tex
-OUTPUT c:\TCC\ESCRITA TCC\build\24_índice.aux
-INPUT .\24_índice.tex
-INPUT .\24_índice.tex
-INPUT 24_índice.tex
 INPUT c:\TCC\ESCRITA TCC\build\0_TCC.aux
 INPUT c:\TCC\ESCRITA TCC\build\1_capa.aux
 INPUT c:\TCC\ESCRITA TCC\build\1_capa.aux
@@ -560,21 +559,12 @@ INPUT c:\TCC\ESCRITA TCC\build\17_metodologia.aux
 INPUT c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux
 INPUT c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux
 INPUT c:\TCC\ESCRITA TCC\build\18_resultados_discussao.aux
+INPUT c:\TCC\ESCRITA TCC\build\18_Conclusão.aux
+INPUT c:\TCC\ESCRITA TCC\build\18_Conclusão.aux
+INPUT c:\TCC\ESCRITA TCC\build\18_Conclusão.aux
 INPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
 INPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
 INPUT c:\TCC\ESCRITA TCC\build\19_referencias.aux
-INPUT c:\TCC\ESCRITA TCC\build\21_glossario.aux
-INPUT c:\TCC\ESCRITA TCC\build\21_glossario.aux
-INPUT c:\TCC\ESCRITA TCC\build\21_glossario.aux
-INPUT c:\TCC\ESCRITA TCC\build\22_apêndice.aux
-INPUT c:\TCC\ESCRITA TCC\build\22_apêndice.aux
-INPUT c:\TCC\ESCRITA TCC\build\22_apêndice.aux
-INPUT c:\TCC\ESCRITA TCC\build\23_anexo.aux
-INPUT c:\TCC\ESCRITA TCC\build\23_anexo.aux
-INPUT c:\TCC\ESCRITA TCC\build\23_anexo.aux
-INPUT c:\TCC\ESCRITA TCC\build\24_índice.aux
-INPUT c:\TCC\ESCRITA TCC\build\24_índice.aux
-INPUT c:\TCC\ESCRITA TCC\build\24_índice.aux
 INPUT c:\TCC\ESCRITA TCC\build\0_TCC.out
 INPUT c:\TCC\ESCRITA TCC\build\0_TCC.out
 INPUT c:\TCC\ESCRITA TCC\build\0_TCC.run.xml

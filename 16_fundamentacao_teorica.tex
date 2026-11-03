@@ -15,7 +15,7 @@
 \noindent\textbf{2 FUNDAMENTAÇÃO TEÓRICA}\par
 \vspace{\baselineskip}
 
-Reconhecer uma tesoura em uma fotografia parece uma tarefa simples para quem conhece o instrumento. Para um computador, entretanto, a imagem é inicialmente um conjunto de números. Transformar esses números em informações como a posição, o tipo e a quantidade de objetos exige um método de análise. Este capítulo apresenta esse percurso: começa pelas relações entre inteligência artificial e aprendizado, explica como imagens podem ser processadas por redes neurais e chega aos critérios utilizados para avaliar a detecção e a contagem. Os exemplos numéricos e os esquemas são didáticos; os resultados do experimento são tratados em capítulo próprio.
+Reconhecer uma tesoura em uma fotografia parece uma tarefa simples para quem conhece o instrumento. Para um computador, entretanto, a imagem é inicialmente um conjunto de números. Transformar esses números em informações como a posição, o tipo e a quantidade de objetos exige um método de análise. Este capítulo apresenta esse percurso: começa pelas relações entre inteligência artificial e aprendizado, explica como imagens podem ser processadas por redes neurais e chega aos critérios utilizados para avaliar a detecção e a contagem.
 
 \vspace{\baselineskip}
 \phantomsection
@@ -64,12 +64,12 @@ Outros filtros realçam mudanças de intensidade. O operador Sobel calcula respo
 \label{fig:fund-filtros}
 \includegraphics[width=\linewidth]{figuras/fund_filtros_didaticos.pdf}
 \par\smallskip
-{\footnotesize Fonte: elaboração própria, em imagem sintética, com operações descritas na documentação do OpenCV \parencite{opencvFiltros,opencvGradientes}.\par}
+{\footnotesize Fonte: elaboração própria, em imagem sintética, com base nas operações descritas por \textcite{opencvGradientes,opencvFiltros}.\par}
 \end{figure}
 
 Nas redes neurais convolucionais, conhecidas pela sigla CNN, do inglês \textit{convolutional neural network}, os filtros têm valores aprendidos durante o treinamento. A aplicação de um filtro em diferentes posições gera um mapa de características: uma nova grade que indica onde o padrão associado ao filtro produz respostas. Diversos filtros geram diferentes mapas, e camadas posteriores combinam essas informações. O compartilhamento dos valores do filtro entre posições evita aprender uma operação inteiramente diferente para cada ponto da imagem \parencite{goodfellow2016}.
 
-As camadas convolucionais são combinadas com outras operações, incluindo funções de ativação, que permitem representar relações não lineares. Em termos intuitivos, a rede não fica limitada a somar sempre as informações da mesma maneira: consegue construir respostas mais complexas a partir dos padrões intermediários. O aprendizado em várias camadas é um dos fundamentos do avanço das redes profundas na análise visual \parencite{lecun2015}. Ainda assim, os mapas internos não devem ser interpretados como uma lista garantida de conceitos humanos, como ``dente'', ``anel'' ou ``ponta curva''. Essas são características úteis para explicar o problema, mas não uma descrição previamente conhecida do que cada filtro aprendeu.
+As camadas convolucionais são combinadas com outras operações, incluindo funções de ativação, que permitem representar relações não lineares. Em termos intuitivos, a rede não fica limitada a somar sempre as informações da mesma maneira: consegue construir respostas mais complexas a partir dos padrões intermediários. O aprendizado em várias camadas é um dos fundamentos do avanço das redes profundas na análise visual \parencite{lecun2015}. Ainda assim, os mapas internos não devem ser interpretados como uma lista garantida de conceitos humanos, como dentes, anéis ou pontas curvas. Essas são características úteis para explicar o problema, mas não uma descrição previamente conhecida do que cada filtro aprendeu.
 
 \vspace{\baselineskip}
 \phantomsection
@@ -178,7 +178,7 @@ P=\frac{VP}{VP+FP},\qquad R=\frac{VP}{VP+FN}.
 
 Considere, como exemplo didático, dez instrumentos anotados e nove detecções, das quais oito corretas. Nesse caso, há $VP=8$, $FP=1$ e $FN=2$. A precisão é $8/9\approx88{,}9\%$ e a revocação é $8/10=80\%$. A primeira informa a proporção de respostas corretas; a segunda mostra a parcela dos instrumentos encontrados. Se aumentam os falsos positivos mantendo os acertos, a precisão diminui. Se aumentam as omissões mantendo os acertos, a revocação diminui.
 
-O limiar de confiança interfere nesse equilíbrio. Elevar o limiar elimina previsões de menor pontuação, podendo retirar tanto erros quanto acertos; reduzi-lo permite aceitar mais previsões, incluindo potenciais falsos positivos. Em geral, utiliza-se uma curva precisão--revocação para observar o comportamento em vários limiares. A precisão média, AP, resume essa curva de acordo com uma convenção de cálculo, e a média das AP entre as classes é denominada mAP \parencite{ultralyticsValidacao}. Por reunir diferentes pontos de operação, a mAP não é a precisão obtida em um único limiar escolhido para contar objetos.
+O limiar de confiança interfere nesse equilíbrio. Elevar o limiar elimina previsões de menor pontuação, podendo retirar tanto erros quanto acertos; reduzi-lo permite aceitar mais previsões, incluindo potenciais falsos positivos. Em geral, utiliza-se uma curva que relaciona precisão e revocação para observar o comportamento em vários limiares. A precisão média, AP, resume essa curva de acordo com uma convenção de cálculo, e a média das AP entre as classes é denominada mAP \parencite{ultralyticsValidacao}. Por reunir diferentes pontos de operação, a mAP não é a precisão obtida em um único limiar escolhido para contar objetos.
 
 Na notação mAP@0,50, a localização é avaliada com IoU de $0{,}50$. Já mAP@0,50:0,95 combina avaliações em dez limiares, de $0{,}50$ a $0{,}95$, com intervalos de $0{,}05$. Os critérios mais altos exigem maior coincidência entre as caixas. Essas métricas descrevem a detecção; não representam a porcentagem de imagens com contagem exata \parencite{ultralyticsValidacao}. Também é necessário informar quais classes possuem exemplos na avaliação, pois uma classe ausente não fornece evidência de desempenho positivo naquele conjunto.
 
@@ -233,7 +233,7 @@ E_{\mathrm{classes}}=\frac{1}{N}\sum_{i=1}^{N}
 \label{eq:fund_exato_classes}
 \end{equation}
 
-A condição ``para todo $c$'' exige coincidência em cada posição da lista. Uma previsão $(1,2,0)$ tem o mesmo total de $(2,1,0)$, mas falha nesse critério porque troca a composição das classes. Assim, o acerto exato por classe é mais exigente que o acerto apenas do total. Entretanto, nem mesmo a coincidência do vetor garante que todas as caixas estejam corretas: uma omissão e uma detecção indevida na mesma categoria podem se compensar.
+A exigência de coincidência para todas as categorias implica que cada posição da lista esteja correta. Uma previsão $(1,2,0)$ tem o mesmo total de $(2,1,0)$, mas falha nesse critério porque troca a composição das classes. Assim, o acerto exato por classe é mais exigente que o acerto apenas do total. Entretanto, nem mesmo a coincidência do vetor garante que todas as caixas estejam corretas: uma omissão e uma detecção indevida na mesma categoria podem se compensar.
 
 A Figura~\ref{fig:fund-compensacao} ilustra essa compensação. Há dois instrumentos na referência. Na previsão esquemática, um é corretamente localizado, o outro é omitido e uma região vazia recebe uma caixa. O total continua igual a dois, mas existem um falso negativo e um falso positivo. Se ambos forem atribuídos à mesma categoria, o vetor de contagens também poderá coincidir. Por isso, as medidas de contagem precisam ser analisadas junto com a qualidade das detecções.
 
@@ -256,7 +256,7 @@ As imagens sem objetos de interesse também contribuem para a avaliação. Nelas
 
 Os indicadores apresentados respondem a perguntas complementares: a detecção avalia localização e classe; o MAE expressa a diferença média entre quantidades; e o acerto exato informa a frequência de contagens sem divergência numérica. A análise por categoria, origem e número de objetos ajuda a identificar condições em que o desempenho muda. Uma condição pouco representada, como forte oclusão, não pode ser considerada validada apenas pelo resultado global.
 
-As categorias também delimitam a interpretação. Se dois instrumentos específicos pertencem ao grupo ``pinças'', distingui-los não faz parte da tarefa do modelo geral. Um bom resultado nesse grupo, portanto, não demonstra reconhecimento de cada tipo específico. Da mesma forma, resultados com instrumentos isolados não comprovam desempenho equivalente em bandejas completas.
+As categorias também delimitam a interpretação. Se dois instrumentos específicos pertencem à categoria pinças, distingui-los não faz parte da tarefa do modelo geral. Um bom resultado nesse grupo, portanto, não demonstra reconhecimento de cada tipo específico. Da mesma forma, resultados com instrumentos isolados não comprovam desempenho equivalente em bandejas completas.
 
 O custo computacional complementa a qualidade das respostas. O tempo de treinamento informa o esforço para obter o modelo; o de inferência, o tempo para analisar novas imagens. A medição deve indicar equipamento, tamanho de entrada e etapas incluídas: somente a rede ou também leitura, preparação e apresentação da imagem. Essas condições impedem transportar diretamente tempos medidos em outro dispositivo.
 

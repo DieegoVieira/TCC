@@ -1,41 +1,112 @@
 \thispagestyle{empty}
-\centering\textbf{Lista de símbolos} \textit{(opcional)}
+\centering\textbf{Lista de símbolos}
 \vspace{6pt}
 
-\textit{Exemplos}:
 \vspace{12pt}
 
 \hspace{0.5cm}
-\raggedright \begin{tabular}{r l}
-    $\forall$~~
+\raggedright
+\begingroup
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{r l}
+    $B_p$~~
     &
-    Quantificação universal
+    Caixa delimitadora prevista pelo modelo
     \\
-    $\exists$~~
+    $B_r$~~
     &
-    Quantificação existencial
+    Caixa delimitadora de referência
     \\
-    $\emptyset$~~
+    $\cap$~~
     &
-    Conjunto nulo ou vazio
+    Interseção entre conjuntos ou regiões
     \\
     $\cup$~~
     &
-    União teórica de conjuntos
+    União entre conjuntos ou regiões
     \\
-    √~~
+    $|\cdot|$~~
     &
-    Raiz quadrada
+    Área de uma região ou valor absoluto, conforme o contexto
     \\
-    ∞~~
+    $P$~~
     &
-    Infinito
+    Precisão das detecções
     \\
-    π~~
+    $R$~~
     &
-    Pi
+    Revocação das detecções
     \\
-    ∑~~
+    $N$~~
+    &
+    Número de imagens avaliadas
+    \\
+    $C$~~
+    &
+    Número de classes ou categorias
+    \\
+    $i$~~
+    &
+    Índice de uma imagem
+    \\
+    $c$~~
+    &
+    Índice de uma classe ou categoria
+    \\
+    $D_i$~~
+    &
+    Conjunto de detecções aceitas na imagem $i$
+    \\
+    $d$~~
+    &
+    Uma detecção pertencente ao conjunto $D_i$
+    \\
+    $\sum$~~
     &
     Somatório
+    \\
+    $\mathbf{1}[\cdot]$~~
+    &
+    Função indicadora: vale um quando a condição é verdadeira e
+    \\
+    ~~
+    &
+    zero caso contrário
+    \\
+    $n_i$~~
+    &
+    Quantidade total de objetos de referência na imagem $i$
+    \\
+    $\widehat{n}_i$~~
+    &
+    Quantidade total de objetos prevista na imagem $i$
+    \\
+    $n_{ic}$~~
+    &
+    Quantidade de objetos de referência da categoria $c$ na imagem $i$
+    \\
+    $\widehat{n}_{ic}$~~
+    &
+    Quantidade prevista de objetos da categoria $c$ na imagem $i$
+    \\
+    $\mathrm{MAE}_{\mathrm{total}}$~~
+    &
+    Erro absoluto médio da contagem total por imagem
+    \\
+    $\mathrm{MAE}_{c}$~~
+    &
+    Erro absoluto médio da contagem da categoria $c$
+    \\
+    $E_{\mathrm{total}}$~~
+    &
+    Proporção de imagens com contagem total correta
+    \\
+    $E_{\mathrm{classes}}$~~
+    &
+    Proporção de imagens com contagem correta em todas as 
+    \\
+    ~~
+    &
+    categorias simultaneamente
 \end{tabular}
+\endgroup

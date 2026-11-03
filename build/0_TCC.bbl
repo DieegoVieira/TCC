@@ -69,6 +69,46 @@
       \verb https://bvsms.saude.gov.br/bvs/publicacoes/documento_referencia_programa_nacional_seguranca.pdf
       \endverb
     \endentry
+    \entry{pytorchTransferencia}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=e18536d5cb7543731fbf2ca1a4908732}{%
+           family={Chilamkurthy},
+           familyi={C\bibinitperiod},
+           given={Sasank},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {PyTorch}%
+      }
+      \strng{namehash}{e18536d5cb7543731fbf2ca1a4908732}
+      \strng{fullhash}{e18536d5cb7543731fbf2ca1a4908732}
+      \strng{fullhashraw}{e18536d5cb7543731fbf2ca1a4908732}
+      \strng{bibnamehash}{e18536d5cb7543731fbf2ca1a4908732}
+      \strng{authorbibnamehash}{e18536d5cb7543731fbf2ca1a4908732}
+      \strng{authornamehash}{e18536d5cb7543731fbf2ca1a4908732}
+      \strng{authorfullhash}{e18536d5cb7543731fbf2ca1a4908732}
+      \strng{authorfullhashraw}{e18536d5cb7543731fbf2ca1a4908732}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Tutorial atualizado em 27 jan. 2025}
+      \field{title}{Transfer Learning for Computer Vision Tutorial}
+      \field{urlday}{1}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html
+      \endverb
+      \verb{url}
+      \verb https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html
+      \endverb
+    \endentry
     \entry{deol2024}{article}{}{}
       \name{author}{10}{}{%
         {{hash=01a550efacaad6c8acd7367ebee97c8e}{%
@@ -205,6 +245,69 @@
       \endverb
       \verb{url}
       \verb https://www.scielo.br/j/rgenf/a/r3t9YfDf5vSzD4PDNmMBHHL/?lang=pt
+      \endverb
+    \endentry
+    \entry{gawande2003}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=c28c2763bcb7e9354ddaf754deaeeaad}{%
+           family={Gawande},
+           familyi={G\bibinitperiod},
+           given={Atul\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=7c9c6ab138876bdfe8918c3033dcb419}{%
+           family={Studdert},
+           familyi={S\bibinitperiod},
+           given={David\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=4422791f0ad9b8059a1b67c7f3c24098}{%
+           family={Orav},
+           familyi={O\bibinitperiod},
+           given={E.\bibnamedelimi John},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=91141c759808d06a20bc52d942be34be}{%
+           family={Brennan},
+           familyi={B\bibinitperiod},
+           given={Troyen\bibnamedelima A.},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=4dc0da8dd52bec3cd00ea1f913826d5a}{%
+           family={Zinner},
+           familyi={Z\bibinitperiod},
+           given={Michael\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{be076e1a55e65b9d6085a97eb6368fdc}
+      \strng{fullhash}{722d2fe10034e8aad961ebc5c1b67a90}
+      \strng{fullhashraw}{722d2fe10034e8aad961ebc5c1b67a90}
+      \strng{bibnamehash}{722d2fe10034e8aad961ebc5c1b67a90}
+      \strng{authorbibnamehash}{722d2fe10034e8aad961ebc5c1b67a90}
+      \strng{authornamehash}{be076e1a55e65b9d6085a97eb6368fdc}
+      \strng{authorfullhash}{722d2fe10034e8aad961ebc5c1b67a90}
+      \strng{authorfullhashraw}{722d2fe10034e8aad961ebc5c1b67a90}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The New England Journal of Medicine}
+      \field{number}{3}
+      \field{title}{Risk Factors for Retained Instruments and Sponges after Surgery}
+      \field{urlday}{1}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{volume}{348}
+      \field{year}{2003}
+      \field{urldateera}{ce}
+      \field{pages}{229\bibrangedash 235}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1056/NEJMsa021721
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1056/NEJMsa021721
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1056/NEJMsa021721
       \endverb
     \endentry
     \entry{goodfellow2016}{book}{}{}
@@ -568,10 +671,13 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{bookpagination}{sheet}
+      \field{bookpagination}{page}
+      \field{note}{Manuscrito consultado em arquivo não disponível publicamente}
+      \field{pagetotal}{61}
       \field{title}{Desenvolvimento de protótipo para contagem e rastreabilidade de instrumental cirúrgico com visão computacional}
-      \field{type}{Dissertação (Mestrado em Enfermagem)}
+      \field{type}{Exame de qualificação (Mestrado em Enfermagem)}
       \field{year}{2025}
+      \field{dateera}{ce}
     \endentry
     \entry{opencvGradientes}{online}{}{}
       \name{author}{1}{}{%
@@ -592,14 +698,16 @@
       \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
       \field{extradate}{1}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Documentação da versão 4.13.0}
+      \field{note}{Documentação da versão 4.13.0, gerada em 31 dez. 2025}
       \field{title}{Image Gradients}
       \field{urlday}{1}
       \field{urlmonth}{11}
       \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://docs.opencv.org/4.13.0/d5/d0f/tutorial_py_gradients.html
@@ -627,14 +735,16 @@
       \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
       \field{extradate}{2}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Documentação da versão 4.13.0}
+      \field{note}{Documentação da versão 4.13.0, gerada em 31 dez. 2025}
       \field{title}{Smoothing Images}
       \field{urlday}{1}
       \field{urlmonth}{11}
       \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://docs.opencv.org/4.13.0/d4/d13/tutorial_py_filtering.html
@@ -783,59 +893,25 @@
       \strng{authornamehash}{95b88f180e9eb5678e0f9ebac2cbe643}
       \strng{authorfullhash}{95b88f180e9eb5678e0f9ebac2cbe643}
       \strng{authorfullhashraw}{95b88f180e9eb5678e0f9ebac2cbe643}
-      \field{extraname}{1}
       \field{sortinit}{P}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradate}{1}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Documentação da versão 2.15}
+      \field{note}{Documentação da versão 2.15, atualizada em 14 maio 2026}
       \field{title}{Reproducibility}
       \field{urlday}{1}
       \field{urlmonth}{11}
       \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://docs.pytorch.org/docs/2.15/notes/randomness.html
       \endverb
       \verb{url}
       \verb https://docs.pytorch.org/docs/2.15/notes/randomness.html
-      \endverb
-    \endentry
-    \entry{pytorchTransferencia}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=95b88f180e9eb5678e0f9ebac2cbe643}{%
-           family={{PyTorch}},
-           familyi={P\bibinitperiod}}}%
-      }
-      \strng{namehash}{95b88f180e9eb5678e0f9ebac2cbe643}
-      \strng{fullhash}{95b88f180e9eb5678e0f9ebac2cbe643}
-      \strng{fullhashraw}{95b88f180e9eb5678e0f9ebac2cbe643}
-      \strng{bibnamehash}{95b88f180e9eb5678e0f9ebac2cbe643}
-      \strng{authorbibnamehash}{95b88f180e9eb5678e0f9ebac2cbe643}
-      \strng{authornamehash}{95b88f180e9eb5678e0f9ebac2cbe643}
-      \strng{authorfullhash}{95b88f180e9eb5678e0f9ebac2cbe643}
-      \strng{authorfullhashraw}{95b88f180e9eb5678e0f9ebac2cbe643}
-      \field{extraname}{2}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Transfer Learning for Computer Vision Tutorial}
-      \field{urlday}{1}
-      \field{urlmonth}{11}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html
-      \endverb
-      \verb{url}
-      \verb https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html
       \endverb
     \endentry
     \entry{ran2023}{article}{}{}
@@ -1035,14 +1111,16 @@
       \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
       \field{extradate}{1}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Documentação técnica atualizável, sem data de publicação identificada}
+      \field{note}{Ano inferido da versão YOLO26 consultada; página atualizável sem data editorial explícita}
       \field{title}{Data Augmentation using Ultralytics YOLO}
       \field{urlday}{31}
       \field{urlmonth}{10}
       \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://docs.ultralytics.com/guides/yolo-data-augmentation/
@@ -1070,14 +1148,16 @@
       \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
       \field{extradate}{2}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Documentação técnica atualizável, sem data de publicação identificada}
+      \field{note}{Ano inferido da versão YOLO26 consultada; página atualizável sem data editorial explícita}
       \field{title}{Model Training with Ultralytics YOLO}
       \field{urlday}{31}
       \field{urlmonth}{10}
       \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://docs.ultralytics.com/modes/train/
@@ -1105,13 +1185,16 @@
       \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
       \field{extradate}{3}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{note}{Ano inferido da versão YOLO26 consultada; página atualizável sem data editorial explícita}
       \field{title}{Model Validation with Ultralytics YOLO}
       \field{urlday}{1}
       \field{urlmonth}{11}
       \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://docs.ultralytics.com/modes/val/
@@ -1139,13 +1222,16 @@
       \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
       \field{extradate}{4}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{url}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{note}{Documentação do modelo lançado em janeiro de 2026; ano da versão consultada}
       \field{title}{Ultralytics {YOLO26}}
       \field{urlday}{1}
       \field{urlmonth}{11}
       \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://docs.ultralytics.com/models/yolo26/

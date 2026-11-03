@@ -1,14 +1,14 @@
 \thispagestyle{empty}
-\raggedright\noindent SOBRENOME, Nome Completo com. \textbf{Título}: subtítulo (quando houver). Ano. 8 f. Trabalho de Conclusão de Curso (Bacharelado em Ciência da Computação) – Centro de Ciências Tecnológicas, Universidade Estadual do Norte do Paraná, Bandeirantes, Ano.
+\normalfont\normalsize
+\onehalfspacing
+\raggedright\noindent VIEIRA, Diego Souza. \textbf{Viabilidade da detecção e contagem automática de instrumentos cirúrgicos por visão computacional}. 2026. 61 p. Trabalho de Conclusão de Curso (Bacharelado em Ciência da Computação) – Centro de Ciências Tecnológicas, Universidade Estadual do Norte do Paraná, Bandeirantes, 2026.
 \vspace{24pt}
 
 \centering \textbf{Resumo}
 \vspace{24pt}
 
-\raggedright Sugere-se que no resumo contenha uma breve introdução/contextualização da pesquisa, apresentando suscintamente seus objetivos, os resultados obtidos e algumas considerações ou conclusões acerca da pesquisa. Quantidade de caracteres sugeridos: entre 150 e 500.
+\raggedright A conferência de instrumentos cirúrgicos envolve reconhecer os materiais e verificar suas quantidades em diferentes etapas da rotina hospitalar. Este trabalho avaliou a viabilidade técnica da detecção e da contagem automática de instrumentos selecionados da caixa de apendicectomia, visando ao apoio à conferência no expurgo e no preparo. Foram reunidas imagens de fontes públicas e fotografias do Hospital Universitário da Universidade Estadual de Londrina, submetidas à revisão, padronização das anotações e verificação de repetições. A base consolidada reuniu 10.327 imagens e 12.714 objetos anotados, organizados em sete categorias gerais. O modelo YOLO26n foi treinado durante 50 épocas, com dimensão de entrada configurada em 640 pixels. O limiar de confiança para a contagem foi definido no conjunto de validação e aplicado ao teste, composto por 1.008 imagens e 1.377 objetos. A avaliação alcançou mAP@0,50 de 98,06\% e mAP@0,50:0,95 de 86,73\%. A contagem total foi correta em 96,43\% das imagens, enquanto as quantidades de todas as categorias coincidiram simultaneamente com a referência em 95,63\%. O erro absoluto médio da contagem total foi de 0,0536 objeto por imagem. O acerto do total diminuiu de 99,29\% nas imagens com um objeto para 78,43\% nas cenas com quatro ou mais. O tempo médio de processamento por chamada completa foi de 29,24 ms no equipamento utilizado. Os resultados indicam viabilidade técnica inicial nas condições avaliadas, com limitações relacionadas à composição do teste, à cobertura das categorias e às dificuldades em cenas com vários instrumentos. A abordagem apresenta potencial como apoio à conferência, mas requer avaliação adicional antes de sua utilização na rotina hospitalar.
+
 \vspace{8pt}
 
-Norma de referência: ABNT NBR 6028 – Resumo, resenha e recensão (2021).
-\vspace{8pt}
-
-\textbf{Palavras-chave}: Palavra 1. Palavra 2. Palavra 3. Palavra 4. Palavra 5.
+\noindent\textbf{Palavras-chave:} visão computacional; instrumentos cirúrgicos; detecção de objetos; contagem automática; YOLO.

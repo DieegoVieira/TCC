@@ -1,9 +1,29 @@
-    \setlength{\parindent}{1cm}
+% !TeX root = 0_TCC.tex
+% Conclusão v1 — 01/11/2026. Não compilar isoladamente.
+% Mantém o padrão do template e a bibliografia já instalada.
+\begingroup
+\justifying
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\onehalfspacing
+\renewcommand{\tablename}{Tabela}
 
-{\raggedright \textbf{3 ~~~~ CONCLUSÃO}}
+\phantomsection
+\addcontentsline{toc}{section}{5 CONCLUSÃO}
+\noindent\textbf{5 CONCLUSÃO}\par
+\nobreak\vspace{\baselineskip}\nobreak
 
 ~~
 
-Com a presente pesquisa, conclui-se que...
+Os resultados indicam viabilidade técnica inicial da detecção e da contagem automática dos instrumentos selecionados, nas condições representadas pelas fotografias avaliadas. O modelo YOLO26n conseguiu localizar objetos e produzir contagens por sete categorias gerais, com resultados favoráveis sobretudo em imagens de instrumentos isolados. Essa evidência sustenta a continuidade da investigação como apoio à conferência no expurgo e no preparo de caixas cirúrgicas, mas ainda não demonstra prontidão para utilização na rotina hospitalar.
 
-    \pagebreak
+A contagem total coincidiu com a referência em 96,43\% das imagens de teste. Entretanto, o acerto diminuiu para 78,43\% nas cenas com quatro ou mais objetos, grupo composto principalmente por fotografias com quatro instrumentos. Essa diferença mostra que o resultado global não representa o desempenho esperado em caixas completas. As falhas observadas com instrumentos próximos ou sobrepostos e a confusão entre lâminas e cabos de bisturi também evidenciam que a quantidade correta precisa ser interpretada junto à identificação e à localização dos objetos.
+
+A principal contribuição da pesquisa foi organizar uma base com imagens de fontes públicas e do HU-UEL e avaliar conjuntamente a detecção e a contagem, permitindo identificar condições favoráveis e dificuldades concretas da abordagem. O procedimento de avaliação distinguiu o acerto do total, a composição por categoria e a correspondência espacial das detecções. Com isso, evitou tratar como equivalentes situações em que o número final coincide, mas os objetos reconhecidos não correspondem integralmente aos instrumentos presentes.
+
+As conclusões permanecem limitadas pela predominância de imagens com um instrumento, pela representação desigual das categorias e pela possível dependência entre fotografias obtidas em condições semelhantes. A cobertura hospitalar também é incompleta para alguns tipos de instrumento. Portanto, os resultados não podem ser estendidos automaticamente a novas sessões de captura, a bandejas densamente organizadas ou a todos os materiais presentes no serviço. Tampouco demonstram que a contagem automatizada possa substituir a conferência profissional ou assegurar a ausência de materiais retidos no paciente.
+
+Como próximos passos, destacam-se a avaliação em fotografias independentes, obtidas em novas sessões, e a ampliação de cenas com vários instrumentos e das categorias menos representadas. Também é pertinente incluir exemplos negativos difíceis, como lâminas visualmente semelhantes a cabos, preservando um conjunto independente para avaliação. Essas medidas permitiriam verificar se o potencial observado se mantém em situações mais próximas da aplicação pretendida e orientar o desenvolvimento de uma ferramenta de apoio aos profissionais.
+
+\endgroup

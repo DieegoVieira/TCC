@@ -7,7 +7,6 @@
 \setlength{\emergencystretch}{2em}
 \onehalfspacing
 \renewcommand{\tablename}{Tabela}
-\captionsetup[table]{labelsep=endash,justification=raggedright,singlelinecheck=false,font=small}
 \phantomsection
 \addcontentsline{toc}{section}{4 RESULTADOS E DISCUSSÃO}
 \noindent\textbf{4 RESULTADOS E DISCUSSÃO}\par
@@ -18,6 +17,8 @@ Este capítulo apresenta os resultados do modelo YOLO26n treinado para detectar 
 A avaliação utilizou 1.008 imagens reservadas para teste, com 1.377 objetos anotados: 559 fotografias do HU-UEL e 449 imagens de fontes da internet. Esses dados foram mantidos separados das 8.304 imagens de treinamento e das 1.015 imagens de validação. Os resultados a seguir se referem às categorias gerais, como pinças e tesouras, e não à distinção entre todos os instrumentos específicos que compõem cada categoria. Assim, identificar uma pinça como pertencente à categoria correta não significa, por si só, reconhecer se ela é uma Kelly, uma Kocher ou outro instrumento desse grupo.
 
 \vspace{\baselineskip}
+\phantomsection
+\addcontentsline{toc}{subsection}{4.1 Evolução do treinamento}
 \noindent\textbf{4.1 Evolução do treinamento}\par
 \nobreak\vspace{\baselineskip}\nobreak
 
@@ -33,11 +34,16 @@ A Figura~\ref{fig:res-treinamento} apresenta dois aspectos dessa evolução. À 
 \par\smallskip{\footnotesize Fonte: elaboração própria, com base nos registros do treinamento.\par}
 \end{figure}
 
-Na última época, a validação alcançou mAP@0,50 de 97,02\% e mAP@0,50:\allowbreak{}0,95 de 87,20\%. Este último foi o maior valor registrado nas 50 épocas. A diferença entre as duas medidas é esperada: a primeira admite uma correspondência espacial menos exigente, enquanto a segunda reúne avaliações com diferentes exigências de sobreposição entre as caixas. Conforme discutido por \textcite{padilla2021}, a interpretação do desempenho depende do critério de correspondência empregado. Por esse motivo, uma única medida de detecção não resume todos os aspectos da qualidade do modelo.
 
-As curvas mostram avanço do aprendizado, mas não demonstram que 50 épocas constituem a duração ideal para qualquer configuração. Também não permitem atribuir o resultado a uma técnica isolada de aumento de dados, pois não foi realizado um experimento que comparasse o treinamento com e sem cada transformação. A alteração das condições de aumento de dados ao final do treinamento, incluindo o encerramento do mosaico, deve ser considerada ao interpretar mudanças nas perdas. O resultado obtido corresponde ao conjunto de escolhas adotado neste experimento.
+
+Na última época, a validação alcançou mAP@0,50 de 97,02\% e mAP@0,50:\allowbreak{}0,95 de 87,20\%. Este último foi o maior valor registrado nas 50 épocas. O checkpoint \texttt{best.pt}, selecionado com base nos resultados de validação, foi utilizado na avaliação do conjunto de teste. A diferença entre as duas medidas é esperada: a primeira admite uma correspondência espacial menos exigente, enquanto a segunda reúne avaliações com diferentes exigências de sobreposição entre as caixas. Conforme discutido por \textcite{padilla2021}, a interpretação do desempenho depende do critério de correspondência empregado. Por esse motivo, uma única medida de detecção não resume todos os aspectos da qualidade do modelo.
+
+
+As curvas mostram avanço do aprendizado, mas não estabelecem uma duração ideal para o treinamento. As mudanças observadas ao final da execução devem ser interpretadas considerando também o encerramento do mosaico. Como as técnicas de aumento de dados não foram avaliadas isoladamente, o desempenho obtido corresponde ao conjunto de escolhas do experimento.
 
 \vspace{\baselineskip}
+\phantomsection
+\addcontentsline{toc}{subsection}{4.2 Escolha do limiar de confiança para a contagem}
 \noindent\textbf{4.2 Escolha do limiar de confiança para a contagem}\par
 \nobreak\vspace{\baselineskip}\nobreak
 
@@ -58,6 +64,8 @@ O menor erro entre os valores examinados ocorreu no limiar 0,45, com soma de 71 
 A escolha anterior ao teste preserva a finalidade desse conjunto: avaliar uma configuração já definida. Ajustar repetidamente o limiar a partir dos erros de teste reduziria a independência dessa avaliação. A revisão visual posterior foi empregada para compreender as falhas, sem modificar o limiar nem recalcular os resultados apresentados neste capítulo.
 
 \vspace{\baselineskip}
+\phantomsection
+\addcontentsline{toc}{subsection}{4.3 Desempenho na detecção dos instrumentos}
 \noindent\textbf{4.3 Desempenho na detecção dos instrumentos}\par
 \nobreak\vspace{\baselineskip}\nobreak
 
@@ -84,7 +92,10 @@ Bicos de aspiração & 21 & 20 & 100,00 & 95,24 \\
 Cúpulas & 30 & 30 & 96,77 & 100,00 \\
 \hline
 \end{tabular}
-\par\smallskip\raggedright\footnotesize Fonte: elaboração própria. Objetos: quantidade na referência original; acertos: detecções associadas à categoria correta com IoU $\geq 0{,}50$. Confiança $\geq 0{,}45$. A referência contém duas classificações incorretas discutidas na Seção 4.6.
+\par\smallskip\raggedright\footnotesize Fonte: elaboração própria.
+
+Nota: objetos correspondem às anotações de referência utilizadas na avaliação; acertos representam detecções associadas à categoria correta com IoU $\geq 0{,}50$ e confiança $\geq 0{,}45$. Duas classificações incorretas da categoria porta-agulhas são examinadas na Seção~4.6.
+
 \end{minipage}
 \end{table}
 
@@ -93,6 +104,8 @@ Os cabos de bisturi apresentaram a menor revocação: 188 dos 209 objetos foram 
 As tesouras apresentaram precisão de 99,33\% e revocação de 98,00\%, com maior quantidade de objetos de referência do que os bicos de aspiração e as cúpulas. Para estas duas últimas categorias, os resultados favoráveis precisam ser interpretados à luz dos 21 e 30 objetos disponíveis no teste. A precisão de 100\% dos bicos de aspiração significa que não houve detecção incorreta dessa categoria neste conjunto; não significa ausência de falhas em novas situações. Da mesma forma, todas as cúpulas de referência foram recuperadas, mas houve uma detecção adicional incorreta.
 
 \vspace{\baselineskip}
+\phantomsection
+\addcontentsline{toc}{subsection}{4.4 Contagem total e contagem por categoria}
 \noindent\textbf{4.4 Contagem total e contagem por categoria}\par
 \nobreak\vspace{\baselineskip}\nobreak
 
@@ -102,9 +115,56 @@ Ao exigir simultaneamente a quantidade correta em todas as sete categorias, o n�
 
 A soma dos erros absolutos por categoria foi de 76, equivalente à média de 0,0754 por imagem. Essa medida foi maior do que o erro da contagem total porque não permite compensações entre categorias. Considerando todas as imagens em conjunto, foram previstos 1.367 objetos, dez a menos do que os 1.377 da referência. Contudo, a diferença de dez no total agregado ocultaria erros locais de sentidos opostos. Para a conferência de uma fotografia, a comparação por imagem é mais informativa do que apenas somar todas as previsões do conjunto.
 
+
+
+\begin{table}[htbp]
+\centering
+\caption{Erro absoluto médio da contagem por categoria no conjunto de teste}
+\label{tab:res-mae-categorias}
+
+\begin{minipage}{0.98\linewidth}
+\singlespacing
+\small
+\centering
+
+\begin{tabular}{lrrrr}
+\hline
+Categoria & Imagens positivas & Objetos & MAE geral & MAE positivo \\
+\hline
+Pinças             & 491 & 509 & 0,0218 & 0,0305 \\
+Tesouras           & 340 & 451 & 0,0119 & 0,0294 \\
+Afastadores        & 25  & 81  & 0,0079 & 0,3200 \\
+Porta-agulhas      & 75  & 76  & 0,0060 & 0,0800 \\
+Cabos de bisturi   & 191 & 209 & 0,0258 & 0,1309 \\
+Bicos de aspiração & 20  & 21  & 0,0010 & 0,0500 \\
+Cúpulas            & 30  & 30  & 0,0010 & 0,0000 \\
+\hline
+\end{tabular}
+
+\par
+\vspace{0.35em}
+\raggedright
+\footnotesize
+
+Fonte: elaboração própria, a partir dos registros de avaliação do modelo (2026).
+
+\par\vspace{0.25em}
+
+\textit{Nota:} imagens positivas representam fotografias com pelo menos um objeto de referência da categoria. O MAE geral foi calculado sobre as 1.008 imagens de teste, incluindo aquelas sem objetos da categoria. O MAE positivo considera somente as imagens positivas da respectiva categoria. Ambos estão expressos em objetos por imagem.
+
+\end{minipage}
+\end{table}
+
+
+
+Os cabos de bisturi apresentaram o maior MAE geral (0,0258), seguidos pelas pinças (0,0218). Entretanto, quando o cálculo considera somente as imagens positivas de cada categoria, destacam-se os afastadores, com MAE de 0,3200 em 25 imagens, e os cabos de bisturi, com 0,1309 em 191 imagens. Essa diferença evidencia como a baixa frequência de uma categoria pode reduzir seu erro médio quando todas as imagens do teste são consideradas. No caso das cúpulas, o MAE positivo foi nulo, enquanto o MAE geral foi de 0,0010, pois ocorreu uma previsão indevida em uma imagem sem objetos dessa categoria. Portanto, os dois indicadores são complementares: o MAE positivo caracteriza os erros de contagem nas imagens que contêm a categoria, enquanto o MAE geral também considera previsões indevidas em imagens nas quais ela está ausente. A quantidade desigual de imagens positivas deve ser considerada na comparação entre as categorias.
+
+
 Além disso, a contagem correta não assegura uma delimitação correta. Uma previsão pode produzir o número esperado de objetos, mas apresentar uma caixa com sobreposição insuficiente em relação à referência. A avaliação conjunta das contagens e das detecções evita tratar esses casos como equivalentes a uma identificação inteiramente correta.
 
 \vspace{\baselineskip}
+\phantomsection
+\addcontentsline{toc}{subsection}{4.5 Origem das imagens e quantidade de objetos na cena}
 \noindent\textbf{4.5 Origem das imagens e quantidade de objetos na cena}\par
 \nobreak\vspace{\baselineskip}\nobreak
 
@@ -147,6 +207,8 @@ O erro absoluto médio também aumentou entre esses grupos: foi de 0,0107 nas im
 O grupo com quatro ou mais objetos reúne 102 imagens, das quais 100 possuem quatro objetos, uma possui cinco e uma possui dez. Assim, ele representa principalmente cenas com quatro instrumentos, e não bandejas completas com grande concentração de itens. As dez imagens sem objetos apresentaram contagem zero corretamente. Esse resultado é útil para verificar bandejas vazias, mas não demonstra que o modelo rejeitaria qualquer objeto estranho ou instrumento fora das categorias de interesse.
 
 \vspace{\baselineskip}
+\phantomsection
+\addcontentsline{toc}{subsection}{4.6 Análise visual dos acertos e das falhas}
 \noindent\textbf{4.6 Análise visual dos acertos e das falhas}\par
 \nobreak\vspace{\baselineskip}\nobreak
 
@@ -156,21 +218,52 @@ Nos exemplos de acerto, as caixas delimitaram os instrumentos e receberam as cat
 
 A Figura~\ref{fig:res-exemplos} apresenta dois casos. Na imagem dos afastadores Farabeuf, quatro objetos de referência resultaram em sete previsões. A proximidade e a sobreposição dos instrumentos dificultam distinguir suas partes e associá-las a um único objeto. No segundo exemplo, havia um cabo de bisturi de interesse e cinco lâminas; o modelo contou cinco objetos como cabos, incluindo quatro lâminas indevidamente. Esse caso mostra que uma categoria pode receber previsões de objetos com partes visualmente semelhantes, ainda que esses objetos não devam participar da contagem.
 
-\begin{figure}[p]
+\begin{figure}[H]
 \centering
 \caption{Exemplos de sobrecontagem em afastadores e de confusão entre cabo de bisturi e lâminas}
 \label{fig:res-exemplos}
-\includegraphics[width=\linewidth]{figuras/resultados_exemplos_erros.pdf}
-\par\smallskip{\footnotesize Fonte: elaboração própria a partir das imagens do conjunto de teste e das saídas do modelo. À esquerda, referência em verde; à direita, previsões em vermelho. Os identificadores em inglês correspondem às categorias utilizadas no processamento.\par}
+
+\begin{minipage}[t]{0.49\linewidth}
+\centering
+{\small (a) Farabeuf: referência\par}
+\vspace{0.2em}
+\includegraphics[width=\linewidth]{figuras/fig10_a_farabeuf_referencia.png}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\linewidth}
+\centering
+{\small (b) Farabeuf: predição\par}
+\vspace{0.2em}
+\includegraphics[width=\linewidth]{figuras/fig10_b_farabeuf_predicao.png}
+\end{minipage}
+
+\vspace{0.35cm}
+
+\begin{minipage}[t]{0.49\linewidth}
+\centering
+{\small (c) Cabo e lâminas: referência\par}
+\vspace{0.2em}
+\includegraphics[width=\linewidth]{figuras/fig10_c_cabo_referencia.png}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\linewidth}
+\centering
+{\small (d) Cabo e lâminas: predição\par}
+\vspace{0.2em}
+\includegraphics[width=\linewidth]{figuras/fig10_d_cabo_predicao.png}
+\end{minipage}
+
+\par\smallskip
+{\footnotesize\raggedright
+Fonte: elaboração própria, a partir das imagens do conjunto de teste e das saídas do modelo. Em (a) e (c), as caixas de referência aparecem em verde; em (b) e (d), as previsões aparecem em vermelho. Os identificadores em inglês correspondem às categorias utilizadas no processamento.\par}
 \end{figure}
 
 Também ocorreram omissões em fotografias com vários cabos de bisturi. Em um caso com cinco cabos lado a lado, foram detectados somente os dois externos. Em outro, com dez objetos de referência, foram previstos três. Esses exemplos ajudam a explicar por que a diferença entre o total previsto e o total de referência pode ser elevada em algumas imagens, apesar do erro médio reduzido no conjunto completo.
 
-A revisão identificou ainda duas classificações incorretas na própria referência: duas imagens de pinça Kelly reta estavam anotadas como porta-agulhas. Nessas imagens, a previsão da categoria pinças era compatível com a identificação visual, mas foi penalizada pela comparação automática com a anotação original. Os resultados deste capítulo foram mantidos conforme essa avaliação original, sem uma reavaliação após correção. A limitação afeta a interpretação das métricas por categoria; a quantidade de objetos dessas duas imagens, porém, permanece a mesma. Assim, a referência também deve ser examinada antes de atribuir todo desacordo ao modelo.
 
-Em outros dois casos, a categoria e a contagem estavam corretas, mas a caixa prevista não atingiu a sobreposição mínima exigida. A inspeção confirmou que se tratava de instrumentos distintos: uma pinça dente de rato e uma pinça anatômica. Apesar da semelhança visual das fotografias, elas não devem ser consideradas cópias do mesmo objeto. Esses casos reforçam a separação entre acertar a quantidade, acertar a categoria e delimitar adequadamente a região do instrumento.
+A revisão visual identificou ainda duas classificações incorretas nas anotações de referência: duas imagens de pinça Kelly reta haviam sido classificadas como porta-agulhas. Em ambos os casos, o modelo produziu uma previsão da categoria pinças, compatível com a identificação visual confirmada pela enfermeira colaboradora. Os resultados apresentados foram preservados conforme as anotações utilizadas na avaliação. Como análise de sensibilidade, considerando a correção dessas duas referências e mantendo as detecções e os 71 acertos originais da categoria porta-agulhas, sua revocação passaria de 93,42\% (71/76) para aproximadamente 95,95\% (71/74). Esse cálculo não constitui uma reavaliação completa das métricas, mas demonstra que parte do erro registrado decorre da referência utilizada, e não necessariamente de uma falha de identificação do modelo.
 
 \vspace{\baselineskip}
+\phantomsection
+\addcontentsline{toc}{subsection}{4.7 Tempo de processamento e alcance dos resultados}
 \noindent\textbf{4.7 Tempo de processamento e alcance dos resultados}\par
 \nobreak\vspace{\baselineskip}\nobreak
 
@@ -182,7 +275,7 @@ A literatura oferece exemplos de detecção de instrumentos em condições disti
 
 A separação de imagens relacionadas entre treino, validação e teste também interfere na confiabilidade da avaliação. \textcite{kapoor2023} discutem como o vazamento de informação pode produzir estimativas excessivamente favoráveis em pesquisas com aprendizado de máquina. Nesta pesquisa, foram empregados agrupamentos e verificações de similaridade para reduzir esse risco. Esses procedimentos, porém, não demonstram independência completa entre todas as sessões de aquisição nem eliminam semelhanças que possam ter permanecido entre fotografias. Uma avaliação posterior com novas sessões de captura constitui uma forma importante de examinar essa limitação.
 
-Outro limite é que as sete categorias gerais abrangem instrumentos diferentes. O bom resultado de pinças ou tesouras não informa se o modelo consegue distinguir instrumentos próximos dentro desses grupos. Da mesma forma, o experimento não permite comparar o YOLO26n com variantes maiores ou atribuir seu desempenho a uma escolha isolada de treinamento, pois essas comparações não integram os resultados apresentados. A configuração de execução determinística também encontrou uma operação sem implementação determinística no dispositivo MPS; portanto, a fixação da semente não assegura reprodução numérica idêntica de todas as etapas.
+O experimento avaliou uma única configuração do YOLO26n, de modo que seus resultados não estabelecem superioridade em relação a outras variantes ou modelos. Além disso, uma operação do dispositivo MPS não dispunha de implementação determinística, o que limita a reprodução numérica exata mesmo com a semente fixada.
 
 Os resultados sustentam uma viabilidade técnica inicial da detecção e da contagem por categorias gerais nas condições examinadas, especialmente em imagens com um instrumento e nas fotografias hospitalares representadas no teste. Essa conclusão é mais restrita do que afirmar que o sistema está pronto para conferir uma caixa cirúrgica completa. A redução do acerto nas cenas com vários objetos, a cobertura desigual das categorias e as falhas observadas em instrumentos próximos mostram a necessidade de ampliar a avaliação antes de propor seu uso como apoio à rotina. Assim, a principal contribuição desta etapa é demonstrar o potencial da abordagem e identificar, com dados de detecção e contagem, as condições que ainda exigem melhoria.
 

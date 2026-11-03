@@ -84,10 +84,7 @@
       <file>0_TCC.bcf</file>
     </requires>
     <requires type="editable">
-      <file>referencias_tcc.bib</file>
-      <file>referencias_introducao_v2.bib</file>
-      <file>referencias_fundamentacao.bib</file>
-      <file>referencias_metodologia.bib</file>
+      <file>referencias_consolidadas.bib</file>
     </requires>
   </external>
 </requests>

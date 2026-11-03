@@ -1,0 +1,123 @@
+\babel@toc {brazilian}{}\relax 
+\contentsline {section}{1 INTRODUÇÃO}{14}{section*.5}%
+\contentsline {subsection}{1.1 Problema de pesquisa e justificativa}{17}{section*.7}%
+\contentsline {subsection}{1.2 Objetivos}{18}{section*.8}%
+\contentsline {subsection}{1.3 Delimitação do estudo}{18}{section*.9}%
+\contentsline {section}{2 FUNDAMENTAÇÃO TEÓRICA}{20}{section*.10}%
+\contentsline {subsection}{2.1 Inteligência artificial, aprendizado e visão computacional}{20}{section*.11}%
+\contentsline {subsection}{2.2 Da imagem digital às características aprendidas}{21}{section*.13}%
+\contentsline {subsection}{2.3 Classificação, detecção e modelos da família YOLO}{23}{section*.15}%
+\contentsline {subsection}{2.4 Treinamento, preparação dos dados e generalização}{25}{section*.16}%
+\contentsline {subsection}{2.5 Pesquisas relacionadas à conferência de instrumentos}{28}{section*.17}%
+\contentsline {subsection}{2.6 Como avaliar a detecção dos objetos}{29}{section*.18}%
+\contentsline {subsection}{2.7 Da detecção à avaliação da contagem}{31}{section*.20}%
+\contentsline {subsection}{2.8 Interpretação da viabilidade técnica}{34}{section*.22}%
+\contentsline {section}{3 METODOLOGIA}{35}{section*.23}%
+\contentsline {subsection}{3.1 Constituição e procedência da base de imagens}{35}{section*.24}%
+\contentsline {subsection}{3.2 Seleção, anotação e padronização dos instrumentos}{36}{section*.26}%
+\contentsline {subsection}{3.3 Consolidação, verificação e separação dos dados}{39}{section*.28}%
+\contentsline {subsection}{3.4 Ambiente computacional e configuração do treinamento}{41}{section*.30}%
+\contentsline {subsection}{3.5 Aumento de dados durante o treinamento}{43}{section*.32}%
+\contentsline {subsection}{3.6 Protocolo de avaliação da detecção e da contagem}{44}{section*.33}%
+\contentsline {section}{4 RESULTADOS E DISCUSSÃO}{47}{section*.34}%
+\contentsline {subsection}{4.1 Evolução do treinamento}{47}{section*.35}%
+\contentsline {subsection}{4.2 Escolha do limiar de confiança para a contagem}{48}{section*.37}%
+\contentsline {subsection}{4.3 Desempenho na detecção dos instrumentos}{49}{section*.39}%
+\contentsline {subsection}{4.4 Contagem total e contagem por categoria}{50}{section*.41}%
+\contentsline {subsection}{4.5 Origem das imagens e quantidade de objetos na cena}{51}{section*.42}%
+\contentsline {subsection}{4.6 Análise visual dos acertos e das falhas}{53}{section*.45}%
+\contentsline {subsection}{4.7 Tempo de processamento e alcance dos resultados}{55}{section*.47}%
+\contentsline {section}{5 CONCLUSÃO}{57}{section*.48}%
+\contentsline {section}{REFERÊNCIAS}{59}{section*.49}%
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
